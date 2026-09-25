@@ -497,6 +497,55 @@ tr.detail-row td{background:var(--well); padding:18px 22px}
 /* تقرير PDF: يُبنى خارج الشاشة وقت التنزيل فقط */
 #reportStage{position:fixed; top:0; left:-10000px; width:794px; pointer-events:none}
 
+/* ---------------------------------------------------------------- التوثيق المصوّر */
+.ph-summary{display:flex; flex-wrap:wrap; gap:10px 26px; align-items:baseline; padding:16px 20px; border-bottom:1px solid var(--rule)}
+.ph-stat{display:flex; align-items:baseline; gap:8px; font-size:12.5px; color:var(--ink-2)}
+.ph-stat b{font-family:var(--display); font-size:20px; font-weight:600; color:var(--ink)}
+.ph-stat.is-warn b{color:var(--serious)}
+.ph-sync{margin-inline-start:auto; font-size:11.5px; color:var(--ink-3)}
+.ph-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; padding:16px 20px 20px}
+.ph-card{display:flex; flex-direction:column; gap:8px; text-align:start; font:inherit; color:inherit; cursor:pointer;
+  background:var(--well); border:1px solid var(--rule); border-radius:var(--r-md); padding:11px 13px}
+.ph-card:hover{border-color:var(--primary); background:var(--primary-wash)}
+.ph-card .nm{font-size:12.8px; font-weight:600; line-height:1.45}
+.ph-card .nm .code{margin-inline-start:6px}
+.ph-chips{display:flex; gap:6px; flex-wrap:wrap}
+.ph-chip{font-size:10.8px; padding:2px 7px; border-radius:4px; border:1px solid var(--rule-2); color:var(--ink-3); background:var(--surface); white-space:nowrap}
+.ph-chip.has{color:var(--primary); border-color:color-mix(in srgb, var(--primary) 35%, transparent); background:color-mix(in srgb, var(--primary) 8%, var(--surface))}
+.ph-empty{padding:26px 20px; text-align:center; color:var(--ink-3); font-size:12.5px}
+.ph-btn{display:inline-flex; align-items:center; gap:6px; margin-top:12px; font:inherit; font-size:12.3px; font-weight:600; cursor:pointer;
+  color:var(--primary); background:var(--surface); border:1px solid var(--primary); border-radius:var(--r-sm); padding:6px 12px}
+.ph-btn:hover{background:var(--primary-wash)}
+/* نافذة عرض الصور */
+.ph-dialog{border:none; padding:0; border-radius:var(--r-lg); width:min(980px, calc(100vw - 32px)); max-height:calc(100vh - 32px);
+  background:var(--surface); color:var(--ink); box-shadow:var(--shadow-2); direction:rtl}
+.ph-dialog::backdrop{background:rgba(6,14,24,.62)}
+.ph-dlg-in{display:flex; flex-direction:column; max-height:calc(100vh - 32px)}
+.ph-dlg-head{display:flex; align-items:flex-start; justify-content:space-between; gap:14px; padding:16px 20px 12px; border-bottom:1px solid var(--rule)}
+.ph-dlg-title{font-family:var(--display); font-size:16px; font-weight:600; line-height:1.4}
+.ph-dlg-sub{font-size:12px; color:var(--ink-3); margin-top:2px}
+.ph-close{flex:none; font:inherit; font-size:20px; line-height:1; width:34px; height:34px; border-radius:50%; cursor:pointer;
+  border:1px solid var(--rule); background:var(--well); color:var(--ink-2)}
+.ph-tabs{display:flex; gap:6px; padding:12px 20px 0; flex-wrap:wrap}
+.ph-tab{font:inherit; font-size:12.5px; font-weight:600; cursor:pointer; padding:7px 14px; border-radius:var(--r-sm);
+  border:1px solid var(--rule); background:var(--well); color:var(--ink-2)}
+.ph-tab[aria-selected="true"]{background:var(--primary); border-color:var(--primary); color:#fff}
+.ph-tab .n{font-weight:400; opacity:.8; margin-inline-start:4px}
+.ph-body{padding:14px 20px 18px; overflow:auto}
+.ph-stage{position:relative; background:var(--night); border-radius:var(--r-md); overflow:hidden; display:flex; align-items:center; justify-content:center; min-height:260px}
+.ph-stage img{display:block; max-width:100%; max-height:min(60vh, 560px); object-fit:contain}
+.ph-nav{position:absolute; top:50%; transform:translateY(-50%); width:38px; height:38px; border-radius:50%; cursor:pointer; font:inherit; font-size:18px;
+  border:none; background:rgba(255,255,255,.88); color:#0F1926}
+.ph-nav.prev{right:10px} .ph-nav.next{left:10px}
+.ph-cap{display:flex; justify-content:space-between; gap:10px; font-size:11.5px; color:var(--ink-3); margin-top:8px}
+.ph-thumbs{display:flex; gap:8px; margin-top:10px}
+.ph-thumbs button{padding:0; border:2px solid transparent; border-radius:var(--r-sm); overflow:hidden; cursor:pointer; background:none; width:92px; height:64px}
+.ph-thumbs button[aria-current="true"]{border-color:var(--copper)}
+.ph-thumbs img{width:100%; height:100%; object-fit:cover; display:block}
+.ph-none{padding:40px 10px; text-align:center; color:var(--ink-3); font-size:12.8px; background:var(--well); border-radius:var(--r-md)}
+.ph-drive{display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; justify-content:space-between; font-size:11.5px; color:var(--ink-3); margin-top:12px}
+.ph-drive a{color:var(--primary); font-weight:600}
+
 footer.notes{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); font-size:11.5px; color:var(--ink-3); line-height:1.95}
 footer.notes b{color:var(--ink-2); font-weight:600}
 
@@ -676,6 +725,15 @@ footer.notes b{color:var(--ink-2); font-weight:600}
   <section class="reveal">
     <div class="shead">
       <span class="sheet">٠٧</span>
+      <h2>التوثيق المصوّر</h2>
+      <span class="note">صور قبل التنفيذ وأثناءه وبعده من مجلدات المستفيدين على Google Drive — حتى 3 صور لكل مرحلة، تُحدَّث تلقائيًا مرة يوميًا. اضغط أي حالة لعرض صورها</span>
+    </div>
+    <div class="card" id="photoSection"><div class="ph-empty">جارٍ تحميل فهرس الصور…</div></div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٨</span>
       <h2>مواقع تواجد المستفيدين</h2>
       <span class="note">مخطط تخطيطي بالمواقع النسبية الفعلية (وليس خريطة شوارع حقيقية) — مرّر أو اضغط على أي نقطة لعرض تفاصيلها، ثم افتحها في خرائط جوجل</span>
     </div>
@@ -699,6 +757,17 @@ footer.notes b{color:var(--ink-2); font-weight:600}
   </footer>
 
   <div id="reportStage" aria-hidden="true"></div>
+
+  <dialog class="ph-dialog" id="phDialog" aria-labelledby="phDlgTitle">
+    <div class="ph-dlg-in">
+      <div class="ph-dlg-head">
+        <div><div class="ph-dlg-title" id="phDlgTitle"></div><div class="ph-dlg-sub" id="phDlgSub"></div></div>
+        <button type="button" class="ph-close" id="phClose" aria-label="إغلاق">×</button>
+      </div>
+      <div class="ph-tabs" id="phTabs" role="tablist"></div>
+      <div class="ph-body" id="phBody"></div>
+    </div>
+  </dialog>
 
 </div>
 
@@ -1524,7 +1593,7 @@ function renderTable(filtered){
           <div class="ditem"><span class="k">مصابون بالحرب بالوحدة</span><span class="v">${d.warInjured}</span></div>
           <div class="ditem"><span class="k">كبار السن (60+) بالوحدة</span><span class="v">${d.elderly}</span></div>
         </div>
-      </div></td></tr>`;
+      </div><button type="button" class="ph-btn" data-photos="${d.code}">عرض صور التوثيق</button></td></tr>`;
     });
   });
   document.getElementById("tbody").innerHTML = rows || `<tr class="empty-row"><td colspan="9">لا يوجد مستفيدون مطابقون لمعايير البحث أو الفلترة الحالية.</td></tr>`;
@@ -1641,7 +1710,8 @@ function renderSitePlan(){
       <a class="sp-gmaps-btn" href="${p.gmaps}" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
         فتح الموقع في خرائط جوجل
-      </a>`;
+      </a>
+      <button type="button" class="ph-btn" data-photos="${esc(p.code)}" style="margin-top:0">عرض صور التوثيق</button>`;
   }
 
   card.innerHTML = `<div class="ph">مرّر مؤشر الفأرة أو اضغط على أي نقطة في المخطط لعرض تفاصيلها</div>`;
@@ -1741,6 +1811,112 @@ const EXEC = (()=>{
   el.classList.toggle("is-stale", stale);
   el.innerHTML = `<i></i>${stale ? "آخر مزامنة ناجحة مع الملف المصدر:" : "تتحدّث تلقائيًا من الملف المصدر — آخر مزامنة:"} ${ltr(SYNC.at)} (${esc(SYNC.tz||"")})`;
 })();
+
+/* ======================================================================= التوثيق المصوّر */
+// الصور ملفات مرافقة للّوحة (photos/index.json + photos/<CODE>.json) يكتبها sync_photos.py يوميًا؛
+// تُجلب عند الحاجة فقط حتى لا تُثقل فتح الصفحة.
+const PH_PHASES = [["before","قبل التنفيذ"],["during","أثناء التنفيذ"],["after","بعد التنفيذ"]];
+let PH_INDEX = null;
+const PH_CACHE = {};
+function phCount(code, p){ return (PH_INDEX && PH_INDEX.counts[code] && PH_INDEX.counts[code][p]) || 0; }
+function fmtStamp(iso){ return iso ? iso.replace("T"," ").slice(0,16) : ""; }
+
+async function loadPhotoIndex(){
+  const box = document.getElementById("photoSection");
+  try{
+    const r = await fetch("photos/index.json", {cache:"no-cache"});
+    if(!r.ok) throw new Error(r.status);
+    PH_INDEX = await r.json();
+  }catch(e){
+    box.innerHTML = `<div class="ph-empty">لا تتوفر صور التوثيق في هذه النسخة من اللوحة.</div>`;
+    return;
+  }
+  const withP = p => DATA.filter(d=>phCount(d.code,p)>0).length;
+  const started = DATA.filter(d=>d.completion>0);
+  const noDuring = started.filter(d=>phCount(d.code,"during")===0).length;
+  box.innerHTML = `
+    <div class="ph-summary">
+      <span class="ph-stat"><b>${withP("before")}</b>/ ${total} حالة لها صور قبل التنفيذ</span>
+      <span class="ph-stat"><b>${withP("during")}</b>/ ${total} لها صور أثناء التنفيذ</span>
+      <span class="ph-stat"><b>${withP("after")}</b>/ ${total} لها صور بعد التنفيذ</span>
+      ${noDuring ? `<span class="ph-stat is-warn"><b>${noDuring}</b>حالة بدأ تنفيذها بلا صور أثناء التنفيذ</span>` : ""}
+      <span class="ph-sync">آخر مزامنة للصور: ${ltr(fmtStamp(PH_INDEX.syncedAt))} UTC</span>
+    </div>
+    <div class="ph-grid">${ENGINEERS.flatMap(e=>DATA.filter(d=>d.eng===e)).map(d=>`
+      <button type="button" class="ph-card" data-photos="${d.code}">
+        <span class="nm">${esc(d.name)}<span class="code">${esc(d.code)}</span></span>
+        <span class="ph-chips">${PH_PHASES.map(([p,l])=>`<span class="ph-chip ${phCount(d.code,p)?"has":""}">${l.replace(" التنفيذ","")} ${phCount(d.code,p)}</span>`).join("")}</span>
+      </button>`).join("")}</div>`;
+}
+
+async function getPhotos(code){
+  if(PH_CACHE[code]) return PH_CACHE[code];
+  const r = await fetch(`photos/${encodeURIComponent(code)}.json`);
+  if(!r.ok) throw new Error(r.status);
+  return (PH_CACHE[code] = await r.json());
+}
+
+const phState = {code:null, phase:"before", i:0, doc:null};
+function renderPhotoBody(){
+  const {code, phase, doc} = phState;
+  const list = (doc && doc.phases[phase]) || [];
+  const cnt = phCount(code, phase);
+  document.getElementById("phTabs").innerHTML = PH_PHASES.map(([p,l])=>
+    `<button type="button" class="ph-tab" role="tab" data-phase="${p}" aria-selected="${p===phase}">${l}<span class="n">(${phCount(code,p)})</span></button>`).join("");
+  const body = document.getElementById("phBody");
+  const folder = PH_INDEX && PH_INDEX.folders[code];
+  const driveLine = `<div class="ph-drive"><span>${cnt>list.length ? `معروض ${list.length} من ${cnt} صورة في هذه المرحلة.` : ""}</span>${folder?`<a href="${folder}" target="_blank" rel="noopener">فتح كل صور الحالة في Google Drive ↗</a>`:""}</div>`;
+  if(!list.length){
+    body.innerHTML = `<div class="ph-none">${phase==="before" ? "لا توجد صور قبل التنفيذ لهذه الحالة." : `لم تُرفع صور ${phase==="during"?"أثناء":"بعد"} التنفيذ لهذه الحالة بعد.`}</div>` + driveLine;
+    return;
+  }
+  const i = Math.min(phState.i, list.length-1), cur = list[i];
+  body.innerHTML = `
+    <div class="ph-stage">
+      <img src="${cur.src}" alt="${esc(PH_PHASES.find(x=>x[0]===phase)[1])} — صورة ${i+1} من ${list.length}">
+      ${list.length>1 ? `<button type="button" class="ph-nav prev" data-step="-1" aria-label="السابقة">›</button><button type="button" class="ph-nav next" data-step="1" aria-label="التالية">‹</button>` : ""}
+    </div>
+    <div class="ph-cap"><span>صورة ${i+1} من ${list.length}</span><span>رُفعت ${ltr(cur.created.slice(0,10))}</span></div>
+    ${list.length>1 ? `<div class="ph-thumbs">${list.map((x,k)=>`<button type="button" data-idx="${k}" aria-current="${k===i}" aria-label="صورة ${k+1}"><img src="${x.src}" alt=""></button>`).join("")}</div>` : ""}
+    ${driveLine}`;
+}
+
+async function openPhotos(code){
+  const d = DATA.find(x=>x.code===code); if(!d) return;
+  const dlg = document.getElementById("phDialog");
+  document.getElementById("phDlgTitle").textContent = `${d.name} — ${d.code}`;
+  document.getElementById("phDlgSub").textContent = `${d.eng} · الإنجاز ${fmtPct(d.completion)} · ${d.stage}`;
+  const firstWith = PH_PHASES.map(x=>x[0]).reverse().find(p=>phCount(code,p)>0) || "before";   // أحدث مرحلة فيها صور
+  Object.assign(phState, {code, phase:firstWith, i:0, doc:null});
+  document.getElementById("phTabs").innerHTML = "";
+  document.getElementById("phBody").innerHTML = `<div class="ph-none">جارٍ تحميل الصور…</div>`;
+  if(typeof dlg.showModal==="function"){ if(!dlg.open) dlg.showModal(); } else dlg.setAttribute("open","");
+  if(!PH_INDEX){ document.getElementById("phBody").innerHTML = `<div class="ph-none">لا تتوفر صور التوثيق في هذه النسخة من اللوحة.</div>`; return; }
+  try{ phState.doc = await getPhotos(code); }
+  catch(e){ phState.doc = {phases:{}}; }
+  if(phState.code===code) renderPhotoBody();
+}
+
+document.addEventListener("click", e=>{
+  const t = e.target.closest("[data-photos]");
+  if(t){ e.stopPropagation(); openPhotos(t.dataset.photos); return; }
+  if(!e.target.closest("#phDialog")) return;
+  const tab = e.target.closest("[data-phase]");
+  if(tab){ phState.phase = tab.dataset.phase; phState.i = 0; renderPhotoBody(); return; }
+  const th = e.target.closest("[data-idx]");
+  if(th){ phState.i = +th.dataset.idx; renderPhotoBody(); return; }
+  const nav = e.target.closest("[data-step]");
+  if(nav){ const n = (phState.doc.phases[phState.phase]||[]).length; phState.i = (phState.i + +nav.dataset.step + n) % n; renderPhotoBody(); }
+});
+document.getElementById("phClose").addEventListener("click", ()=>document.getElementById("phDialog").close());
+document.getElementById("phDialog").addEventListener("click", e=>{ if(e.target.id==="phDialog") e.target.close(); });   // النقر على الخلفية
+document.getElementById("phDialog").addEventListener("keydown", e=>{
+  if(!phState.doc) return;
+  const n = (phState.doc.phases[phState.phase]||[]).length; if(n<2) return;
+  if(e.key==="ArrowLeft"){ phState.i = (phState.i+1)%n; renderPhotoBody(); }
+  if(e.key==="ArrowRight"){ phState.i = (phState.i-1+n)%n; renderPhotoBody(); }
+});
+loadPhotoIndex();
 
 /* ======================================================================= التنزيل (PDF / Excel) */
 const LIBS = {
