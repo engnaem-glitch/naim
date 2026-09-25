@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>لوحة المساعدة النقدية لإصلاح المأوى الطارئ 25 مستفيد</title>
 <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -417,6 +416,87 @@ tr.detail-row td{background:var(--well); padding:18px 22px}
 .sp-gmaps-btn svg{width:13px; height:13px; flex:none}
 .sp-note{font-size:11px; color:var(--ink-3); margin-top:12px; line-height:1.8}
 
+/* ---------------------------------------------------------------- شريط التنزيل + المزامنة */
+.actionbar{display:flex; align-items:center; gap:10px 14px; flex-wrap:wrap; margin:22px 0 0; padding:12px 16px;
+  background:var(--surface); border:1px solid var(--rule); border-radius:var(--r-md)}
+.sync{display:inline-flex; align-items:center; gap:8px; font-size:12.3px; color:var(--ink-2)}
+.sync i{width:8px; height:8px; border-radius:50%; background:var(--good); flex:none;
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--good) 20%, transparent)}
+.sync.is-stale i{background:var(--warn); box-shadow:0 0 0 3px color-mix(in srgb, var(--warn) 20%, transparent)}
+.dl-group{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-inline-start:auto}
+.dl-group .lbl{font-size:12px; color:var(--ink-3)}
+.dl-btn{display:inline-flex; align-items:center; gap:7px; font-family:var(--body); font-size:12.8px; font-weight:600;
+  border-radius:var(--r-sm); padding:8px 14px; cursor:pointer; border:1px solid var(--primary);
+  background:var(--primary); color:#fff}
+.dl-btn.is-alt{background:var(--surface); color:var(--primary)}
+.dl-btn:hover{filter:brightness(1.08)}
+.dl-btn[disabled]{opacity:.55; cursor:progress}
+.dl-btn svg{width:14px; height:14px; flex:none}
+.dl-msg{font-size:12px; color:var(--ink-3); min-height:1em}
+.dl-msg.is-err{color:var(--crit)}
+
+/* ---------------------------------------------------------------- الملخص التنفيذي */
+.exec{margin:22px 0 0; display:grid; grid-template-columns:1.25fr 1fr; gap:0}
+@media (max-width:900px){.exec{grid-template-columns:1fr}}
+.exec-main{padding:22px 24px}
+.exec-side{padding:22px 24px; border-inline-start:1px solid var(--rule); background:var(--well)}
+@media (max-width:900px){.exec-side{border-inline-start:none; border-block-start:1px solid var(--rule)}}
+.eyebrow{font-size:11.5px; font-weight:600; color:var(--copper); margin-bottom:6px}
+.exec-head{font-family:var(--display); font-size:17px; font-weight:600; line-height:1.55; margin:0 0 14px; text-wrap:pretty}
+.exec-head b{color:var(--crit); font-weight:600}
+.exec-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px}
+.exec-list li{display:flex; gap:10px; align-items:flex-start; font-size:12.8px; line-height:1.7; color:var(--ink-2)}
+.exec-list li::before{content:""; flex:none; width:6px; height:6px; margin-top:.62em; transform:rotate(45deg); background:var(--primary)}
+.exec-list b{color:var(--ink); font-weight:600}
+.countdown{display:flex; align-items:center; gap:14px; padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--rule)}
+.cd-num{font-family:var(--display); font-size:34px; font-weight:600; line-height:1; color:var(--copper); min-width:2ch; text-align:center}
+.cd-txt{font-size:12.5px; color:var(--ink-2); line-height:1.6}
+.cd-txt b{display:block; font-family:var(--display); font-size:14px; color:var(--ink)}
+.risk-title{display:flex; justify-content:space-between; align-items:baseline; font-family:var(--display); font-size:13.5px; font-weight:600; color:var(--ink-2); margin-bottom:10px}
+.risk-title span{font-family:var(--body); font-size:11.5px; font-weight:400; color:var(--ink-3)}
+.risks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; max-height:330px; overflow:auto}
+.risk{display:grid; grid-template-columns:auto 1fr auto; gap:4px 10px; align-items:center; background:var(--surface);
+  border:1px solid var(--rule); border-radius:var(--r-sm); padding:8px 11px}
+.risk .who{font-size:12.5px; font-weight:600; min-width:0}
+.risk .who .code{margin-inline-start:6px}
+.risk .why{grid-column:2 / -1; font-size:11.8px; color:var(--ink-2); line-height:1.55}
+.risk .pct{font-family:var(--display); font-size:12.5px; font-weight:600; color:var(--ink-2)}
+.sev{display:inline-block; font-size:10.5px; font-weight:600; padding:2px 7px; border-radius:4px; color:var(--c);
+  background:color-mix(in srgb, var(--c) 10%, transparent); border:1px solid color-mix(in srgb, var(--c) 28%, transparent); white-space:nowrap}
+.sev-crit{--c:var(--crit)} .sev-high{--c:var(--serious)} .sev-med{--c:var(--warn)}
+.no-risk{font-size:12.5px; color:var(--ink-3); padding:8px 0}
+
+/* ---------------------------------------------------------------- جاهزية طلب الدفعات */
+.ready{margin-top:24px; padding-top:20px; border-top:1px solid var(--rule)}
+.ready-wrap{overflow-x:auto}
+.ready table{min-width:640px; font-size:12.5px}
+.ready th{background:transparent; position:static; font-size:11px; padding:8px 10px; text-align:start}
+.ready td{padding:10px; border-bottom:1px solid var(--rule)}
+.ready tr:last-child td{border-bottom:none}
+.ready td.n{font-family:var(--display); font-weight:600; direction:ltr; unicode-bidi:isolate; text-align:end; white-space:nowrap}
+.ready td.n .cur{font-weight:500}
+.ready .pos{color:var(--good)} .ready .neg{color:var(--serious)}
+.ready-note{font-size:11.5px; color:var(--ink-3); line-height:1.8; margin-top:10px}
+
+/* ---------------------------------------------------------------- المخطط مقابل الفعلي */
+.pva-legend{display:flex; gap:16px; flex-wrap:wrap; font-size:11.5px; color:var(--ink-2); margin-bottom:8px}
+.pva-legend i{display:inline-block; width:18px; height:0; border-top:2.5px solid var(--c); margin-inline-end:6px; vertical-align:middle}
+.pva-legend i.dash{border-top-style:dashed}
+.pva-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px}
+@media (max-width:520px){.pva-stats{grid-template-columns:1fr}}
+.pva-stat{background:var(--well); border-radius:var(--r-sm); padding:9px 11px}
+.pva-stat .v{font-family:var(--display); font-size:17px; font-weight:600; line-height:1.2}
+.pva-stat .k{font-size:10.8px; color:var(--ink-3); margin-top:3px; line-height:1.45}
+.pva-stat.is-bad .v{color:var(--crit)}
+.pva-foot{font-size:10.8px; color:var(--ink-3); margin-top:10px; line-height:1.7}
+
+/* ---------------------------------------------------------------- مؤشرات التغيّر */
+.delta{display:inline-flex; align-items:center; gap:3px; font-family:var(--display); font-size:11.5px; font-weight:600; white-space:nowrap; direction:ltr; unicode-bidi:isolate}
+.delta.up{color:var(--good)} .delta.down{color:var(--crit)} .delta.flat{color:var(--ink-3); font-weight:500}
+
+/* تقرير PDF: يُبنى خارج الشاشة وقت التنزيل فقط */
+#reportStage{position:fixed; top:0; left:-10000px; width:794px; pointer-events:none}
+
 footer.notes{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); font-size:11.5px; color:var(--ink-3); line-height:1.95}
 footer.notes b{color:var(--ink-2); font-weight:600}
 
@@ -455,7 +535,22 @@ footer.notes b{color:var(--ink-2); font-weight:600}
 
 <div class="wrap">
 
+  <div class="actionbar">
+    <span class="sync" id="syncBadge"></span>
+    <div class="dl-group" id="dlGroup" hidden>
+      <span class="lbl">تنزيل تقرير الإنجاز:</span>
+      <button type="button" class="dl-btn" id="dlPdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 19.5h14"/></svg>تقرير PDF</button>
+      <button type="button" class="dl-btn is-alt" id="dlXlsx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>جداول Excel</button>
+      <span class="dl-msg" id="dlMsg" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+
   <div id="phaseBanner"></div>
+
+  <div class="panel exec reveal" id="exec">
+    <div class="exec-main" id="execMain"></div>
+    <div class="exec-side" id="execSide"></div>
+  </div>
 
   <div class="panel kpi-strip reveal" id="kpiRow"></div>
 
@@ -485,6 +580,7 @@ footer.notes b{color:var(--ink-2); font-weight:600}
       <div class="alloc-key" id="finAllocKey"></div>
       <div class="stages" id="financeStages"></div>
       <div id="financeNoteWrap"></div>
+      <div class="ready" id="readyWrap"></div>
       <div class="fin-foot" id="financeReconcileNote"></div>
     </div>
   </section>
@@ -508,7 +604,7 @@ footer.notes b{color:var(--ink-2); font-weight:600}
     <div class="shead">
       <span class="sheet">٠٣</span>
       <h2>المسار الزمني وأداء المشروع</h2>
-      <span class="note">المعالم موزّعة تخطيطيًا، وعلامة "اليوم" محسوبة فعليًا من التاريخ — ومنحنى الأداء يُبنى تلقائيًا نقطة كل يوم</span>
+      <span class="note">المعالم موزّعة تخطيطيًا، وعلامة "اليوم" محسوبة فعليًا من التاريخ — ومنحنى الإنجاز يُبنى تلقائيًا بنقطة لكل يوم ويُقارن بالمسار المخطط</span>
     </div>
     <div class="temporal">
       <div class="card lift tl-card">
@@ -518,7 +614,7 @@ footer.notes b{color:var(--ink-2); font-weight:600}
         <div class="tl-foot" id="tlFoot"></div>
       </div>
       <div class="card lift trend-card">
-        <div class="card-title">متوسط السكور العام عبر الوقت</div>
+        <div class="card-title">الإنجاز الفعلي مقابل المخطط</div>
         <div class="trend-wrap" id="trendWrap"></div>
       </div>
     </div>
@@ -568,7 +664,7 @@ footer.notes b{color:var(--ink-2); font-weight:600}
       <table id="tbl">
         <thead>
           <tr>
-            <th>#</th><th>الاسم</th><th>الكود</th><th>الإنجاز</th>
+            <th>#</th><th>الاسم</th><th>الكود</th><th>الإنجاز</th><th id="thDelta">التغيّر</th>
             <th>الحالة الزمنية</th><th>أهلية الدفعة الأخيرة</th><th>السكور</th><th>التصنيف</th>
           </tr>
         </thead>
@@ -594,7 +690,7 @@ footer.notes b{color:var(--ink-2); font-weight:600}
   </section>
 
   <footer class="notes">
-    <b>إعداد وتصميم اللوحة والإشراف التقني عليها:</b> م. نعيم شاهين — تُحدَّث تلقائيًا بشكل يومي، أو فور صدور تعليمات تحديث مباشرة منه.<br>
+    <b>إعداد وتصميم اللوحة والإشراف التقني عليها:</b> م. نعيم شاهين — تُحدَّث تلقائيًا من الملف المصدر أربع مرات يوميًا (6 و9 و12 صباحًا و3 عصرًا بتوقيت فلسطين تقريبًا) دون أي تدخل يدوي، ويظهر وقت آخر مزامنة أعلى الصفحة.<br>
     <b>مصدر البيانات:</b> ملف "ملف_المستفيدين_المتكامل_بيانات_الاسر_ولوحة_السير" الموحّد على Google Drive — نسب الإنجاز والدفعات مرتبطة بصيغ حية (IMPORTRANGE) بملف "جدول الكميات" الخاص بكل مستفيد، والمرحلة الحالية من ورقة "لوحة سير المشروع"، والبيانات الأسرية/الديموغرافية من ورقة "قاعدة بيانات الأسر" المستخرجة من استمارة KOBO الميدانية.<br>
     <b>توزيع الحالات على المهندسين المشرفين</b> (م. رانيا مهنا / م. سماح ابراهيم) معتمد يدويًا حسب التوزيع الرسمي الذي أقرّه فريق المشروع، ولا يُقرأ تلقائيًا من عمود "المهندس المشرف" في الملف.<br>
     <b>السكور</b> = نسبة الإنجاز الكلي (حتى 50) + متوسط تقدم الدفعتين 1 و2 (حتى 20) + الالتزام بالجدول الزمني (حتى 30) — تقييم تنفيذي بحت، لا يشمل أي عامل مالي أو إداري.<br>
@@ -602,12 +698,14 @@ footer.notes b{color:var(--ink-2); font-weight:600}
     <b>مواقع تواجد المستفيدين:</b> من ملف "احدثيات اماكن تواجد المستفيدين 25" على Google Drive — مخطط تخطيطي (site plan) بمواقع نسبية محسوبة من الإحداثيات الفعلية، وليس خريطة شوارع حقيقية (بيئة عرض اللوحة لا تسمح بتحميل صور خرائط خارجية)؛ زوجا الأكواد NS1/NS2 وMR3/MR6 مسجَّلان بنفس الإحداثيات في الملف المصدر، وتم تفريقهما بصريًا بمقدار طفيف على المخطط لتفادي تطابق النقاط فقط، دون أي أثر على رابط "فتح في خرائط جوجل" لكل منهما.
   </footer>
 
+  <div id="reportStage" aria-hidden="true"></div>
+
 </div>
 
 <script>
 /* ============================= DATA (يُستبدل بالكامل عند كل تحديث يومي) ============================= */
 
-const REPORT_DATE = "2026-09-24";
+const REPORT_DATE = "2026-09-25";
 
 // المعالم: مطابقة لملفات جداول الكميات الـ25 (ورقة "اللوحة الرئيسية": C17 بداية · C9/C10/C11 طلبات الدفعات · E17 نهاية).
 // بداية المشروع 2026-07-01 ونهايته 2026-10-31 (122 يومًا) - صُحّحت بتاريخ 2026-09-20 بتأكيد المستخدم (كانت 2026-09-01 خطأً).
@@ -650,26 +748,34 @@ const COORDS = [
 {code:"SE11", lat:31.5183717, lon:34.4678883, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5183717,34.4678883"},
 ];
 
-// سجل يومي لمتوسط السكور العام - تُلحق به المهمة المجدولة نقطة جديدة كل يوم (لا تُستبدل، بل تُضاف/تُحدَّث لنفس تاريخ اليوم فقط)
+// سجل يومي لمتوسط السكور العام (overall) ومتوسط نسبة الإنجاز الميداني % (completion) - يُضيف سكربت التحديث نقطة واحدة لكل يوم
+// (آخر مزامنة في اليوم تستبدل قيمة نفس اليوم). completion أُضيف 2026-09-25: القيم حتى 2026-09-20 كانت صفرًا فعلًا في المصدر،
+// وقيمة 2026-09-22 غير محفوظة (لم يُسجَّل السجل حينها سوى السكور) فتُترك بلا completion ولا تظهر في منحنى الإنجاز.
 // أُعيد ضبط السجل بتاريخ 2026-09-03 مع اعتماد الملف الموحّد الجديد (مصدر بيانات مختلف عن السجل السابق).
 const HISTORY = [
-  {date:"2026-09-03", overall:0.0},
-  {date:"2026-09-07", overall:0.0},
-  {date:"2026-09-08", overall:0.0},
-  {date:"2026-09-09", overall:0.0},
-  {date:"2026-09-15", overall:0.0},
-  {date:"2026-09-20", overall:0.0},
-  {date:"2026-09-22", overall:16.3},
-  {date:"2026-09-24", overall:24.3},
+  {"date":"2026-09-03","overall":0,"completion":0},
+  {"date":"2026-09-07","overall":0,"completion":0},
+  {"date":"2026-09-08","overall":0,"completion":0},
+  {"date":"2026-09-09","overall":0,"completion":0},
+  {"date":"2026-09-15","overall":0,"completion":0},
+  {"date":"2026-09-20","overall":0,"completion":0},
+  {"date":"2026-09-22","overall":16.3},
+  {"date":"2026-09-24","overall":24.3,"completion":31.1},
+  {"date":"2026-09-25","overall":24.4,"completion":31.3},
 ];
 
+// المسار المخطط للإنجاز: خطي على مدة المشروع (وتيرة الوقت المنقضي، وهو نفس منطق "متأخر عن وتيرة الوقت" في الملف المصدر).
+// fullBy = موعد طلب الدفعة الثالثة التي تتطلب إنجاز 100% (يُستخدم لحساب المعدل اليومي المطلوب). ثابت - لا يغيّره التحديث التلقائي.
+const PLAN = {start:"2026-07-01", end:"2026-10-31", fullBy:"2026-10-15"};
+
+// آخر مزامنة ناجحة مع الملف المصدر (يكتبها سكربت التحديث التلقائي).
+const SYNC = {"at":"2026-09-25 22:44","tz":"توقيت فلسطين","fileId":"1BgvaMttG3EeHl11HkZyv69wH22rsrbhGv4cY53catqk"};
+
+// لقطة آخر يوم سابق للمقارنة (التغيّر منذ آخر تحديث): {date, rows:{code:[completion,p1,p2,stage]}} - يكتبها سكربت التحديث تلقائيًا.
+const PREV = {"date":"2026-09-24","rows":{"MM4":[0.4202,1,0.1677,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"NS1":[0.3041,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"NS2":[0.4463,1,0.1315,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"RM11":[0.082,0.1273,0,"قيد تنفيذ أعمال الدفعة الأولى"],"RM5":[0.2968,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MM5":[0.4182,1,0.0979,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MM6":[0.5519,1,0.3542,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MM8":[0.3632,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MM9":[0.3663,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"NS9":[0.3305,1,0.0348,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MF7":[0.3036,1,0.0674,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MS8":[0.0839,0.1637,0,"قيد تنفيذ أعمال الدفعة الأولى"],"MR6":[0.3219,1,0.0252,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MM2":[0.5631,1,0.3009,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MR3":[0.3258,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MS5":[0.3154,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MS1":[0.1696,0.3996,0,"قيد تنفيذ أعمال الدفعة الأولى"],"MR2":[0.3141,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MF8":[0,0,0,"لم يبدأ التنفيذ بعد"],"MF6":[0.4006,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"MF5":[0,0,0,"لم يبدأ التنفيذ بعد"],"SE5":[0.309,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"SE6":[0.3358,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"SE7":[0.3518,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"],"SE11":[0.411,1,0,"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية"]}};
+
 // إجمالي على مستوى المشروع من "قاعدة بيانات الأسر" (ورقة لوحة المؤشرات) - يُحدَّث يوميًا مع الملف الموحّد
-const FAMILY = {
-  families:25, coreMembers:132, extendedMembers:62, totalIndividuals:194,
-  casesWithExtended:11, extendedSubfamilies:15, disabled:10, elderly:12,
-  chronic:14, warInjured:9, nursingMothers:4, avgFamilySize:5.3,
-  childrenUnder18:99, childrenPct:51.0, women:103, men:91, workingAge:83, workingAgePct:42.8, elderlyPct:6.2,
-};
+const FAMILY = {"families":25,"coreMembers":132,"extendedMembers":62,"totalIndividuals":194,"casesWithExtended":11,"extendedSubfamilies":15,"disabled":10,"elderly":12,"chronic":14,"warInjured":9,"nursingMothers":4,"avgFamilySize":5.3,"childrenUnder18":99,"childrenPct":51.0,"women":103,"men":91,"workingAge":83,"workingAgePct":42.8,"elderlyPct":6.2};
 
 // الوضع المالي للمشروع (مستوى المشروع ككل فقط - لا قيم مالية لأي مستفيد بعينه)
 // totalGrant ثابت يدويًا = القيمة الرسمية المعتمدة للمنحة (274,998 ₪ - بتأكيد المستخدم 2026-09-06)، وليس من عمود "إجمالي قيمة العقود" بورقة "لوحة سير المشروع".
@@ -679,79 +785,149 @@ const FAMILY = {
 // (نسبة الإنجاز وقيمة العقد متطابقتان تمامًا بين الورقتين، التعارض في عمود الصرف فقط) - عُرض على المستخدم فاختار صراحة اعتماد
 // "ملخص المستفيدين المرتبط" كمصدر وحيد لـtotalDisbursed ولكل القيم المالية المصروفة. راجع فحص الجلسة بتاريخ 2026-09-22 لمزيد من التفصيل.
 const FINANCE = {
-  totalGrant: 274998,
-  totalDisbursed: 74414.94,
-  remaining: 200583.06,
-  disbursedPct: 27.1,
-  contractsSum: 274996.3,
-  payments: [
-    {label:"الدفعة الأولى (30%)", planned:82498.89, actual:74414.94},
-    {label:"الدفعة الثانية (50%)", planned:137498.15, actual:0},
-    {label:"الدفعة الثالثة (20%)", planned:54999.26, actual:0},
+  "totalGrant": 274998,
+  "totalDisbursed": 74414.94,
+  "remaining": 200583.06,
+  "disbursedPct": 27.1,
+  "contractsSum": 274996.3,
+  "payments": [
+    {
+      "label": "الدفعة الأولى (30%)",
+      "planned": 82498.89,
+      "actual": 74414.94
+    },
+    {
+      "label": "الدفعة الثانية (50%)",
+      "planned": 137498.15,
+      "actual": 0.0
+    },
+    {
+      "label": "الدفعة الثالثة (20%)",
+      "planned": 54999.26,
+      "actual": 0.0
+    }
   ],
+  "earned": {
+    "total": 90962.24,
+    "payments": [
+      67231.71,
+      6796.2,
+      16934.33
+    ]
+  },
+  "receipts": [
+    {
+      "received": 23,
+      "dates": [
+        "2026-09-15",
+        "2026-09-17"
+      ],
+      "missing": [
+        "MF8",
+        "MF5"
+      ]
+    },
+    {
+      "received": 0,
+      "dates": [],
+      "missing": [
+        "MM4",
+        "NS1",
+        "NS2",
+        "RM11",
+        "RM5",
+        "MM5",
+        "MM6",
+        "MM8",
+        "MM9",
+        "NS9",
+        "MF7",
+        "MS8",
+        "MR6",
+        "MM2",
+        "MR3",
+        "MS5",
+        "MS1",
+        "MR2",
+        "MF8",
+        "MF6",
+        "MF5",
+        "SE5",
+        "SE6",
+        "SE7",
+        "SE11"
+      ]
+    },
+    {
+      "received": 0,
+      "dates": [],
+      "missing": [
+        "MM4",
+        "NS1",
+        "NS2",
+        "RM11",
+        "RM5",
+        "MM5",
+        "MM6",
+        "MM8",
+        "MM9",
+        "NS9",
+        "MF7",
+        "MS8",
+        "MR6",
+        "MM2",
+        "MR3",
+        "MS5",
+        "MS1",
+        "MR2",
+        "MF8",
+        "MF6",
+        "MF5",
+        "SE5",
+        "SE6",
+        "SE7",
+        "SE11"
+      ]
+    }
+  ]
 };
 
 // التوزيع العمري والنوعي الكامل لكل أفراد المشروع (أساسي + ممتد) - من ورقة "الفئات العمرية للمشروع"
 const AGE_BANDS = [
-  {label:"أقل من 8 سنوات", male:21, female:22, total:43, pct:22.2},
-  {label:"8 - 17 سنة", male:27, female:29, total:56, pct:28.9},
-  {label:"18 - 59 سنة", male:38, female:45, total:83, pct:42.8},
-  {label:"60 سنة فأكثر", male:5, female:7, total:12, pct:6.2},
+  {"label":"أقل من 8 سنوات","male":21,"female":22,"total":43,"pct":22.2},
+  {"label":"8 - 17 سنة","male":27,"female":29,"total":56,"pct":28.9},
+  {"label":"18 - 59 سنة","male":38,"female":45,"total":83,"pct":42.8},
+  {"label":"60 سنة فأكثر","male":5,"female":7,"total":12,"pct":6.2},
 ];
 
 // completion/p1/p2: كسور 0..1 من الأعمدة الحية (IMPORTRANGE) بورقة "ملخص المستفيدين المرتبط" (أيضًا المصدر المعتمد لعمود المصروف - راجع ملاحظة FINANCE أعلاه).
 // eng/stage/adherence وحقول الأسرة من ورقتي "لوحة سير المشروع" و"قاعدة بيانات الأسر" بالملف الموحّد (معتمد).
 const DATA = [
-{code:"MM4",name:"رائد نبيل احمد السويسي",eng:"م. رانيا مهنا",items:13,completion:0.4202015277,p1:1,p2:0.1677359151,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:13,hasExtended:true,disabled:0,chronic:0,warInjured:2,elderly:0},
-{code:"NS1",name:"منى نافذ محمود عبد العال",eng:"م. رانيا مهنا",items:11,completion:0.3041368744,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"NS2",name:"خديجه راشد يوسف عبد العال",eng:"م. رانيا مهنا",items:13,completion:0.4462840905,p1:1,p2:0.1315422947,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 55%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:6,hasExtended:true,disabled:1,chronic:1,warInjured:1,elderly:2},
-{code:"RM11",name:"مجدولين حاتم اسعد الوحيدي",eng:"م. رانيا مهنا",items:12,completion:0.081963714,p1:0.127342066,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)",
-  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:9,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
-{code:"RM5",name:"حنين روحي مصطفى الطناني",eng:"م. رانيا مهنا",items:14,completion:0.2967686022,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"MM5",name:"سلفيا نبيل احمد البهتيني",eng:"م. رانيا مهنا",items:14,completion:0.4182074309,p1:1,p2:0.097883959,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"MM6",name:"عطية احمد عثمان السويسي",eng:"م. رانيا مهنا",items:13,completion:0.5518597997,p1:1,p2:0.3542069321,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🟠 الإنجاز أبطأ من المخطط",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 45%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:false,disabled:3,chronic:0,warInjured:0,elderly:2},
-{code:"MM8",name:"خضر عبدالرحيم راشد الدلو",eng:"م. رانيا مهنا",items:11,completion:0.3632007302,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 64%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"MM9",name:"بلال اياد عبدالرحيم الدلو",eng:"م. رانيا مهنا",items:12,completion:0.3663182573,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 63%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:1,warInjured:0,elderly:0},
-{code:"NS9",name:"نداء جودت عبد المظلوم",eng:"م. رانيا مهنا",items:19,completion:0.3305497,p1:1,p2:0.0348334307,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:13,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"MF7",name:"جودت عبد طه المظلوم",eng:"م. رانيا مهنا",items:14,completion:0.3036001286,p1:1,p2:0.0673697805,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:true,disabled:2,chronic:2,warInjured:0,elderly:0},
-{code:"MS8",name:"يونس نعيم يونس قنيطة",eng:"م. رانيا مهنا",items:12,completion:0.0838625327,p1:0.1637192343,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)",
-  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:8,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
-{code:"MR6",name:"فوزية عبد العزيز مبروك ضبان",eng:"م. سماح ابراهيم",items:12,completion:0.3218645426,p1:1,p2:0.025203252,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:10,hasExtended:true,disabled:1,chronic:2,warInjured:0,elderly:1},
-{code:"MM2",name:"رسمية محمد ابراهيم الطنة",eng:"م. سماح ابراهيم",items:10,completion:0.5630567144,p1:1,p2:0.300890743,schedGood:false,eligGood:false,housing:"ملك",schedText:"🟠 الإنجاز أبطأ من المخطط",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 44%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
-{code:"MR3",name:"أيمن أحمد هاشم ضبان",eng:"م. سماح ابراهيم",items:11,completion:0.3257836198,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:2,warInjured:2,elderly:0},
-{code:"MS5",name:"محمد حسن مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:12,completion:0.3153747871,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"MS1",name:"حسن مصطفى حسني الجاعوني",eng:"م. سماح ابراهيم",items:11,completion:0.1695772059,p1:0.3996101365,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 83%)",
-  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:6,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:2},
-{code:"MR2",name:"رأفت أحمد هاشم ضبان",eng:"م. سماح ابراهيم",items:10,completion:0.3140764172,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:false,disabled:0,chronic:1,warInjured:1,elderly:0},
-{code:"MF8",name:"عطالله عايش محمد الفالوجى",eng:"م. سماح ابراهيم",items:12,completion:0,p1:0,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)",
-  stage:"لم يبدأ التنفيذ بعد",adherence:"ضمن الموعد المخطط",familySize:23,hasExtended:true,disabled:1,chronic:0,warInjured:0,elderly:1},
-{code:"MF6",name:"مصطفى سالم عايدي المشهراوي",eng:"م. سماح ابراهيم",items:11,completion:0.4006261266,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 60%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:9,hasExtended:true,disabled:0,chronic:0,warInjured:1,elderly:0},
-{code:"MF5",name:"محمود فريد احمد صبيح",eng:"م. سماح ابراهيم",items:7,completion:0,p1:0,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)",
-  stage:"لم يبدأ التنفيذ بعد",adherence:"ضمن الموعد المخطط",familySize:6,hasExtended:false,disabled:1,chronic:1,warInjured:0,elderly:0},
-{code:"SE5",name:"ناصر مصطفى حسني الجاعوني",eng:"م. سماح ابراهيم",items:11,completion:0.3089950651,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:1},
-{code:"SE6",name:"عمر ناصر مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:8,completion:0.3357505439,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 66%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:3,warInjured:1,elderly:0},
-{code:"SE7",name:"بلال ناصر مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:8,completion:0.3518024446,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 65%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
-{code:"SE11",name:"فوزي محمد فتحي عبد العليم المصري",eng:"م. سماح ابراهيم",items:13,completion:0.4109868741,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 59%)",
-  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:1,chronic:1,warInjured:1,elderly:0},
+{"code":"MM4","name":"رائد نبيل احمد السويسي","eng":"م. رانيا مهنا","items":13,"completion":0.4202015277,"p1":1.0,"p2":0.1677359151,"schedGood":false,"eligGood":false,"housing":"إستضافة","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":13,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":2,"elderly":0},
+{"code":"NS1","name":"منى نافذ محمود عبد العال","eng":"م. رانيا مهنا","items":11,"completion":0.3041368744,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":7,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"NS2","name":"خديجه راشد يوسف عبد العال","eng":"م. رانيا مهنا","items":13,"completion":0.4956190551,"p1":1.0,"p2":0.2089201151,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 50%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":6,"hasExtended":true,"disabled":1,"chronic":1,"warInjured":1,"elderly":2},
+{"code":"RM11","name":"مجدولين حاتم اسعد الوحيدي","eng":"م. رانيا مهنا","items":12,"completion":0.081963714,"p1":0.127342066,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)","stage":"قيد تنفيذ أعمال الدفعة الأولى","adherence":"ضمن الموعد المخطط","familySize":9,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":0,"elderly":1},
+{"code":"RM5","name":"حنين روحي مصطفى الطناني","eng":"م. رانيا مهنا","items":14,"completion":0.2967686022,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":5,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"MM5","name":"سلفيا نبيل احمد البهتيني","eng":"م. رانيا مهنا","items":14,"completion":0.4182074309,"p1":1.0,"p2":0.097883959,"schedGood":false,"eligGood":false,"housing":"إستضافة","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":5,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"MM6","name":"عطية احمد عثمان السويسي","eng":"م. رانيا مهنا","items":13,"completion":0.5518597997,"p1":1.0,"p2":0.3542069321,"schedGood":false,"eligGood":false,"housing":"إستضافة","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 45%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":8,"hasExtended":false,"disabled":3,"chronic":0,"warInjured":0,"elderly":2},
+{"code":"MM8","name":"خضر عبدالرحيم راشد الدلو","eng":"م. رانيا مهنا","items":11,"completion":0.3632007302,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 64%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":5,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"MM9","name":"بلال اياد عبدالرحيم الدلو","eng":"م. رانيا مهنا","items":12,"completion":0.3663182573,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 63%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":5,"hasExtended":false,"disabled":0,"chronic":1,"warInjured":0,"elderly":0},
+{"code":"NS9","name":"نداء جودت عبد المظلوم","eng":"م. رانيا مهنا","items":19,"completion":0.3305497,"p1":1.0,"p2":0.0348334307,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":13,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"MF7","name":"جودت عبد طه المظلوم","eng":"م. رانيا مهنا","items":14,"completion":0.3036001286,"p1":1.0,"p2":0.0673697805,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":7,"hasExtended":true,"disabled":2,"chronic":2,"warInjured":0,"elderly":0},
+{"code":"MS8","name":"يونس نعيم يونس قنيطة","eng":"م. رانيا مهنا","items":12,"completion":0.0838625327,"p1":0.1637192343,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)","stage":"قيد تنفيذ أعمال الدفعة الأولى","adherence":"ضمن الموعد المخطط","familySize":8,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":0,"elderly":1},
+{"code":"MR6","name":"فوزية عبد العزيز مبروك ضبان","eng":"م. سماح ابراهيم","items":12,"completion":0.3218645426,"p1":1.0,"p2":0.025203252,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":10,"hasExtended":true,"disabled":1,"chronic":2,"warInjured":0,"elderly":1},
+{"code":"MM2","name":"رسمية محمد ابراهيم الطنة","eng":"م. سماح ابراهيم","items":10,"completion":0.5630567144,"p1":1.0,"p2":0.300890743,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🟠 الإنجاز أبطأ من المخطط","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 44%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":8,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":0,"elderly":1},
+{"code":"MR3","name":"أيمن أحمد هاشم ضبان","eng":"م. سماح ابراهيم","items":11,"completion":0.3257836198,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":4,"hasExtended":false,"disabled":0,"chronic":2,"warInjured":2,"elderly":0},
+{"code":"MS5","name":"محمد حسن مصطفى الجاعوني","eng":"م. سماح ابراهيم","items":12,"completion":0.3153747871,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":7,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"MS1","name":"حسن مصطفى حسني الجاعوني","eng":"م. سماح ابراهيم","items":11,"completion":0.1695772059,"p1":0.3996101365,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 83%)","stage":"قيد تنفيذ أعمال الدفعة الأولى","adherence":"ضمن الموعد المخطط","familySize":6,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":0,"elderly":2},
+{"code":"MR2","name":"رأفت أحمد هاشم ضبان","eng":"م. سماح ابراهيم","items":10,"completion":0.3140764172,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":8,"hasExtended":false,"disabled":0,"chronic":1,"warInjured":1,"elderly":0},
+{"code":"MF8","name":"عطالله عايش محمد الفالوجى","eng":"م. سماح ابراهيم","items":12,"completion":0.0,"p1":0.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)","stage":"لم يبدأ التنفيذ بعد","adherence":"ضمن الموعد المخطط","familySize":23,"hasExtended":true,"disabled":1,"chronic":0,"warInjured":0,"elderly":1},
+{"code":"MF6","name":"مصطفى سالم عايدي المشهراوي","eng":"م. سماح ابراهيم","items":11,"completion":0.4006261266,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 60%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":9,"hasExtended":true,"disabled":0,"chronic":0,"warInjured":1,"elderly":0},
+{"code":"MF5","name":"محمود فريد احمد صبيح","eng":"م. سماح ابراهيم","items":7,"completion":0.0,"p1":0.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)","stage":"لم يبدأ التنفيذ بعد","adherence":"ضمن الموعد المخطط","familySize":6,"hasExtended":false,"disabled":1,"chronic":1,"warInjured":0,"elderly":0},
+{"code":"SE5","name":"ناصر مصطفى حسني الجاعوني","eng":"م. سماح ابراهيم","items":11,"completion":0.3089950651,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":4,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":1},
+{"code":"SE6","name":"عمر ناصر مصطفى الجاعوني","eng":"م. سماح ابراهيم","items":8,"completion":0.3357505439,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 66%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":7,"hasExtended":false,"disabled":0,"chronic":3,"warInjured":1,"elderly":0},
+{"code":"SE7","name":"بلال ناصر مصطفى الجاعوني","eng":"م. سماح ابراهيم","items":8,"completion":0.3518024446,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 65%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":4,"hasExtended":false,"disabled":0,"chronic":0,"warInjured":0,"elderly":0},
+{"code":"SE11","name":"فوزي محمد فتحي عبد العليم المصري","eng":"م. سماح ابراهيم","items":13,"completion":0.4109868741,"p1":1.0,"p2":0.0,"schedGood":false,"eligGood":false,"housing":"ملك","schedText":"🔴 الإنجاز متأخر عن الجدول الزمني","eligText":"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 59%)","stage":"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية","adherence":"✅ اكتملت الدفعة الأولى","familySize":7,"hasExtended":false,"disabled":1,"chronic":1,"warInjured":1,"elderly":0},
 ];
 /* ================================================================================================= */
 
@@ -827,6 +1003,43 @@ const lateCount = DATA.filter(d=>!d.schedGood).length;
 const ZERO_PROGRESS = DATA.every(d=>d.completion===0 && d.p1===0 && d.p2===0);
 const PRE_EXECUTION = ZERO_PROGRESS && FINANCE.totalDisbursed===0;
 
+/* ---------- التغيّر منذ آخر لقطة يوم سابق (PREV يكتبه سكربت التحديث) ---------- */
+const PREV_ROWS = (typeof PREV!=="undefined" && PREV && PREV.rows) ? PREV.rows : null;
+const PREV_DATE = PREV_ROWS ? PREV.date : null;
+DATA.forEach(d=>{
+  const p = PREV_ROWS && PREV_ROWS[d.code];
+  d.delta = p ? (d.completion - p[0])*100 : null;          // بالنقاط المئوية
+  d.prevStage = p ? p[3] : null;
+});
+const HAS_DELTA = DATA.some(d=>d.delta!=null);
+function deltaHtml(v){
+  if(v==null) return `<span class="delta flat">—</span>`;
+  if(Math.abs(v)<0.05) return `<span class="delta flat">0</span>`;
+  return `<span class="delta ${v>0?'up':'down'}">${v>0?'▲ +':'▼ '}${v.toFixed(1)}</span>`;
+}
+function deltaTxt(v){ return v==null ? "—" : (Math.abs(v)<0.05 ? "0" : (v>0?"+":"")+v.toFixed(1)); }
+
+/* ---------- المسار المخطط مقابل الفعلي ---------- */
+const AR_MONTHS = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+function arDate(iso){ const [y,m,d] = iso.split("-").map(Number); return `${d} ${AR_MONTHS[m-1]}`; }
+function addDays(iso, n){ const t = new Date(iso+"T00:00:00Z"); t.setUTCDate(t.getUTCDate()+Math.round(n)); return t.toISOString().slice(0,10); }
+function planPct(iso){
+  const f = dayDiff(PLAN.start, iso) / Math.max(1, dayDiff(PLAN.start, PLAN.end));
+  return Math.max(0, Math.min(1, f))*100;
+}
+const ACTUAL_PCT = avgCompletionAll*100;
+const PLAN_TODAY = planPct(REPORT_DATE);
+const GAP = PLAN_TODAY - ACTUAL_PCT;
+const DAYS_TO_FULL = dayDiff(REPORT_DATE, PLAN.fullBy);
+const REQUIRED_RATE = DAYS_TO_FULL>0 ? (100-ACTUAL_PCT)/DAYS_TO_FULL : null;
+// بداية التنفيذ الفعلي = أول تاريخ استلام للدفعة الأولى (المقدّمة) - أساس حساب الوتيرة الحالية
+const EXEC_START = (FINANCE.receipts && FINANCE.receipts[0] && FINANCE.receipts[0].dates.length) ? FINANCE.receipts[0].dates[0] : null;
+const EXEC_DAYS = EXEC_START ? dayDiff(EXEC_START, REPORT_DATE) : 0;
+const CURRENT_RATE = (EXEC_DAYS>0 && ACTUAL_PCT>0) ? ACTUAL_PCT/EXEC_DAYS : null;
+const PROJECTED_FULL = CURRENT_RATE ? addDays(REPORT_DATE, (100-ACTUAL_PCT)/CURRENT_RATE) : null;
+const P1_DONE = DATA.filter(d=>d.p1>=0.999).length;
+const P2_DONE = DATA.filter(d=>d.p2>=0.999).length;
+
 /* ---------- المسار الزمني: الحساب ---------- */
 function dayDiff(a,b){ return (new Date(b)-new Date(a))/86400000; }
 const spanDays = Math.max(1, Math.round(dayDiff(MILESTONES[0].date, MILESTONES[MILESTONES.length-1].date)));
@@ -847,6 +1060,7 @@ const todayPos = (()=>{
 /* ---------- كتلة بيانات المخطط (Title block) ---------- */
 document.getElementById("titleBlock").innerHTML = `
   <div class="tb-row"><span class="k">تاريخ اللقطة</span><span class="v">${ltr(REPORT_DATE)}</span></div>
+  <div class="tb-row"><span class="k">آخر مزامنة مع المصدر</span><span class="v">${(typeof SYNC!=="undefined" && SYNC) ? ltr(SYNC.at) : "—"}</span></div>
   <div class="tb-row"><span class="k">إعداد وتصميم</span><span class="v">م. نعيم شاهين</span></div>
   <div class="tb-row"><span class="k">عدد المستفيدين</span><span class="v">${total} وحدة سكنية</span></div>
   <div class="tb-row"><span class="k">الإشراف الميداني</span><span class="v">${ENGINEERS.length} مهندسات</span></div>
@@ -969,6 +1183,31 @@ if(FINANCE.contractsSum!=null && Math.abs(FINANCE.contractsSum-FINANCE.totalGran
 } else {
   document.getElementById("financeReconcileNote").innerHTML = "";
 }
+
+/* ---------- جاهزية طلب الدفعات: المخطط / المستحق حسب الإنجاز / المصروف ---------- */
+const READY_COUNTS = [P1_DONE, P2_DONE, eligibleCount];
+const READY_ROWS = FINANCE.payments.map((p,i)=>{
+  const earned = FINANCE.earned ? FINANCE.earned.payments[i] : null;
+  const rc = FINANCE.receipts ? FINANCE.receipts[i] : null;
+  return {label:p.label, planned:p.planned, earned, actual:p.actual,
+          diff: earned==null ? null : earned - p.actual, ready:READY_COUNTS[i], received: rc ? rc.received : null};
+});
+(function renderReadiness(){
+  const el = document.getElementById("readyWrap");
+  const money = v => v==null ? "—" : `${v.toLocaleString("en-US",{maximumFractionDigits:0})}<span class="cur">₪</span>`;
+  const diffCell = v => v==null ? "—" : `<span class="${v>=0?'pos':'neg'}">${v>=0?'+':'−'}${Math.abs(v).toLocaleString("en-US",{maximumFractionDigits:0})}<span class="cur">₪</span></span>`;
+  el.innerHTML = `
+    <div class="card-title">جاهزية طلب الدفعات</div>
+    <div class="ready-wrap"><table>
+      <thead><tr><th>الدفعة</th><th>المخطط</th><th>المستحق حسب الإنجاز</th><th>المصروف فعليًا</th><th>الفرق (مستحق − مصروف)</th><th>أنجزوا أعمالها</th><th>استلموها</th></tr></thead>
+      <tbody>${READY_ROWS.map(r=>`<tr>
+        <td>${esc(r.label)}</td><td class="n">${money(r.planned)}</td><td class="n">${money(r.earned)}</td>
+        <td class="n">${money(r.actual)}</td><td class="n">${diffCell(r.diff)}</td>
+        <td><span class="num-ratio">${r.ready} / ${total}</span></td>
+        <td>${r.received==null ? "—" : `<span class="num-ratio">${r.received} / ${total}</span>`}</td></tr>`).join("")}</tbody>
+    </table></div>
+    <div class="ready-note">المستحق حسب الإنجاز = قيمة ما نُفِّذ فعلًا من بنود كل دفعة وفق الملف المصدر. الفرق الموجب مبلغ استحقه المستفيدون ولم يُصرف بعد، والسالب مبلغ صُرف مقدّمًا قبل استكمال الأعمال المقابلة له. كل الأرقام على مستوى المشروع ككل.</div>`;
+})();
 
 /* ---------- الأثر الإنساني ---------- */
 document.getElementById("impactHero").innerHTML =
@@ -1097,7 +1336,74 @@ function renderTrend(history){
     z.addEventListener("mouseleave", ()=> tip.classList.remove("show"));
   });
 }
-renderTrend(HISTORY);
+/* ---------- الإنجاز الفعلي مقابل المسار المخطط ---------- */
+function renderPva(){
+  const wrap = document.getElementById("trendWrap");
+  const pts = HISTORY.filter(h=>typeof h.completion==="number")
+                     .map(h=>({date:h.date, v:h.completion}));
+  const W=560, H=236, padT=14, padB=30, padL=12, padR=40;
+  const iw = W-padL-padR, ih = H-padT-padB;
+  const span = Math.max(1, dayDiff(PLAN.start, PLAN.end));
+  // المحور الزمني من اليمين لليسار (نفس اتجاه مخطط المعالم المجاور): البداية يمينًا
+  const x = iso => W - padR - Math.max(0, Math.min(1, dayDiff(PLAN.start, iso)/span))*iw;
+  const y = v => padT + (100-Math.max(0,Math.min(100,v)))/100*ih;
+  let svg = `<svg class="trend-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="منحنى الإنجاز الفعلي مقابل المسار المخطط">`;
+  [0,25,50,75,100].forEach(v=>{
+    svg += `<line x1="${padL}" y1="${y(v).toFixed(1)}" x2="${W-padR}" y2="${y(v).toFixed(1)}" stroke="var(--rule)" stroke-width="1"/>`;
+    svg += `<text x="${W-padR+8}" y="${(y(v)+3.5).toFixed(1)}" font-size="10" fill="var(--ink-3)" text-anchor="start" font-family="IBM Plex Sans Arabic, sans-serif">${v}%</text>`;
+  });
+  // بدايات الأشهر
+  const [sy, sm] = PLAN.start.split("-").map(Number);
+  for(let k=0; k<12; k++){
+    const m = (sm-1+k)%12, yy = sy + Math.floor((sm-1+k)/12);
+    const iso = `${yy}-${String(m+1).padStart(2,"0")}-01`;
+    if(dayDiff(PLAN.start, iso) < 0 || dayDiff(iso, PLAN.end) < 0) break;
+    svg += `<line x1="${x(iso).toFixed(1)}" y1="${H-padB}" x2="${x(iso).toFixed(1)}" y2="${H-padB+5}" stroke="var(--rule-2)" stroke-width="1"/>`;
+    svg += `<text x="${x(iso).toFixed(1)}" y="${H-padB+18}" font-size="10" fill="var(--ink-3)" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif">${AR_MONTHS[m]}</text>`;
+  }
+  // موعد الإنجاز الكامل المطلوب (طلب الدفعة الثالثة)
+  const xf = x(PLAN.fullBy);
+  svg += `<line x1="${xf.toFixed(1)}" y1="${padT}" x2="${xf.toFixed(1)}" y2="${H-padB}" stroke="var(--ink-3)" stroke-width="1" stroke-dasharray="2 3"/>`;
+  svg += `<text x="${(xf-4).toFixed(1)}" y="${padT+10}" font-size="9.5" fill="var(--ink-3)" text-anchor="end" font-family="IBM Plex Sans Arabic, sans-serif">100% مطلوبة ${arDate(PLAN.fullBy)}</text>`;
+  // المسار المخطط
+  svg += `<line x1="${x(PLAN.start).toFixed(1)}" y1="${y(0).toFixed(1)}" x2="${x(PLAN.end).toFixed(1)}" y2="${y(100).toFixed(1)}" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="6 5"/>`;
+  // اليوم + الفجوة
+  const xt = x(REPORT_DATE);
+  svg += `<line x1="${xt.toFixed(1)}" y1="${padT}" x2="${xt.toFixed(1)}" y2="${H-padB}" stroke="var(--copper)" stroke-width="1.5"/>`;
+  if(GAP > 1){
+    svg += `<line x1="${xt.toFixed(1)}" y1="${y(PLAN_TODAY).toFixed(1)}" x2="${xt.toFixed(1)}" y2="${y(ACTUAL_PCT).toFixed(1)}" stroke="var(--crit)" stroke-width="4" opacity=".35"/>`;
+  }
+  svg += `<circle cx="${xt.toFixed(1)}" cy="${y(PLAN_TODAY).toFixed(1)}" r="4" fill="var(--surface)" stroke="var(--ink-3)" stroke-width="2"/>`;
+  // الفعلي
+  if(pts.length){
+    const path = pts.map((p,i)=>`${i?'L':'M'}${x(p.date).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
+    const area = `${path} L${x(pts[pts.length-1].date).toFixed(1)},${y(0).toFixed(1)} L${x(pts[0].date).toFixed(1)},${y(0).toFixed(1)} Z`;
+    svg += `<path d="${area}" fill="var(--primary)" opacity=".10"/>`;
+    svg += `<path d="${path}" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+    pts.forEach((p,i)=>{
+      const last = i===pts.length-1;
+      svg += `<circle cx="${x(p.date).toFixed(1)}" cy="${y(p.v).toFixed(1)}" r="${last?5:3}" fill="var(--primary)" stroke="var(--surface)" stroke-width="${last?2:1.5}"><title>${p.date}: ${p.v.toFixed(1)}%</title></circle>`;
+    });
+    const lp = pts[pts.length-1];
+    svg += `<text x="${(x(lp.date)-8).toFixed(1)}" y="${(y(lp.v)+4).toFixed(1)}" font-size="12" font-weight="600" fill="var(--primary)" text-anchor="end" font-family="Readex Pro, sans-serif">${lp.v.toFixed(1)}%</text>`;
+  }
+  svg += `</svg>`;
+  const rateTxt = REQUIRED_RATE!=null ? `${REQUIRED_RATE.toFixed(1)} نقطة/يوم` : "انتهت المدة";
+  wrap.innerHTML = `
+    <div class="pva-legend">
+      <span><i style="--c:var(--primary)"></i>الإنجاز الفعلي (متوسط الـ${total} حالة)</span>
+      <span><i class="dash" style="--c:var(--ink-3)"></i>المسار المخطط (وتيرة الوقت)</span>
+      <span><i style="--c:var(--copper)"></i>اليوم</span>
+    </div>
+    ${svg}
+    <div class="pva-stats">
+      <div class="pva-stat ${GAP>10?'is-bad':''}"><div class="v">${GAP>0?'−':'+'}${Math.abs(GAP).toFixed(1)} نقطة</div><div class="k">الفجوة عن المخطط اليوم (المخطط ${PLAN_TODAY.toFixed(0)}%)</div></div>
+      <div class="pva-stat"><div class="v">${rateTxt}</div><div class="k">المعدل اليومي المطلوب لبلوغ 100% بحلول ${arDate(PLAN.fullBy)}</div></div>
+      <div class="pva-stat ${PROJECTED_FULL && PROJECTED_FULL>PLAN.fullBy?'is-bad':''}"><div class="v">${PROJECTED_FULL ? arDate(PROJECTED_FULL) : "—"}</div><div class="k">الإنجاز الكامل المتوقع بالوتيرة الحالية${CURRENT_RATE?` (${CURRENT_RATE.toFixed(1)} نقطة/يوم)`:""}</div></div>
+    </div>
+    <div class="pva-foot">المسار المخطط خطي على مدة المشروع من ${arDate(PLAN.start)} إلى ${arDate(PLAN.end)}. الوتيرة الحالية محسوبة من بداية التنفيذ الفعلي${EXEC_START?` (أول استلام للدفعة الأولى ${ltr(EXEC_START)})`:""} حتى اليوم.</div>`;
+}
+renderPva();
 
 /* ---------- بطاقات المهندسات ---------- */
 const CIRC = 2*Math.PI*33;
@@ -1129,6 +1435,7 @@ document.getElementById("engGrid").innerHTML = ENGINEERS.map(key=>{
       </svg>
       <div class="eng-stats">
         <div class="srow"><span class="k">متوسط السكور</span><span class="v">${avgS.toFixed(1)}</span></div>
+        ${HAS_DELTA ? `<div class="srow"><span class="k">تغيّر الإنجاز منذ ${ltr(PREV_DATE)}</span>${deltaHtml(avg(list.filter(d=>d.delta!=null).map(d=>d.delta)))}</div>` : ""}
         <div class="srow"><span class="k">مؤهل للدفعة الأخيرة</span><span class="v">${eligN}</span></div>
         <div class="srow"><span class="k">ملتزم بالجدول الزمني</span><span class="v num-ratio">${onSched} / ${list.length}</span></div>
         <div><div class="cls-bar">${bars}</div><div class="cls-key">${key2}</div></div>
@@ -1187,19 +1494,20 @@ function renderTable(filtered){
     const color = engColorVar(key);
     const list = filtered.filter(d=>d.eng===key);
     if(!list.length) return;
-    rows += `<tr class="grp"><td colspan="8"><span class="eng-pill"><span class="dot" style="background:${color}"></span>${esc(key)} — ${list.length} مستفيدًا</span></td></tr>`;
+    rows += `<tr class="grp"><td colspan="9"><span class="eng-pill"><span class="dot" style="background:${color}"></span>${esc(key)} — ${list.length} مستفيدًا</span></td></tr>`;
     list.forEach((d,i)=>{
       rows += `<tr class="row-main" data-code="${d.code}">
         <td>${i+1}</td>
         <td class="name-cell"><span class="chev">◀</span>${esc(d.name)}</td>
         <td><span class="code">${d.code}</span></td>
         <td><span class="mini-bar"><span data-w="${fmtPct(d.completion)}"></span></span>${fmtPct(d.completion)}</td>
+        <td>${deltaHtml(d.delta)}</td>
         <td>${d.schedGood ? tag("مطابق","t-good") : tag("متأخر","t-crit")}</td>
         <td>${d.eligGood ? tag("مؤهل","t-good") : tag("غير مؤهل","t-crit")}</td>
         <td class="score">${d.score}</td>
         <td>${tag(d.cls, CLS_TAG[d.cls])}</td>
       </tr>
-      <tr class="detail-row" data-detail-for="${d.code}"><td colspan="8"><div class="detail-grid">
+      <tr class="detail-row" data-detail-for="${d.code}"><td colspan="9"><div class="detail-grid">
         <div>
           <div class="ditem"><span class="k">حالة السكن</span><span class="v">${esc(d.housing)}</span></div>
           <div class="ditem"><span class="k">المرحلة الحالية</span><span class="v">${esc(d.stage)}</span></div>
@@ -1219,7 +1527,7 @@ function renderTable(filtered){
       </div></td></tr>`;
     });
   });
-  document.getElementById("tbody").innerHTML = rows || `<tr class="empty-row"><td colspan="8">لا يوجد مستفيدون مطابقون لمعايير البحث أو الفلترة الحالية.</td></tr>`;
+  document.getElementById("tbody").innerHTML = rows || `<tr class="empty-row"><td colspan="9">لا يوجد مستفيدون مطابقون لمعايير البحث أو الفلترة الحالية.</td></tr>`;
   document.getElementById("fCount").textContent = `عرض ${filtered.length} من ${total}`;
   animateFills(document.getElementById("tbody"));
 }
@@ -1241,6 +1549,7 @@ document.getElementById("tbody").addEventListener("click", e=>{
   row.classList.toggle("open", open);
   if(detail) detail.classList.toggle("open", open);
 });
+document.getElementById("thDelta").textContent = HAS_DELTA ? `التغيّر منذ ${PREV_DATE}` : "التغيّر";
 applyFilters();
 
 /* ---------- المخطط التخطيطي لمواقع تواجد المستفيدين ---------- */
@@ -1346,6 +1655,365 @@ function renderSitePlan(){
   noteEl.textContent = 'مخطط تخطيطي يقرّب المواقع النسبية لبعضها البعض على مقياس محلي تقديري، وليس خريطة شوارع دقيقة - استخدم زر "فتح في خرائط جوجل" للوصول للموقع الفعلي.';
 }
 renderSitePlan();
-</script>
 
-</body></html>
+/* ======================================================================= الملخص التنفيذي */
+function daysAr(n){ n=Math.round(n); if(n===1) return "يوم واحد"; if(n===2) return "يومان"; if(n>=3 && n<=10) return `${n} أيام`; return `${n} يومًا`; }
+const MS_P1 = MILESTONES.find(m=>m.label.includes("الأولى"));
+const MS_P2 = MILESTONES.find(m=>m.label.includes("الثانية"));
+const NEXT_MS = MILESTONES.find(m=>m.date>=REPORT_DATE) || null;
+const DAYS_TO_NEXT = NEXT_MS ? Math.round(dayDiff(REPORT_DATE, NEXT_MS.date)) : null;
+const ENG_STATS = ENGINEERS.map(e=>{
+  const list = DATA.filter(d=>d.eng===e), ds = list.filter(d=>d.delta!=null);
+  return {eng:e, n:list.length, completion:avg(list.map(d=>d.completion))*100, score:avg(list.map(d=>d.score)),
+          delta: ds.length ? avg(ds.map(d=>d.delta)) : null, late:list.filter(d=>!d.schedGood).length,
+          p1Done:list.filter(d=>d.p1>=0.999).length, notStarted:list.filter(d=>d.completion===0).length};
+});
+
+const RISKS = (()=>{
+  const out = [];
+  DATA.forEach(d=>{
+    if(d.completion===0){
+      out.push({sev:"crit", d, why:"لم يبدأ التنفيذ بعد — لا بنود منجزة في جدول الكميات"});
+    } else if(MS_P1 && d.p1<0.999){
+      const n = Math.round(dayDiff(REPORT_DATE, MS_P1.date));
+      out.push({sev:"high", d, why: n>=0
+        ? `أعمال الدفعة الأولى منجزة بنسبة ${fmtPct(d.p1)} وموعد طلبها بعد ${daysAr(n)}`
+        : `تجاوز موعد طلب الدفعة الأولى (${arDate(MS_P1.date)}) وأعمالها منجزة بنسبة ${fmtPct(d.p1)}`});
+    }
+    if(d.delta!=null && d.delta < -0.05){
+      out.push({sev:"med", d, why:`انخفضت نسبة الإنجاز ${Math.abs(d.delta).toFixed(1)} نقطة منذ ${PREV_DATE} — يُراجَع إدخال الكميات`});
+    }
+  });
+  const rank = {crit:0, high:1, med:2};
+  return out.sort((a,b)=>rank[a.sev]-rank[b.sev] || a.d.completion-b.d.completion);
+})();
+const SEV_LABEL = {crit:"حرج", high:"عاجل", med:"للمراجعة"};
+
+const EXEC = (()=>{
+  const fmt0 = v => v.toLocaleString("en-US",{maximumFractionDigits:0});
+  const headline = GAP > 2
+    ? `المشروع في يومه ${elapsedClamped} من ${spanDays} (${PLAN_TODAY.toFixed(0)}% من المدة)، ومتوسط الإنجاز الميداني ${ACTUAL_PCT.toFixed(1)}% — أي <b>متأخر ${GAP.toFixed(1)} نقطة</b> عن الوتيرة المخططة.`
+    : `المشروع في يومه ${elapsedClamped} من ${spanDays} (${PLAN_TODAY.toFixed(0)}% من المدة)، ومتوسط الإنجاز الميداني ${ACTUAL_PCT.toFixed(1)}% — مطابق للوتيرة المخططة أو أسرع.`;
+  const b = [];
+  const rc = FINANCE.receipts || [];
+  b.push(`<b>الدفعة الأولى:</b> أنجز ${P1_DONE} من ${total} مستفيدًا أعمالها بالكامل${rc[0]?`، واستلمها ${rc[0].received} مستفيدًا`:""}.`);
+  if(MS_P2){
+    const n = Math.round(dayDiff(REPORT_DATE, MS_P2.date));
+    b.push(`<b>الدفعة الثانية:</b> أنجز ${P2_DONE} من ${total} أعمالها بالكامل${n>=0?`، وموعد طلبها ${arDate(MS_P2.date)} (بعد ${daysAr(n)})`:""}.`);
+  }
+  b.push(`<b>الصرف:</b> ${fmt0(FINANCE.totalDisbursed)} ₪ (${FINANCE.disbursedPct.toFixed(1)}% من المنحة)${FINANCE.earned?` مقابل ${fmt0(FINANCE.earned.total)} ₪ مستحقة حسب الإنجاز`:""}.`);
+  if(HAS_DELTA){
+    const up = DATA.filter(d=>d.delta>0.05).length, down = DATA.filter(d=>d.delta<-0.05).length;
+    const ad = avg(DATA.filter(d=>d.delta!=null).map(d=>d.delta));
+    b.push(`<b>منذ ${PREV_DATE}:</b> تقدّمت ${up} حالة${down?` وتراجعت ${down}`:""}، وتغيّر متوسط الإنجاز ${deltaTxt(ad)} نقطة.`);
+  }
+  b.push(`<b>حسب المهندسة:</b> ${ENG_STATS.map(s=>`${s.eng} ${s.completion.toFixed(0)}% (${s.n} حالة)`).join(" · ")}.`);
+  const strip = h => h.replace(/<[^>]+>/g,"");
+  return {headline, bullets:b, headlineTxt:strip(headline), bulletsTxt:b.map(strip)};
+})();
+
+(function renderExec(){
+  document.getElementById("execMain").innerHTML = `
+    <div class="eyebrow">الملخص التنفيذي · ${ltr(REPORT_DATE)}</div>
+    <p class="exec-head">${EXEC.headline}</p>
+    <ul class="exec-list">${EXEC.bullets.map(x=>`<li><span>${x}</span></li>`).join("")}</ul>`;
+  const cd = NEXT_MS ? `<div class="countdown">
+      <div class="cd-num">${DAYS_TO_NEXT===0 ? "اليوم" : arNum(DAYS_TO_NEXT)}</div>
+      <div class="cd-txt"><b>${esc(NEXT_MS.label)}</b>${DAYS_TO_NEXT===0 ? `موعده اليوم ${arDate(NEXT_MS.date)}` : `بعد ${daysAr(DAYS_TO_NEXT)} · ${arDate(NEXT_MS.date)}`}</div>
+    </div>` : "";
+  const list = RISKS.length
+    ? `<ul class="risks">${RISKS.map(r=>`<li class="risk">
+        <span class="sev sev-${r.sev}">${SEV_LABEL[r.sev]}</span>
+        <span class="who">${esc(r.d.name)}<span class="code">${esc(r.d.code)}</span></span>
+        <span class="pct">${fmtPct(r.d.completion)}</span>
+        <span class="why">${esc(r.why)} · ${esc(r.d.eng)}</span></li>`).join("")}</ul>`
+    : `<div class="no-risk">لا توجد حالات حرجة أو عاجلة في هذه اللقطة.</div>`;
+  document.getElementById("execSide").innerHTML = cd +
+    `<div class="risk-title">حالات تحتاج تدخّلًا<span>${RISKS.length} حالة</span></div>` + list;
+})();
+
+/* ======================================================================= حالة المزامنة */
+(function renderSync(){
+  const el = document.getElementById("syncBadge");
+  if(typeof SYNC==="undefined" || !SYNC){ el.innerHTML = `<i></i>تاريخ اللقطة ${ltr(REPORT_DATE)}`; return; }
+  const t = Date.parse(SYNC.at.replace(" ","T")+":00+03:00");
+  const stale = !(Date.now()-t < 30*3600e3);
+  el.classList.toggle("is-stale", stale);
+  el.innerHTML = `<i></i>${stale ? "آخر مزامنة ناجحة مع الملف المصدر:" : "تتحدّث تلقائيًا من الملف المصدر — آخر مزامنة:"} ${ltr(SYNC.at)} (${esc(SYNC.tz||"")})`;
+})();
+
+/* ======================================================================= التنزيل (PDF / Excel) */
+const LIBS = {
+  pdf:  "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",
+  xlsx: "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js",
+};
+const _libs = {};
+function loadLib(k){
+  return _libs[k] || (_libs[k] = new Promise((res, rej)=>{
+    const s = document.createElement("script");
+    s.src = LIBS[k]; s.onload = ()=>res();
+    s.onerror = ()=>{ delete _libs[k]; rej(Object.assign(new Error("lib"), {code:"lib"})); };
+    document.head.appendChild(s);
+  }));
+}
+
+let DOWNLOADS = null;
+(async ()=>{
+  try{
+    DOWNLOADS = (window.claude && typeof window.claude.use==="function") ? await window.claude.use("downloads") : null;
+  }catch(e){ DOWNLOADS = null; }
+  if(DOWNLOADS) document.getElementById("dlGroup").hidden = false;
+})();
+
+async function runDownload(kind){
+  const msg = document.getElementById("dlMsg");
+  const btns = [...document.querySelectorAll(".dl-btn")];
+  btns.forEach(b=>b.disabled = true);
+  msg.className = "dl-msg";
+  msg.textContent = kind==="pdf" ? "جارٍ إعداد تقرير PDF…" : "جارٍ إعداد ملف Excel…";
+  try{
+    const file = kind==="pdf" ? await buildPdf() : await buildXlsx();
+    msg.textContent = "بانتظار تأكيد الحفظ…";
+    await DOWNLOADS.save(file);
+    msg.textContent = "تم حفظ الملف.";
+  }catch(e){
+    const code = e && e.code;
+    if(code==="declined"){ msg.textContent = ""; }
+    else if(code==="rate_limited"){ msg.textContent = "توجد نافذة حفظ مفتوحة بالفعل. أكملها ثم أعد المحاولة."; }
+    else {
+      msg.className = "dl-msg is-err";
+      msg.textContent = code==="lib" ? "تعذّر تحميل أداة إنشاء الملف. تحقق من الاتصال ثم أعد المحاولة."
+        : (["unavailable","not_granted","capability_disabled","capability_removed","extension_not_enabled"].includes(code)
+            ? "التنزيل غير متاح في طريقة العرض هذه." : "تعذّر إنشاء الملف. أعد المحاولة.");
+      if(!code) console.error(e);
+    }
+  }finally{
+    btns.forEach(b=>b.disabled = false);
+  }
+}
+document.getElementById("dlPdf").addEventListener("click", ()=>runDownload("pdf"));
+document.getElementById("dlXlsx").addEventListener("click", ()=>runDownload("xlsx"));
+
+/* ---------- تقرير PDF: صفحات A4 يرسمها المتصفح نفسه (تشكيل عربي سليم) ثم تُجمَع بـ jsPDF ---------- */
+const RP_W = 794, RP_H = 1123, RP_PAD = 38, RP_FOOT = 30;
+// خط التقرير من خطوط النظام عمدًا: خطوط Google لا تصل إلى الصورة المرسومة، فيجب أن يُقاس التخطيط ويُرسَم بنفس الخط.
+const RP_CSS = `
+.rp-page{all:initial; display:block; width:${RP_W}px; height:${RP_H}px; padding:${RP_PAD}px ${RP_PAD}px ${RP_PAD+RP_FOOT}px; position:relative; overflow:hidden;
+  background:#fff; color:#12202C; direction:rtl; font-family:Tahoma,"Segoe UI","Noto Sans Arabic","DejaVu Sans",Arial,sans-serif;
+  font-size:11.5px; line-height:1.65; box-sizing:border-box; letter-spacing:0}
+.rp-page *{box-sizing:border-box; letter-spacing:0}
+.rp-hd{background:#0A1B2E; color:#fff; padding:18px 22px 16px; border-bottom:3px solid #D2601A; border-radius:6px; margin-bottom:6px}
+.rp-k{color:#F08A3E; font-size:11px; font-weight:600}
+.rp-t{font-size:21px; font-weight:700; margin:3px 0 9px}
+.rp-meta{display:flex; gap:6px 20px; flex-wrap:wrap; color:#C9D6E4; font-size:11px}
+.rp-meta b{color:#fff}
+.rp-h2{font-size:14px; font-weight:700; margin:16px 0 8px; padding-bottom:5px; border-bottom:1.5px solid #D2601A}
+.rp-lead{font-size:13px; font-weight:700; margin:0 0 6px; line-height:1.75}
+.rp-ul{margin:0; padding:0 18px 0 0}
+.rp-ul li{margin:2px 0}
+.rp-kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:7px}
+.rp-kpi{border:1px solid #DCE3EC; border-radius:6px; padding:8px 10px; background:#F4F7FB}
+.rp-kpi .l{font-size:10.5px; color:#566572}
+.rp-kpi .v{font-size:18px; font-weight:700; color:#14508F; line-height:1.3}
+.rp-kpi .s{font-size:10px; color:#7C8B98}
+.rp-page table{width:100%; border-collapse:collapse; font-size:10.5px; table-layout:auto}
+.rp-page th{background:#EEF2F7; color:#4A5967; font-weight:700; text-align:right; padding:5px 6px; border-bottom:1px solid #C3CEDA}
+.rp-page td{padding:4px 6px; border-bottom:1px solid #E3E9F0; vertical-align:top; text-align:right}
+.rp-page .n{direction:ltr; unicode-bidi:isolate; white-space:nowrap}
+.rp-page .up{color:#17784A; font-weight:700} .rp-page .down{color:#B3302B; font-weight:700}
+.rp-note{font-size:10px; color:#7C8B98; margin-top:5px; line-height:1.7}
+.rp-ft{font-size:9.5px; color:#7C8B98; margin-top:14px; padding-top:8px; border-top:1px solid #DCE3EC; line-height:1.75}
+.rp-foot{position:absolute; left:${RP_PAD}px; right:${RP_PAD}px; bottom:16px; display:flex; justify-content:space-between;
+  font-size:9.5px; color:#7C8B98; border-top:1px solid #E3E9F0; padding-top:6px}`;
+
+function reportBlocks(){
+  const f0 = v => v.toLocaleString("en-US",{maximumFractionDigits:0});
+  const n = v => `<span class="n">${esc(v)}</span>`;
+  const dl = v => v==null ? "—" : `<span class="n ${v>0.05?"up":(v<-0.05?"down":"")}">${deltaTxt(v)}</span>`;
+  const sevColor = {crit:"#B3302B", high:"#A34418", med:"#96700F"};
+  const kpis = [
+    ["متوسط الإنجاز الميداني", `${ACTUAL_PCT.toFixed(1)}%`, `المخطط اليوم ${PLAN_TODAY.toFixed(0)}%`],
+    ["الفجوة عن المخطط", `${GAP.toFixed(1)}`, "نقطة مئوية"],
+    ["متوسط السكور العام", avgScore.toFixed(1), "من 100"],
+    ["نسبة الصرف من المنحة", `${FINANCE.disbursedPct.toFixed(1)}%`, `${f0(FINANCE.totalDisbursed)} ₪ من ${f0(FINANCE.totalGrant)} ₪`],
+    ["مؤهل للدفعة الأخيرة", `${eligibleCount} / ${total}`, "يتطلب إنجاز 100%"],
+    ["متأخر عن الجدول", `${lateCount} / ${total}`, "حسب الملف المصدر"],
+  ];
+  const B = [];
+  B.push({html:`<div class="rp-hd">
+    <div class="rp-k">تقرير سير العمل · متابعة الإشراف الهندسي الميداني</div>
+    <div class="rp-t">المساعدة النقدية لإصلاح المأوى الطارئ (${total} مستفيدًا)</div>
+    <div class="rp-meta"><span>تاريخ اللقطة: <b>${n(REPORT_DATE)}</b></span>${(typeof SYNC!=="undefined"&&SYNC)?`<span>آخر مزامنة: <b>${n(SYNC.at)}</b></span>`:""}<span>الإشراف الميداني: <b>${ENGINEERS.map(esc).join("، ")}</b></span><span>إعداد: <b>م. نعيم شاهين</b></span></div>
+  </div>`});
+  B.push({html:`<div><div class="rp-h2">الملخص التنفيذي</div>
+    <div class="rp-lead">${esc(EXEC.headlineTxt)}</div>
+    <ul class="rp-ul">${EXEC.bulletsTxt.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
+    ${NEXT_MS?`<div class="rp-note">المعلم القادم: ${esc(NEXT_MS.label)}، ${arDate(NEXT_MS.date)} (${DAYS_TO_NEXT===0?"اليوم":`بعد ${daysAr(DAYS_TO_NEXT)}`}).</div>`:""}</div>`});
+  B.push({html:`<div><div class="rp-h2">المؤشرات الرئيسية</div>
+    <div class="rp-kpis">${kpis.map(k=>`<div class="rp-kpi"><div class="l">${k[0]}</div><div class="v">${n(k[1])}</div><div class="s">${esc(k[2])}</div></div>`).join("")}</div>
+    <div class="rp-note">المسار المخطط خطي على مدة المشروع (${arDate(PLAN.start)} إلى ${arDate(PLAN.end)}). المعدل اليومي المطلوب لبلوغ 100% بحلول ${arDate(PLAN.fullBy)}: ${REQUIRED_RATE!=null?REQUIRED_RATE.toFixed(1)+" نقطة/يوم":"—"}${PROJECTED_FULL?`. الإنجاز الكامل المتوقع بالوتيرة الحالية: ${arDate(PROJECTED_FULL)}`:""}.</div></div>`});
+  B.push({title:"الوضع المالي وجاهزية طلب الدفعات (مستوى المشروع)",
+    head:`<tr><th>الدفعة</th><th>المخطط (₪)</th><th>المستحق حسب الإنجاز (₪)</th><th>المصروف (₪)</th><th>الفرق (₪)</th><th>أنجزوا أعمالها</th><th>استلموها</th></tr>`,
+    rows:[...READY_ROWS.map(r=>`<tr><td>${esc(r.label)}</td><td>${n(f0(r.planned))}</td><td>${r.earned==null?"—":n(f0(r.earned))}</td><td>${n(f0(r.actual))}</td><td>${r.diff==null?"—":n((r.diff>=0?"+":"−")+f0(Math.abs(r.diff)))}</td><td>${n(r.ready+" / "+total)}</td><td>${r.received==null?"—":n(r.received+" / "+total)}</td></tr>`),
+      `<tr><td><b>الإجمالي</b></td><td><b>${n(f0(FINANCE.totalGrant))}</b></td><td><b>${FINANCE.earned?n(f0(FINANCE.earned.total)):"—"}</b></td><td><b>${n(f0(FINANCE.totalDisbursed))}</b></td><td></td><td></td><td></td></tr>`],
+    note:"الفرق الموجب مبلغ مستحق لم يُصرف بعد، والسالب مبلغ صُرف مقدّمًا قبل استكمال أعماله. لا يتضمن التقرير أي قيمة مالية خاصة بمستفيد بعينه."});
+  B.push({title:"الأداء حسب المهندسة المشرفة",
+    head:`<tr><th>المهندسة</th><th>الحالات</th><th>متوسط الإنجاز</th><th>التغيّر${HAS_DELTA?` منذ ${n(PREV_DATE)}`:""}</th><th>متوسط السكور</th><th>أنجزوا أعمال د1</th><th>لم يبدأ</th><th>متأخر</th></tr>`,
+    rows:ENG_STATS.map(s=>`<tr><td>${esc(s.eng)}</td><td>${s.n}</td><td>${n(s.completion.toFixed(1)+"%")}</td><td>${dl(s.delta)}</td><td>${n(s.score.toFixed(1))}</td><td>${n(s.p1Done+" / "+s.n)}</td><td>${s.notStarted}</td><td>${n(s.late+" / "+s.n)}</td></tr>`)});
+  B.push(RISKS.length ? {title:`حالات تحتاج تدخّلًا (${RISKS.length})`,
+    head:`<tr><th>الأولوية</th><th>الكود</th><th>المستفيد</th><th>المهندسة</th><th>الإنجاز</th><th>السبب</th></tr>`,
+    rows:RISKS.map(r=>`<tr><td style="color:${sevColor[r.sev]}; font-weight:700; white-space:nowrap">${SEV_LABEL[r.sev]}</td><td>${n(r.d.code)}</td><td>${esc(r.d.name)}</td><td style="white-space:nowrap">${esc(r.d.eng)}</td><td>${n(fmtPct(r.d.completion))}</td><td>${esc(r.why)}</td></tr>`)}
+    : {html:`<div><div class="rp-h2">حالات تحتاج تدخّلًا</div><div class="rp-note">لا توجد حالات حرجة أو عاجلة في هذه اللقطة.</div></div>`});
+  B.push({title:"حالة المستفيدين",
+    head:`<tr><th>#</th><th>الكود</th><th>المستفيد</th><th>المهندسة</th><th>الإنجاز</th><th>التغيّر</th><th>د1</th><th>د2</th><th>المرحلة الحالية</th><th>السكور</th></tr>`,
+    rows:ENGINEERS.flatMap(e=>DATA.filter(d=>d.eng===e)).map((d,i)=>`<tr><td>${i+1}</td><td>${n(d.code)}</td><td>${esc(d.name)}</td><td style="white-space:nowrap">${esc(d.eng.replace("م. ",""))}</td><td>${n(fmtPct(d.completion))}</td><td>${dl(d.delta)}</td><td>${n(fmtPct(d.p1))}</td><td>${n(fmtPct(d.p2))}</td><td>${esc(d.stage)}</td><td>${d.score}</td></tr>`),
+    note:`د1 ود2 = نسبة إنجاز أعمال الدفعة الأولى والثانية. التغيّر بالنقاط المئوية لنسبة الإنجاز الكلي${HAS_DELTA?` منذ ${PREV_DATE}`:""}.`});
+  B.push({html:`<div class="rp-ft">مصدر البيانات: الملف الموحّد للمشروع على Google Drive، ونسب الإنجاز مرتبطة حيًا بجداول الكميات لكل مستفيد. السكور = الإنجاز الكلي (حتى 50) + متوسط تقدم الدفعتين 1 و2 (حتى 20) + الالتزام بالجدول الزمني (حتى 30). لا يتضمن التقرير أرقام هوية أو جوال أو قيمًا مالية خاصة بمستفيد بعينه. أُنشئ من لوحة سير العمل التي أعدّها م. نعيم شاهين.</div>`});
+  return B;
+}
+
+function layoutReport(stage){
+  // داخل shadow root حتى لا تتسرّب أنماط اللوحة (مثل min-width للجداول) إلى قياس صفحات التقرير
+  const root = stage.shadowRoot || stage.attachShadow({mode:"open"});
+  root.innerHTML = "";
+  const pages = [];
+  const limit = RP_H - 2*RP_PAD - RP_FOOT - 24;   // هامش أمان لاختلافات القياس الطفيفة بين الصفحة والصورة
+  let body;
+  const newPage = ()=>{
+    const p = document.createElement("div");
+    p.className = "rp-page"; p.setAttribute("dir","rtl");
+    p.innerHTML = `<style>${RP_CSS}</style><div class="rp-body"></div><div class="rp-foot"></div>`;
+    root.appendChild(p); pages.push(p);
+    body = p.querySelector(".rp-body");
+  };
+  const fits = ()=> body.offsetHeight <= limit;
+  const frag = html => { const t = document.createElement("div"); t.innerHTML = html.trim(); return t.firstElementChild; };
+  newPage();
+  for(const b of reportBlocks()){
+    if(b.html){
+      const el = frag(b.html); body.appendChild(el);
+      if(!fits() && body.children.length>1){ body.removeChild(el); newPage(); body.appendChild(el); }
+      continue;
+    }
+    // جدول يُقسَّم على الصفحات صفًا صفًا مع تكرار رأس الجدول
+    let cont = false, tbody;
+    const start = ()=>{
+      const w = frag(`<div><div class="rp-h2">${b.title}${cont?" (تابع)":""}</div><table><thead>${b.head}</thead><tbody></tbody></table></div>`);
+      body.appendChild(w); tbody = w.querySelector("tbody"); return w;
+    };
+    let wrap = start();
+    for(const rowHtml of b.rows){
+      const tr = frag(`<table><tbody>${rowHtml}</tbody></table>`).querySelector("tr");
+      tbody.appendChild(tr);
+      if(!fits()){
+        tbody.removeChild(tr);
+        if(!tbody.children.length){ body.removeChild(wrap); } else { cont = true; }
+        newPage(); wrap = start(); tbody.appendChild(tr);
+      }
+    }
+    if(b.note){
+      const nt = frag(`<div class="rp-note">${esc(b.note)}</div>`); wrap.appendChild(nt);
+      if(!fits()){ wrap.removeChild(nt); newPage(); body.appendChild(nt); }
+    }
+  }
+  pages.forEach((p,i)=>{
+    p.querySelector(".rp-foot").innerHTML =
+      `<span>تقرير سير العمل · المساعدة النقدية لإصلاح المأوى الطارئ · <span class="n">${REPORT_DATE}</span></span><span>صفحة ${i+1} من ${pages.length}</span>`;
+  });
+  return pages;
+}
+
+async function pageToJpeg(el){
+  const xhtml = new XMLSerializer().serializeToString(el);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${RP_W}" height="${RP_H}"><foreignObject x="0" y="0" width="${RP_W}" height="${RP_H}">${xhtml}</foreignObject></svg>`;
+  const img = new Image();
+  await new Promise((res, rej)=>{
+    img.onload = res; img.onerror = ()=>rej(new Error("render"));
+    img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+  });
+  const S = 2, c = document.createElement("canvas");
+  c.width = RP_W*S; c.height = RP_H*S;
+  const g = c.getContext("2d");
+  g.fillStyle = "#ffffff"; g.fillRect(0,0,c.width,c.height);
+  g.drawImage(img, 0, 0, c.width, c.height);
+  return c.toDataURL("image/jpeg", 0.92);
+}
+
+async function buildPdf(){
+  await loadLib("pdf");
+  const stage = document.getElementById("reportStage");
+  try{
+    const pages = layoutReport(stage);
+    const pdf = new window.jspdf.jsPDF({unit:"mm", format:"a4", orientation:"portrait", compress:true});
+    pdf.setProperties({title:`تقرير سير العمل ${REPORT_DATE}`, author:"م. نعيم شاهين"});
+    for(let i=0; i<pages.length; i++){
+      if(i) pdf.addPage();
+      pdf.addImage(await pageToJpeg(pages[i]), "JPEG", 0, 0, 210, 297);
+    }
+    return {filename:`تقرير سير العمل - ${REPORT_DATE}.pdf`, data:pdf.output("blob")};
+  }finally{
+    if(stage.shadowRoot) stage.shadowRoot.innerHTML = "";
+  }
+}
+
+/* ---------- ملف Excel: أوراق للملخص والمستفيدين والمهندسات والدفعات والسجل ---------- */
+async function buildXlsx(){
+  await loadLib("xlsx");
+  const X = window.XLSX, wb = X.utils.book_new();
+  const r1 = v => Math.round(v*10)/10;
+  const add = (name, rows, widths)=>{
+    const ws = X.utils.aoa_to_sheet(rows);
+    ws["!cols"] = widths.map(w=>({wch:w}));
+    X.utils.book_append_sheet(wb, ws, name);
+  };
+  add("الملخص", [
+    ["لوحة سير العمل — المساعدة النقدية لإصلاح المأوى الطارئ", ""],
+    ["تاريخ اللقطة", REPORT_DATE],
+    ["آخر مزامنة", (typeof SYNC!=="undefined"&&SYNC) ? SYNC.at : ""],
+    ["", ""],
+    ["الملخص", EXEC.headlineTxt],
+    ...EXEC.bulletsTxt.map(t=>["", t]),
+    ["", ""],
+    ["المؤشر", "القيمة"],
+    ["عدد المستفيدين", total],
+    ["متوسط الإنجاز الميداني (%)", r1(ACTUAL_PCT)],
+    ["الإنجاز المخطط اليوم (%)", r1(PLAN_TODAY)],
+    ["الفجوة عن المخطط (نقطة)", r1(GAP)],
+    ["المعدل اليومي المطلوب لبلوغ 100% بحلول "+PLAN.fullBy+" (نقطة/يوم)", REQUIRED_RATE!=null ? r1(REQUIRED_RATE) : ""],
+    ["الإنجاز الكامل المتوقع بالوتيرة الحالية", PROJECTED_FULL || ""],
+    ["متوسط السكور العام", r1(avgScore)],
+    ["مؤهل للدفعة الأخيرة", eligibleCount],
+    ["أنجز 100% من البنود", completedCount],
+    ["متأخر عن الجدول الزمني", lateCount],
+    ["قيمة المنحة (₪)", FINANCE.totalGrant],
+    ["المصروف فعليًا (₪)", FINANCE.totalDisbursed],
+    ["نسبة الصرف (%)", FINANCE.disbursedPct],
+    ["المتبقي (₪)", FINANCE.remaining],
+    ["المستحق حسب الإنجاز (₪)", FINANCE.earned ? FINANCE.earned.total : ""],
+  ], [44, 90]);
+  add("المستفيدون", [
+    ["الكود","الاسم","المهندسة","نسبة الإنجاز (%)", HAS_DELTA?`التغيّر منذ ${PREV_DATE} (نقطة)`:"التغيّر (نقطة)","إنجاز الدفعة 1 (%)","إنجاز الدفعة 2 (%)","المرحلة الحالية","الحالة الزمنية","أهلية الدفعة الأخيرة","السكور","التصنيف","حالة السكن","أفراد الوحدة السكنية"],
+    ...ENGINEERS.flatMap(e=>DATA.filter(d=>d.eng===e)).map(d=>[d.code, d.name, d.eng, r1(d.completion*100), d.delta==null?"":r1(d.delta),
+      r1(d.p1*100), r1(d.p2*100), d.stage, clean(d.schedText), d.eligGood?"مؤهل":"غير مؤهل", d.score, d.cls, d.housing, d.familySize]),
+  ], [8, 30, 16, 14, 16, 14, 14, 44, 30, 16, 8, 10, 12, 12]);
+  add("المهندسات", [
+    ["المهندسة","عدد الحالات","متوسط الإنجاز (%)","التغيّر (نقطة)","متوسط السكور","أنجزوا أعمال الدفعة الأولى","لم يبدأ التنفيذ","متأخر عن الجدول"],
+    ...ENG_STATS.map(s=>[s.eng, s.n, r1(s.completion), s.delta==null?"":r1(s.delta), r1(s.score), s.p1Done, s.notStarted, s.late]),
+  ], [18, 12, 16, 14, 13, 22, 14, 16]);
+  add("الدفعات", [
+    ["الدفعة","المخطط (₪)","المستحق حسب الإنجاز (₪)","المصروف (₪)","الفرق (₪)","أنجزوا أعمالها","استلموها"],
+    ...READY_ROWS.map(r=>[r.label, r.planned, r.earned==null?"":Math.round(r.earned*100)/100, r.actual, r.diff==null?"":Math.round(r.diff*100)/100, r.ready, r.received==null?"":r.received]),
+  ], [22, 14, 22, 14, 14, 14, 12]);
+  add("حالات تحتاج تدخل", [
+    ["الأولوية","الكود","المستفيد","المهندسة","الإنجاز (%)","السبب"],
+    ...RISKS.map(r=>[SEV_LABEL[r.sev], r.d.code, r.d.name, r.d.eng, r1(r.d.completion*100), r.why]),
+  ], [10, 8, 30, 16, 11, 70]);
+  add("السجل اليومي", [
+    ["التاريخ","متوسط الإنجاز (%)","المخطط (%)","متوسط السكور"],
+    ...HISTORY.map(h=>[h.date, typeof h.completion==="number"?h.completion:"", r1(planPct(h.date)), h.overall]),
+  ], [12, 16, 12, 13]);
+  wb.Workbook = {Views:[{RTL:true}]};
+  const buf = X.write(wb, {bookType:"xlsx", type:"array"});
+  return {filename:`بيانات سير العمل - ${REPORT_DATE}.xlsx`, data:new Blob([buf])};
+}
+</script>
