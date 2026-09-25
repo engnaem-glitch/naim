@@ -1,0 +1,1351 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>لوحة المساعدة النقدية لإصلاح المأوى الطارئ 25 مستفيد</title>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================================
+   نظام التصميم - "ملف هندسي" (Technical dossier)
+   ألوان التصنيف تم التحقق منها بمدقق لوحات الألوان (عمى ألوان + تباين) بالوضعين
+   ============================================================================ */
+:root{
+  /* أرضية باردة نظيفة بانحياز أزرق خفيف - مُختارة لتترك الثلاثي (أزرق/برتقالي/فيروزي) يتنفّس */
+  --paper:#EEF2F7; --surface:#FFFFFF; --well:#F4F7FB;
+  --ink:#0F1926; --ink-2:#4A5967; --ink-3:#7E8D9C;
+  --rule:#DCE3EC; --rule-2:#C3CEDA;
+  /* ١ الأزرق: لون العلامة - المقاييس والأشرطة والروابط */
+  --primary:#14508F; --primary-2:#2E7ACD; --primary-wash:#E8F0FA;
+  /* ٢ البرتقالي: النقيض الدافئ - المسطرة وعلامة "اليوم" والعناوين الفوقية */
+  --copper:#D2601A; --copper-2:#F08A3E;
+  /* ٣ الفيروزي: الثالث الجسر بين الأزرق والأخضر - العدسة الثالثة والبيانات */
+  --teal:#0787A0; --teal-2:#2FA8BE;
+  --night:#0A1B2E; --night-2:#123054;
+  --on-night:#E9F0F8; --on-night-2:#9FB6CE; --on-night-rule:rgba(255,255,255,.15);
+  /* تصنيفية: العدسات الثلاث = الثلاثي نفسه (مُدقّقة لعمى الألوان والتباين) */
+  --cat-1:#1F6FCF; --cat-2:#D2601A; --cat-3:#0787A0;
+  --cat-4:#8B44C4; --cat-5:#B0356E; --cat-6:#0E8F63; --cat-7:#8A6A12;
+  /* حالة - محجوزة ومنفصلة عن ألوان العلامة */
+  --good:#17784A; --warn:#96700F; --serious:#A34418; --crit:#B3302B;
+  --shadow-1:0 1px 1px rgba(15,25,38,.04), 0 3px 8px -3px rgba(15,25,38,.12);
+  --shadow-2:0 2px 4px rgba(15,25,38,.06), 0 20px 40px -22px rgba(15,25,38,.32);
+  --r-lg:14px; --r-md:10px; --r-sm:7px;
+  --display:"Readex Pro",system-ui,sans-serif;
+  --body:"IBM Plex Sans Arabic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#080E16; --surface:#131C27; --well:#1A2431;
+    --ink:#E7EDF4; --ink-2:#A4B3C2; --ink-3:#748493;
+    --rule:#243040; --rule-2:#354354;
+    --primary:#5B9DED; --primary-2:#8CBCFF; --primary-wash:#15263A;
+    --copper:#E89A55; --copper-2:#F4B87F;
+    --teal:#35AFC4; --teal-2:#6ACEDE;
+    --night:#050B14; --night-2:#0D2440;
+    --on-night:#E6EEF8; --on-night-2:#93AAC4; --on-night-rule:rgba(255,255,255,.12);
+    --cat-1:#4C86D6; --cat-2:#D4762F; --cat-3:#1D95A8;
+    --cat-4:#9468CE; --cat-5:#C4568A; --cat-6:#199668; --cat-7:#A08528;
+    --good:#2FA062; --warn:#C09429; --serious:#D07440; --crit:#DE5A54;
+    --shadow-1:0 1px 1px rgba(0,0,0,.3), 0 3px 10px -3px rgba(0,0,0,.5);
+    --shadow-2:0 2px 6px rgba(0,0,0,.35), 0 22px 44px -22px rgba(0,0,0,.65);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#080E16; --surface:#131C27; --well:#1A2431;
+  --ink:#E7EDF4; --ink-2:#A4B3C2; --ink-3:#748493;
+  --rule:#243040; --rule-2:#354354;
+  --primary:#5B9DED; --primary-2:#8CBCFF; --primary-wash:#15263A;
+  --copper:#E89A55; --copper-2:#F4B87F;
+  --teal:#35AFC4; --teal-2:#6ACEDE;
+  --night:#050B14; --night-2:#0D2440;
+  --on-night:#E6EEF8; --on-night-2:#93AAC4; --on-night-rule:rgba(255,255,255,.12);
+  --cat-1:#4C86D6; --cat-2:#D4762F; --cat-3:#1D95A8;
+  --cat-4:#9468CE; --cat-5:#C4568A; --cat-6:#199668; --cat-7:#A08528;
+  --good:#2FA062; --warn:#C09429; --serious:#D07440; --crit:#DE5A54;
+  --shadow-1:0 1px 1px rgba(0,0,0,.3), 0 3px 10px -3px rgba(0,0,0,.5);
+  --shadow-2:0 2px 6px rgba(0,0,0,.35), 0 22px 44px -22px rgba(0,0,0,.65);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink); direction:rtl;
+  font-family:var(--body); font-size:14px; line-height:1.6;
+  font-variant-numeric:tabular-nums; -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--display); margin:0; text-wrap:balance; font-weight:600; letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--primary); outline-offset:2px; border-radius:4px}
+.wrap{max-width:1200px; margin:0 auto; padding:0 22px 72px}
+.ltr{direction:ltr; unicode-bidi:isolate; display:inline-block; white-space:nowrap}
+.num-ratio,.ltr-num{direction:ltr; unicode-bidi:isolate; display:inline-block; white-space:nowrap}
+
+/* ---------------------------------------------------------------- المقدمة / كتلة العنوان */
+.masthead{position:relative; overflow:hidden; color:var(--on-night);
+  background:radial-gradient(120% 150% at 88% -10%, rgba(224,138,56,.16) 0%, transparent 55%),
+             linear-gradient(158deg, var(--night-2) 0%, var(--night) 72%)}
+.masthead::before{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:
+    repeating-linear-gradient(0deg, var(--on-night-rule) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, var(--on-night-rule) 0 1px, transparent 1px 26px);
+  -webkit-mask-image:radial-gradient(120% 110% at 78% 0%, #000 12%, transparent 78%);
+          mask-image:radial-gradient(120% 110% at 78% 0%, #000 12%, transparent 78%);
+}
+.masthead-in{position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:34px 22px 26px;
+  display:flex; justify-content:space-between; align-items:flex-start; gap:28px; flex-wrap:wrap}
+.brand{display:flex; align-items:flex-start; gap:15px; min-width:0}
+.brand-mark{flex:none; width:44px; height:44px; color:#fff; margin-top:3px}
+.brand-mark svg{width:100%; height:100%; display:block}
+.kicker{font-size:11.5px; font-weight:600; letter-spacing:.09em; color:var(--copper-2); margin-bottom:5px}
+.masthead h1{font-size:29px; line-height:1.25; color:#fff; max-width:16ch}
+.brand-en{direction:ltr; unicode-bidi:isolate; text-align:right; font-size:12px; font-weight:400;
+  letter-spacing:.06em; color:var(--on-night-2); margin-top:7px}
+
+/* كتلة بيانات المخطط (Title block) - نفس منطق كتلة العنوان في المخططات الهندسية */
+.titleblock{flex:none; border:1px solid var(--on-night-rule); border-radius:var(--r-md); min-width:252px; background:rgba(255,255,255,.035)}
+.tb-row{display:flex; justify-content:space-between; align-items:baseline; gap:18px; padding:8px 13px;
+  font-size:12px; border-block-start:1px solid var(--on-night-rule)}
+.tb-row:first-child{border-block-start:none}
+.tb-row .k{color:var(--on-night-2); font-size:11px}
+.tb-row .v{font-weight:600; color:#fff}
+
+/* شريط المؤشرات التنفيذية على المقدمة */
+.mstrip{position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 22px;
+  display:grid; grid-template-columns:repeat(4,1fr); border-block-start:1px solid var(--on-night-rule)}
+@media (max-width:820px){.mstrip{grid-template-columns:repeat(2,1fr)}}
+.mstat{padding:15px 18px 17px; border-inline-start:1px solid var(--on-night-rule)}
+.mstat:first-child{border-inline-start:none}
+@media (max-width:820px){
+  .mstat:nth-child(2n+1){border-inline-start:none}
+  .mstat:nth-child(n+3){border-block-start:1px solid var(--on-night-rule)}
+}
+.mstat .k{font-size:11.5px; color:var(--on-night-2); margin-bottom:6px}
+.mstat .v{font-family:var(--display); font-size:21px; font-weight:600; color:#fff; line-height:1.15}
+.mstat .v small{font-size:12.5px; font-weight:400; color:var(--on-night-2); margin-inline-start:5px}
+.mstat.is-copper .v{color:var(--copper-2)}
+.mstat-track{height:3px; background:var(--on-night-rule); border-radius:2px; margin-top:9px; overflow:hidden}
+.mstat-track span{display:block; height:100%; background:var(--copper-2); border-radius:2px; width:0}
+/* مسطرة قياس - نفس فكرة شريط المقياس أسفل المخططات الهندسية */
+.scale-rule{height:8px; position:relative; z-index:1;
+  background:
+    repeating-linear-gradient(90deg, var(--on-night-rule) 0 1px, transparent 1px 14px) bottom/100% 4px no-repeat,
+    linear-gradient(90deg, var(--copper) 0%, var(--copper) 46%, var(--teal) 54%, var(--teal) 100%) bottom/100% 2px no-repeat;
+}
+
+/* ---------------------------------------------------------------- تنبيه حالة المشروع */
+.notice{display:flex; gap:14px; align-items:flex-start; background:var(--surface);
+  border:1px solid var(--rule); border-inline-start:3px solid var(--copper);
+  border-radius:var(--r-md); padding:15px 18px; box-shadow:var(--shadow-1); margin:26px 0 0}
+.notice .ic{flex:none; width:22px; height:22px; color:var(--copper); margin-top:1px}
+.notice b{display:block; font-family:var(--display); font-size:14.5px; font-weight:600; margin-bottom:4px}
+.notice p{margin:0; font-size:12.8px; color:var(--ink-2); line-height:1.75}
+
+/* ---------------------------------------------------------------- لوحة المؤشرات الموحّدة */
+.panel{background:var(--surface); border:1px solid var(--rule); border-radius:var(--r-lg);
+  box-shadow:var(--shadow-1); overflow:hidden}
+.kpi-strip{display:grid; margin:26px 0 40px}
+.kpi{padding:16px 18px 16px; border-inline-start:1px solid var(--rule); border-block-start:1px solid var(--rule)}
+@media (min-width:1041px){
+  .kpi-strip{grid-template-columns:repeat(5,1fr)}
+  .kpi:nth-child(5n+1){border-inline-start:none}
+  .kpi:nth-child(-n+5){border-block-start:none}
+}
+@media (max-width:1040px) and (min-width:661px){
+  .kpi-strip{grid-template-columns:repeat(3,1fr)}
+  .kpi:nth-child(3n+1){border-inline-start:none}
+  .kpi:nth-child(-n+3){border-block-start:none}
+}
+@media (max-width:660px){
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .kpi:nth-child(2n+1){border-inline-start:none}
+  .kpi:nth-child(-n+2){border-block-start:none}
+  .kpi:last-child:nth-child(odd){grid-column:1 / -1}
+}
+.kpi-lab{display:flex; align-items:center; gap:7px; font-size:12px; font-weight:500; color:var(--ink-2)}
+.kpi-lab .g{flex:none; width:15px; height:15px; color:var(--ink-3)}
+.kpi-lab .g svg{width:100%; height:100%; display:block}
+.kpi-val{font-family:var(--display); font-size:28px; font-weight:600; line-height:1.1; margin-top:9px}
+.kpi-sub{font-size:11.5px; color:var(--ink-3); margin-top:5px}
+.kpi.is-primary .kpi-val{color:var(--primary)} .kpi.is-primary .kpi-lab .g{color:var(--primary)}
+.kpi.is-crit .kpi-val{color:var(--crit)} .kpi.is-crit .kpi-lab .g{color:var(--crit)}
+
+/* ---------------------------------------------------------------- رؤوس الأقسام */
+section{margin-bottom:44px}
+.shead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; position:relative;
+  margin-bottom:18px; padding-bottom:11px; border-bottom:1px solid var(--rule)}
+.shead::after{content:""; position:absolute; bottom:-1px; inset-inline-start:0; width:54px; height:2px; background:var(--copper)}
+.sheet{font-family:var(--display); font-size:11px; font-weight:500; color:var(--ink-3);
+  border:1px solid var(--rule-2); border-radius:5px; padding:2px 7px; letter-spacing:.03em; flex:none}
+.shead h2{font-size:19.5px}
+.shead .note{margin-inline-start:auto; font-size:12px; color:var(--ink-3); max-width:540px; text-align:start; line-height:1.65}
+
+.card{background:var(--surface); border:1px solid var(--rule); border-radius:var(--r-lg); box-shadow:var(--shadow-1)}
+.card-title{font-family:var(--display); font-size:13.5px; font-weight:600; color:var(--ink-2); margin-bottom:14px}
+
+/* ---------------------------------------------------------------- حركة */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{opacity:0; transform:translateY(10px); transition:opacity .5s ease, transform .5s ease}
+  .reveal.in{opacity:1; transform:translateY(0)}
+  .gauge-fill,.fin-gauge-fill{transition:stroke-dashoffset 1.1s cubic-bezier(.22,.9,.3,1)}
+  .bar-fill,.mini-bar span,.stage-fill,.cls-bar span,.mstat-track span,.tl-progress{transition:width .8s cubic-bezier(.22,.9,.3,1)}
+  .lift{transition:box-shadow .18s ease, border-color .18s ease}
+  .lift:hover{box-shadow:var(--shadow-2); border-color:var(--rule-2)}
+}
+
+/* ---------------------------------------------------------------- الوضع المالي */
+.fin{padding:26px 28px 24px}
+.fin-top{display:flex; gap:36px; align-items:center; flex-wrap:wrap; padding-bottom:22px; border-bottom:1px solid var(--rule)}
+.fin-figs{flex:1 1 340px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; min-width:280px}
+@media (max-width:620px){.fin-figs{grid-template-columns:1fr; gap:16px}}
+.fin-fig .k{font-size:12px; color:var(--ink-2); font-weight:500}
+.fin-fig .v{font-family:var(--display); font-size:24px; font-weight:600; margin-top:7px; line-height:1.1;
+  direction:ltr; unicode-bidi:isolate; text-align:end}
+/* رمز العملة كعنصر مستقل بعد الرقم: يضمن ترتيبًا بصريًا صريحًا ويمنحه وزنًا أخف */
+.cur{font-size:.6em; font-weight:500; color:var(--ink-3); margin-inline-start:.3em}
+.mstat .cur{color:var(--on-night-2)}
+.fin-fig.is-lead .v{color:var(--ink)}
+.fin-fig.is-out .v{color:var(--primary)}
+.fin-fig.is-rest .v{color:var(--ink-2)}
+.fin-gauge-wrap{flex:none; display:flex; flex-direction:column; align-items:center; gap:8px; margin-inline-start:auto;
+  padding-inline-start:34px; border-inline-start:1px solid var(--rule)}
+@media (max-width:760px){.fin-gauge-wrap{padding-inline-start:0; border-inline-start:none; margin-inline-start:0}}
+.fin-gauge{position:relative; width:112px; height:112px}
+.fin-gauge svg{display:block}
+.fin-gauge .pct{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:var(--display); font-weight:600; font-size:20px}
+.fin-gauge-lab{font-size:11.5px; color:var(--ink-3); text-align:center; max-width:132px; line-height:1.5; text-wrap:balance}
+/* شريط توزيع الدفعات */
+.alloc{display:flex; gap:2px; margin:22px 0 8px; height:13px}
+.alloc span{border-radius:3px}
+.alloc-key{display:flex; gap:18px; flex-wrap:wrap; font-size:11.5px; color:var(--ink-3); margin-bottom:22px}
+.alloc-key i{display:inline-block; width:9px; height:9px; border-radius:2px; margin-inline-end:6px; vertical-align:-1px}
+.stages{display:flex; flex-direction:column; gap:16px}
+.stage-head{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap;
+  font-size:12.5px; font-weight:500; color:var(--ink-2); margin-bottom:7px}
+.stage-head b{font-family:var(--display); font-weight:600; color:var(--ink)}
+.stage-track{position:relative; height:9px; background:var(--well); border-radius:5px; overflow:hidden}
+.stage-fill{position:absolute; inset-inline-start:0; top:0; bottom:0; width:0; background:var(--primary); border-radius:5px}
+.stage-nums{display:flex; justify-content:space-between; gap:12px; font-size:11.5px; color:var(--ink-3); margin-top:6px}
+.fin-note{display:flex; gap:9px; align-items:flex-start; font-size:12.2px; line-height:1.7; color:var(--ink-2);
+  background:var(--well); border:1px solid var(--rule); border-radius:var(--r-sm); padding:10px 13px; margin-top:20px}
+.fin-foot{font-size:11px; color:var(--ink-3); margin-top:18px; padding-top:14px; border-top:1px dashed var(--rule); line-height:1.75}
+
+/* ---------------------------------------------------------------- الأثر الأسري */
+.impact{padding:20px 24px 22px}
+.impact-hero{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; padding-bottom:14px; margin-bottom:16px; border-bottom:1px solid var(--rule)}
+.impact-hero .v{font-family:var(--display); font-size:30px; font-weight:600; line-height:1}
+.impact-hero .k{font-size:12.5px; color:var(--ink-2)}
+.lenses{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+@media (max-width:880px){.lenses{grid-template-columns:1fr}}
+.lens{border-radius:var(--r-md); background:var(--well); border:1px solid var(--rule); padding:12px 14px 13px; position:relative; overflow:hidden}
+.lens::before{content:""; position:absolute; inset-block:0; inset-inline-end:0; width:3px; background:var(--c)}
+.lens-k{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:600; color:var(--ink-2); margin-bottom:11px}
+.lens-k i{width:7px; height:7px; border-radius:50%; background:var(--c); flex:none}
+.lens-items{display:grid; grid-template-columns:repeat(auto-fit,minmax(72px,1fr)); gap:10px}
+.li-v{font-family:var(--display); font-size:19px; font-weight:600; color:var(--c); line-height:1}
+.li-k{font-size:10.5px; color:var(--ink-2); margin-top:4px; line-height:1.35}
+.li-s{font-size:10px; color:var(--ink-3); margin-top:2px}
+.impact-sub{font-size:11.5px; font-weight:600; color:var(--ink-2); margin:20px 0 11px}
+.tiles{display:grid; grid-template-columns:repeat(6,1fr); gap:12px}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{text-align:center; padding:9px 6px; background:var(--well); border-radius:var(--r-sm)}
+.tile .v{font-family:var(--display); font-size:17px; font-weight:600; color:var(--ink); line-height:1}
+.tile .k{font-size:10px; color:var(--ink-2); margin-top:5px; line-height:1.35}
+.agetbl{margin-top:20px; padding-top:16px; border-top:1px solid var(--rule)}
+.age-row{display:grid; grid-template-columns:1.8fr repeat(4,.8fr); gap:8px; padding:7px 6px; font-size:12px; align-items:center; border-radius:5px}
+.age-row>div:not(:first-child){text-align:center}
+.age-row+.age-row{border-top:1px solid var(--rule)}
+.age-row.h{font-size:10.5px; font-weight:600; color:var(--ink-3); border-top:none; padding-bottom:4px}
+.age-row.t{font-weight:600; background:var(--well); margin-top:5px; border-top:none}
+@media (max-width:620px){.age-row{grid-template-columns:1.4fr repeat(4,.7fr); font-size:11px}}
+
+/* ---------------------------------------------------------------- المسار الزمني + الاتجاه */
+.temporal{display:grid; grid-template-columns:1.35fr 1fr; gap:18px; align-items:stretch}
+@media (max-width:960px){.temporal{grid-template-columns:1fr}}
+.tl-card{padding:24px 28px 20px}
+.timeline{position:relative; height:4px; background:var(--rule); border-radius:2px; margin:104px 10px 0}
+.tl-progress{position:absolute; inset-block:0; inset-inline-start:auto; right:0; width:0; background:var(--primary); border-radius:2px}
+.tl-node{position:absolute; top:50%; transform:translate(50%,-50%) rotate(45deg); width:11px; height:11px;
+  background:var(--surface); border:2px solid var(--rule-2); z-index:2}
+.tl-node.done{background:var(--primary); border-color:var(--primary)}
+.tl-label{position:absolute; top:-64px; transform:translateX(50%); width:124px; text-align:center}
+.tl-label .d{font-size:10.5px; color:var(--ink-3); direction:ltr; unicode-bidi:isolate}
+.tl-label .t{font-size:12.5px; font-weight:600; color:var(--ink); line-height:1.4; margin-top:2px}
+.today-line{position:absolute; top:-14px; bottom:-14px; width:2px; background:var(--copper); z-index:1}
+.today-flag{position:absolute; top:-98px; transform:translateX(50%); z-index:3; white-space:nowrap; text-align:center}
+.today-flag span{background:var(--copper); color:#fff; font-size:11px; font-weight:600; padding:3px 10px; border-radius:5px}
+.tl-foot{margin-top:34px; padding-top:14px; border-top:1px dashed var(--rule); font-size:11px; color:var(--ink-3); line-height:1.75}
+/* على الشاشات الضيقة يتحوّل المخطط الأفقي إلى قائمة رأسية (المسميات تتراكب أفقيًا تحت 700px) */
+.tl-vert{display:none; list-style:none; margin:4px 0 0; padding:0}
+@media (max-width:700px){
+  .timeline{display:none}
+  .tl-vert{display:block}
+  .tl-foot{margin-top:18px}
+}
+.tv-item{position:relative; padding-inline-end:24px; padding-block:10px}
+.tv-item::before{content:""; position:absolute; inset-inline-end:5px; top:0; bottom:0; width:2px; background:var(--rule)}
+.tv-item:first-child::before{top:18px}
+.tv-item:last-child::before{bottom:auto; height:18px}
+.tv-dot{position:absolute; inset-inline-end:0; top:14px; width:12px; height:12px; transform:rotate(45deg);
+  background:var(--surface); border:2px solid var(--rule-2)}
+.tv-item.done .tv-dot{background:var(--primary); border-color:var(--primary)}
+.tv-item.now .tv-dot{background:var(--copper); border-color:var(--copper)}
+.tv-d{font-size:11px; color:var(--ink-3); direction:ltr; unicode-bidi:isolate; display:block}
+.tv-t{font-size:13px; font-weight:600; margin-top:1px}
+.tv-item.now .tv-t{color:var(--copper)}
+.trend-card{padding:22px 24px 18px; display:flex; flex-direction:column}
+.trend-wrap{position:relative; flex:1; display:flex; flex-direction:column; justify-content:center}
+.trend-svg{width:100%; height:auto; display:block; overflow:visible}
+.hover-zone{fill:transparent; cursor:crosshair}
+.trend-tooltip{position:absolute; pointer-events:none; background:var(--ink); color:var(--surface);
+  font-size:11.5px; line-height:1.6; padding:7px 11px; border-radius:var(--r-sm); white-space:nowrap;
+  box-shadow:var(--shadow-2); opacity:0; transform:translate(-50%,-100%); transition:opacity .12s; z-index:5}
+.trend-tooltip.show{opacity:1}
+/* حالة "قراءة واحدة فقط" - تصميم مقصود بدل رسم شبه فارغ */
+.single-reading{display:flex; align-items:center; gap:20px; flex-wrap:wrap; padding:6px 0 4px}
+.sr-fig{flex:none; text-align:center}
+.sr-fig .v{font-family:var(--display); font-size:40px; font-weight:600; line-height:1; color:var(--primary)}
+.sr-fig .k{font-size:11px; color:var(--ink-3); margin-top:6px}
+.sr-txt{flex:1 1 200px; font-size:12.2px; color:var(--ink-2); line-height:1.75}
+.sr-axis{height:1px; background:repeating-linear-gradient(90deg,var(--rule-2) 0 5px, transparent 5px 10px); margin:18px 0 8px; position:relative}
+.sr-axis i{position:absolute; inset-inline-end:0; top:50%; width:9px; height:9px; border-radius:50%;
+  background:var(--primary); border:2px solid var(--surface); transform:translate(50%,-50%)}
+.sr-scale{display:flex; justify-content:space-between; font-size:10.5px; color:var(--ink-3)}
+
+/* ---------------------------------------------------------------- المهندسون */
+.eng-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px}
+.eng-card{padding:20px 22px; position:relative; overflow:hidden}
+.eng-card::before{content:""; position:absolute; inset-block:0; inset-inline-end:0; width:3px; background:var(--c)}
+.eng-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:16px}
+.eng-name{font-family:var(--display); font-size:15px; font-weight:600; color:var(--c)}
+.eng-count{font-size:11.5px; color:var(--ink-3)}
+.eng-body{display:flex; gap:20px; align-items:center}
+.gauge{flex:none}
+.eng-stats{flex:1; min-width:0; display:flex; flex-direction:column; gap:9px}
+.srow{display:flex; align-items:baseline; justify-content:space-between; gap:10px; font-size:12.5px}
+.srow .k{color:var(--ink-2)}
+.srow .v{font-family:var(--display); font-weight:600}
+.cls-bar{display:flex; gap:2px; height:8px; margin-top:5px}
+.cls-bar span{border-radius:2px}
+.cls-key{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; font-size:10.5px; color:var(--ink-2)}
+.cls-key i{display:inline-block; width:8px; height:8px; border-radius:2px; margin-inline-end:5px; vertical-align:-1px}
+
+/* ---------------------------------------------------------------- التوزيعات */
+.dist-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+@media (max-width:1000px){.dist-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:660px){.dist-grid{grid-template-columns:1fr}}
+.dist-card{padding:19px 21px}
+.bar-row{display:flex; align-items:center; gap:12px; font-size:12.5px; margin-bottom:12px}
+.bar-row:last-child{margin-bottom:0}
+.bar-row .lab{width:152px; flex:none; color:var(--ink-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+@media (max-width:1000px){.bar-row .lab{width:132px}}
+.bar-track{flex:1; height:8px; background:var(--well); border-radius:4px; overflow:hidden}
+.bar-fill{height:100%; border-radius:4px; width:0}
+.bar-num{width:24px; flex:none; font-family:var(--display); font-weight:600; text-align:end}
+
+/* ---------------------------------------------------------------- الجدول */
+.toolbar{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+.toolbar input[type="text"],.toolbar select{
+  font-family:var(--body); font-size:13px; color:var(--ink); background:var(--surface);
+  border:1px solid var(--rule-2); border-radius:var(--r-sm); padding:8px 12px; outline:none}
+.toolbar input[type="text"]{min-width:200px; flex:1 1 200px}
+.toolbar input[type="text"]:focus,.toolbar select:focus{border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-wash)}
+.toolbar .reset-btn{font-family:var(--body); font-size:12.5px; font-weight:500; color:var(--ink-2);
+  background:var(--well); border:1px solid var(--rule); border-radius:var(--r-sm); padding:8px 14px; cursor:pointer}
+.toolbar .reset-btn:hover{color:var(--ink); border-color:var(--rule-2)}
+.toolbar .count{margin-inline-start:auto; font-size:12.5px; color:var(--ink-3); white-space:nowrap}
+.table-wrap{overflow-x:auto; border:1px solid var(--rule); border-radius:var(--r-lg); box-shadow:var(--shadow-1); background:var(--surface)}
+table{width:100%; border-collapse:collapse; font-size:12.8px; min-width:940px}
+thead th{position:sticky; top:0; z-index:2; background:var(--well); color:var(--ink-2);
+  font-weight:600; font-size:11.5px; text-align:start; padding:11px 14px; border-bottom:1px solid var(--rule-2); white-space:nowrap}
+tbody td{padding:10px 14px; border-bottom:1px solid var(--rule); vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr.grp td{background:var(--well); padding:9px 14px}
+tbody tr.grp .eng-pill{display:inline-flex; align-items:center; gap:8px; font-family:var(--display); font-weight:600; font-size:12.5px}
+tbody tr.grp .dot{width:8px; height:8px; border-radius:50%; flex:none}
+tbody tr.row-main{cursor:pointer}
+tbody tr.row-main:hover td{background:var(--primary-wash)}
+tbody tr.row-main.open td{background:var(--primary-wash)}
+.chev{display:inline-block; margin-inline-end:8px; font-size:9px; color:var(--ink-3); transition:transform .15s}
+tr.open .chev{transform:rotate(-90deg)}
+tr.detail-row{display:none}
+tr.detail-row.open{display:table-row}
+tr.detail-row td{background:var(--well); padding:18px 22px}
+.detail-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px 34px}
+@media (max-width:780px){.detail-grid{grid-template-columns:1fr}}
+.ditem{display:flex; justify-content:space-between; gap:16px; font-size:12.3px; padding:7px 0; border-bottom:1px dashed var(--rule)}
+.ditem .k{color:var(--ink-2); flex:none}
+.ditem .v{font-weight:500; text-align:end}
+.name-cell{font-weight:500}
+.code{font-family:var(--display); font-size:11px; font-weight:500; color:var(--ink-3); letter-spacing:.03em}
+.mini-bar{width:64px; height:6px; background:var(--well); border-radius:3px; overflow:hidden; display:inline-block; vertical-align:middle; margin-inline-end:8px}
+.mini-bar span{display:block; height:100%; background:var(--primary); width:0}
+/* وسوم الحالة: نقطة ملوّنة + نص - أهدأ بصريًا من الشارات الممتلئة، واللون ليس الحامل الوحيد للمعنى */
+.tag{display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:500; padding:3px 9px;
+  border-radius:5px; background:color-mix(in srgb, var(--c) 9%, transparent);
+  border:1px solid color-mix(in srgb, var(--c) 24%, transparent); color:var(--c); white-space:nowrap}
+.tag i{width:6px; height:6px; border-radius:50%; background:var(--c); flex:none}
+.t-good{--c:var(--good)} .t-warn{--c:var(--warn)} .t-serious{--c:var(--serious)} .t-crit{--c:var(--crit)}
+.score{font-family:var(--display); font-weight:600}
+.empty-row td{padding:30px; text-align:center; color:var(--ink-3)}
+
+/* ---------------------------------------------------------------- المخطط التخطيطي للمواقع */
+.siteplan-card{padding:22px 26px 20px}
+.siteplan-layout{display:grid; grid-template-columns:1.55fr 1fr; gap:20px; align-items:start}
+@media (max-width:860px){.siteplan-layout{grid-template-columns:1fr}}
+.siteplan-svg-wrap{position:relative; border:1px solid var(--rule); border-radius:var(--r-md); background:var(--well); overflow:hidden}
+.siteplan-svg{width:100%; height:auto; display:block}
+.sp-dot{cursor:pointer; stroke:var(--surface); stroke-width:2}
+.sp-dot:hover, .sp-dot.active{stroke:var(--ink)}
+.sp-scale-txt{font-size:9.5px; fill:var(--ink-3); font-family:"IBM Plex Sans Arabic", sans-serif}
+.sp-north-txt{font-size:10px; font-weight:600; fill:var(--ink-2); font-family:"Readex Pro", sans-serif}
+.sp-legend{display:flex; gap:16px; flex-wrap:wrap; font-size:11.5px; color:var(--ink-2); margin-top:12px}
+.sp-legend i{display:inline-block; width:9px; height:9px; border-radius:50%; margin-inline-end:6px; vertical-align:-1px}
+.sp-card{border:1px solid var(--rule); border-radius:var(--r-md); background:var(--well); padding:16px 18px; min-height:190px; display:flex; flex-direction:column; gap:11px}
+.sp-card .ph{color:var(--ink-3); font-size:12.5px; line-height:1.8; margin:auto 0; text-align:center}
+.sp-card-head{display:flex; align-items:center; gap:9px}
+.sp-card-head i{width:11px; height:11px; border-radius:50%; flex:none; border:2px solid var(--surface); box-shadow:0 0 0 1px var(--rule-2)}
+.sp-card-name{font-family:var(--display); font-weight:600; font-size:14.5px; line-height:1.35}
+.sp-card-code{font-size:11px; color:var(--ink-3); font-family:var(--display); letter-spacing:.03em}
+.sp-card-rows{display:flex; flex-direction:column; gap:6px; font-size:12.3px}
+.sp-card-rows .r{display:flex; justify-content:space-between; gap:10px}
+.sp-card-rows .k{color:var(--ink-2)}
+.sp-card-rows .v{font-weight:500; text-align:end}
+.sp-gmaps-btn{margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:7px;
+  font-family:var(--body); font-size:12.5px; font-weight:600; color:#fff; background:var(--primary);
+  border-radius:var(--r-sm); padding:9px 14px; text-decoration:none}
+.sp-gmaps-btn:hover{background:var(--primary-2)}
+.sp-gmaps-btn svg{width:13px; height:13px; flex:none}
+.sp-note{font-size:11px; color:var(--ink-3); margin-top:12px; line-height:1.8}
+
+footer.notes{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); font-size:11.5px; color:var(--ink-3); line-height:1.95}
+footer.notes b{color:var(--ink-2); font-weight:600}
+
+@media print{
+  body{background:#fff}
+  .masthead{background:#0A1B2E !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .card,.panel,.table-wrap{box-shadow:none; break-inside:avoid}
+  section{break-inside:avoid}
+  .toolbar{display:none}
+}
+</style>
+
+<div class="masthead">
+  <div class="masthead-in">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.5 15.5 16 6l11.5 9.5"/>
+          <path d="M8 14v10.5h16V14"/>
+          <path d="M13.5 24.5v-6h5v6"/>
+          <path d="M3 28.5h26" stroke="#D89440"/>
+          <path d="M6.5 28.5v2.2M16 28.5v2.2M25.5 28.5v2.2" stroke="#D89440" stroke-width="1.3"/>
+        </svg>
+      </div>
+      <div>
+        <div class="kicker">متابعة الإشراف الهندسي الميداني</div>
+        <h1>المساعدة النقدية لإصلاح المأوى الطارئ</h1>
+        <div class="brand-en">Cash for Emergency Shelter Repairs</div>
+      </div>
+    </div>
+    <div class="titleblock" id="titleBlock"></div>
+  </div>
+  <div class="mstrip" id="mstrip"></div>
+  <div class="scale-rule"></div>
+</div>
+
+<div class="wrap">
+
+  <div id="phaseBanner"></div>
+
+  <div class="panel kpi-strip reveal" id="kpiRow"></div>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠١</span>
+      <h2>الوضع المالي للمشروع</h2>
+      <span class="note">إجمالي قيمة العقود مقابل ما صُرف فعليًا حتى تاريخ هذه اللقطة — على مستوى المشروع ككل، بلا أي قيمة مالية خاصة بمستفيد بعينه</span>
+    </div>
+    <div class="card lift fin">
+      <div class="fin-top">
+        <div class="fin-figs" id="finFigs"></div>
+        <div class="fin-gauge-wrap">
+          <div class="fin-gauge">
+            <svg width="112" height="112" viewBox="0 0 112 112">
+              <circle cx="56" cy="56" r="47" fill="none" stroke="var(--well)" stroke-width="10"/>
+              <circle class="fin-gauge-fill" id="finGaugeFill" cx="56" cy="56" r="47" fill="none"
+                stroke="var(--primary)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 56 56)"/>
+            </svg>
+            <div class="pct" id="finGaugePct">0%</div>
+          </div>
+          <div class="fin-gauge-lab">نسبة الصرف من قيمة العقود</div>
+        </div>
+      </div>
+      <div class="card-title" style="margin-top:22px; margin-bottom:0">هيكل الدفعات الثلاث من إجمالي المنحة</div>
+      <div class="alloc" id="finAlloc"></div>
+      <div class="alloc-key" id="finAllocKey"></div>
+      <div class="stages" id="financeStages"></div>
+      <div id="financeNoteWrap"></div>
+      <div class="fin-foot" id="financeReconcileNote"></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٢</span>
+      <h2>إحصائيات مهمة</h2>
+      <span class="note">من قاعدة بيانات الأسر (استمارة KOBO) — نفس الـ١٩٤ فردًا مقسّمون بثلاث عدسات مستقلة، كل عدسة تجمع وحدها إلى ١٩٤</span>
+    </div>
+    <div class="card lift impact">
+      <div class="impact-hero" id="impactHero"></div>
+      <div class="lenses" id="impactGroups"></div>
+      <div class="impact-sub">مؤشرات إضافية عن الأسر المستفيدة</div>
+      <div class="tiles" id="impactGrid"></div>
+      <div class="agetbl" id="ageBreakdown"></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٣</span>
+      <h2>المسار الزمني وأداء المشروع</h2>
+      <span class="note">المعالم موزّعة تخطيطيًا، وعلامة "اليوم" محسوبة فعليًا من التاريخ — ومنحنى الأداء يُبنى تلقائيًا نقطة كل يوم</span>
+    </div>
+    <div class="temporal">
+      <div class="card lift tl-card">
+        <div class="card-title">معالم الدفعات والموقع الحالي</div>
+        <div class="timeline" id="timeline"></div>
+        <ol class="tl-vert" id="timelineVert"></ol>
+        <div class="tl-foot" id="tlFoot"></div>
+      </div>
+      <div class="card lift trend-card">
+        <div class="card-title">متوسط السكور العام عبر الوقت</div>
+        <div class="trend-wrap" id="trendWrap"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٤</span>
+      <h2>الأداء حسب المهندس المشرف الميداني</h2>
+      <span class="note" id="engDeltaNote"></span>
+    </div>
+    <div class="eng-grid" id="engGrid"></div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٥</span>
+      <h2>توزيعات الحالة والتصنيف</h2>
+      <span class="note">على مستوى الـ٢٥ مستفيدًا</span>
+    </div>
+    <div class="dist-grid" id="distGrid"></div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٦</span>
+      <h2>القائمة الكاملة للمستفيدين</h2>
+      <span class="note">اضغط أي صف لعرض بطاقته التفصيلية</span>
+    </div>
+    <div class="toolbar">
+      <input type="text" id="fSearch" placeholder="ابحث بالاسم أو الكود…" aria-label="بحث">
+      <select id="fEng" aria-label="تصفية حسب المهندس"><option value="">كل المهندسين</option></select>
+      <select id="fCls" aria-label="تصفية حسب التصنيف">
+        <option value="">كل التصنيفات</option>
+        <option value="ممتاز">ممتاز</option><option value="جيد">جيد</option>
+        <option value="متابعة">متابعة</option><option value="حرج">حرج</option>
+      </select>
+      <select id="fSched" aria-label="تصفية حسب الحالة الزمنية">
+        <option value="">كل الحالات الزمنية</option>
+        <option value="good">مطابق أو أسرع من المخطط</option>
+        <option value="bad">متأخر عن الجدول</option>
+      </select>
+      <button type="button" class="reset-btn" id="fReset">إعادة تعيين</button>
+      <span class="count" id="fCount"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th>#</th><th>الاسم</th><th>الكود</th><th>الإنجاز</th>
+            <th>الحالة الزمنية</th><th>أهلية الدفعة الأخيرة</th><th>السكور</th><th>التصنيف</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="shead">
+      <span class="sheet">٠٧</span>
+      <h2>مواقع تواجد المستفيدين</h2>
+      <span class="note">مخطط تخطيطي بالمواقع النسبية الفعلية (وليس خريطة شوارع حقيقية) — مرّر أو اضغط على أي نقطة لعرض تفاصيلها، ثم افتحها في خرائط جوجل</span>
+    </div>
+    <div class="card lift siteplan-card">
+      <div class="siteplan-layout">
+        <div class="siteplan-svg-wrap" id="spWrap"></div>
+        <div class="sp-card" id="spCard"></div>
+      </div>
+      <div class="sp-legend" id="spLegend"></div>
+      <div class="sp-note" id="spNote"></div>
+    </div>
+  </section>
+
+  <footer class="notes">
+    <b>إعداد وتصميم اللوحة والإشراف التقني عليها:</b> م. نعيم شاهين — تُحدَّث تلقائيًا بشكل يومي، أو فور صدور تعليمات تحديث مباشرة منه.<br>
+    <b>مصدر البيانات:</b> ملف "ملف_المستفيدين_المتكامل_بيانات_الاسر_ولوحة_السير" الموحّد على Google Drive — نسب الإنجاز والدفعات مرتبطة بصيغ حية (IMPORTRANGE) بملف "جدول الكميات" الخاص بكل مستفيد، والمرحلة الحالية من ورقة "لوحة سير المشروع"، والبيانات الأسرية/الديموغرافية من ورقة "قاعدة بيانات الأسر" المستخرجة من استمارة KOBO الميدانية.<br>
+    <b>توزيع الحالات على المهندسين المشرفين</b> (م. رانيا مهنا / م. سماح ابراهيم) معتمد يدويًا حسب التوزيع الرسمي الذي أقرّه فريق المشروع، ولا يُقرأ تلقائيًا من عمود "المهندس المشرف" في الملف.<br>
+    <b>السكور</b> = نسبة الإنجاز الكلي (حتى 50) + متوسط تقدم الدفعتين 1 و2 (حتى 20) + الالتزام بالجدول الزمني (حتى 30) — تقييم تنفيذي بحت، لا يشمل أي عامل مالي أو إداري.<br>
+    <b>الوضع المالي</b> المعروض أعلاه على مستوى المشروع ككل فقط — لا تُعرض أي قيمة مالية خاصة بمستفيد بعينه في هذه اللوحة، ولا أي بيانات تعريف شخصية (هوية/جوال).<br>
+    <b>مواقع تواجد المستفيدين:</b> من ملف "احدثيات اماكن تواجد المستفيدين 25" على Google Drive — مخطط تخطيطي (site plan) بمواقع نسبية محسوبة من الإحداثيات الفعلية، وليس خريطة شوارع حقيقية (بيئة عرض اللوحة لا تسمح بتحميل صور خرائط خارجية)؛ زوجا الأكواد NS1/NS2 وMR3/MR6 مسجَّلان بنفس الإحداثيات في الملف المصدر، وتم تفريقهما بصريًا بمقدار طفيف على المخطط لتفادي تطابق النقاط فقط، دون أي أثر على رابط "فتح في خرائط جوجل" لكل منهما.
+  </footer>
+
+</div>
+
+<script>
+/* ============================= DATA (يُستبدل بالكامل عند كل تحديث يومي) ============================= */
+
+const REPORT_DATE = "2026-09-24";
+
+// المعالم: مطابقة لملفات جداول الكميات الـ25 (ورقة "اللوحة الرئيسية": C17 بداية · C9/C10/C11 طلبات الدفعات · E17 نهاية).
+// بداية المشروع 2026-07-01 ونهايته 2026-10-31 (122 يومًا) - صُحّحت بتاريخ 2026-09-20 بتأكيد المستخدم (كانت 2026-09-01 خطأً).
+// pos تخطيطي (توزيع متساوٍ لتفادي تراكب المسميات)، وعلامة "اليوم" تُسقَط على هذا المقياس بالاستيفاء بين تاريخَي المعلمين المحيطين.
+const MILESTONES = [
+  {date:"2026-07-01", label:"بدء المشروع", sub:"", pos:0, done:true},
+  {date:"2026-09-27", label:"طلب الدفعة الأولى", sub:"حسب نسبة كل مستفيد", pos:25, done:false},
+  {date:"2026-09-30", label:"طلب الدفعة الثانية", sub:"حسب نسبة كل مستفيد", pos:50, done:false},
+  {date:"2026-10-15", label:"طلب الدفعة الثالثة", sub:"تتطلب إنجاز 100%", pos:75, done:false},
+  {date:"2026-10-31", label:"نهاية المشروع", sub:"", pos:100, done:false},
+];
+
+// إحداثيات مواقع تواجد المستفيدين (خطوط الطول/العرض) - من ملف "احدثيات اماكن تواجد المستفيدين 25" على Google Drive
+// ثابتة (مواقع فعلية على الأرض لا تتغيّر يوميًا) - لا تُستبدل أو تُعاد قراءتها ضمن التحديث اليومي إلا إن طلب المستخدم ذلك صراحةً
+const COORDS = [
+{code:"MM4", lat:31.5181665, lon:34.4684543, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5181665,34.4684543"},
+{code:"NS1", lat:31.5173594, lon:34.4679538, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5173594,34.4679538"},
+{code:"NS2", lat:31.5173594, lon:34.4679538, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5173594,34.4679538"},
+{code:"RM11", lat:31.518227, lon:34.4673153, gmaps:"https://www.google.com/maps/search/?api=1&query=31.518227,34.4673153"},
+{code:"RM5", lat:31.5175573, lon:34.468139, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5175573,34.468139"},
+{code:"MM5", lat:31.5180461, lon:34.4681471, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5180461,34.4681471"},
+{code:"MM6", lat:31.517805, lon:34.4684089, gmaps:"https://www.google.com/maps/search/?api=1&query=31.517805,34.4684089"},
+{code:"MM8", lat:31.5176073, lon:34.4693909, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5176073,34.4693909"},
+{code:"MM9", lat:31.5182471, lon:34.468199, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5182471,34.468199"},
+{code:"NS9", lat:31.5179263, lon:34.4675918, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5179263,34.4675918"},
+{code:"MF7", lat:31.518064, lon:34.46749, gmaps:"https://www.google.com/maps/search/?api=1&query=31.518064,34.46749"},
+{code:"MS8", lat:31.5185247, lon:34.4661773, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5185247,34.4661773"},
+{code:"MR6", lat:31.5180184, lon:34.4678965, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5180184,34.4678965"},
+{code:"MM2", lat:31.5174389, lon:34.468608, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5174389,34.468608"},
+{code:"MR3", lat:31.5180184, lon:34.4678965, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5180184,34.4678965"},
+{code:"MS5", lat:31.5180109, lon:34.468157, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5180109,34.468157"},
+{code:"MS1", lat:31.5179149, lon:34.4682186, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5179149,34.4682186"},
+{code:"MR2", lat:31.5176504, lon:34.4681088, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5176504,34.4681088"},
+{code:"MF8", lat:31.518369, lon:34.467393, gmaps:"https://www.google.com/maps/search/?api=1&query=31.518369,34.467393"},
+{code:"MF6", lat:31.518005, lon:34.467216, gmaps:"https://www.google.com/maps/search/?api=1&query=31.518005,34.467216"},
+{code:"MF5", lat:31.517291, lon:34.468336, gmaps:"https://www.google.com/maps/search/?api=1&query=31.517291,34.468336"},
+{code:"SE5", lat:31.5173877, lon:34.4686342, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5173877,34.4686342"},
+{code:"SE6", lat:31.5174044, lon:34.4689345, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5174044,34.4689345"},
+{code:"SE7", lat:31.5179548, lon:34.4679457, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5179548,34.4679457"},
+{code:"SE11", lat:31.5183717, lon:34.4678883, gmaps:"https://www.google.com/maps/search/?api=1&query=31.5183717,34.4678883"},
+];
+
+// سجل يومي لمتوسط السكور العام - تُلحق به المهمة المجدولة نقطة جديدة كل يوم (لا تُستبدل، بل تُضاف/تُحدَّث لنفس تاريخ اليوم فقط)
+// أُعيد ضبط السجل بتاريخ 2026-09-03 مع اعتماد الملف الموحّد الجديد (مصدر بيانات مختلف عن السجل السابق).
+const HISTORY = [
+  {date:"2026-09-03", overall:0.0},
+  {date:"2026-09-07", overall:0.0},
+  {date:"2026-09-08", overall:0.0},
+  {date:"2026-09-09", overall:0.0},
+  {date:"2026-09-15", overall:0.0},
+  {date:"2026-09-20", overall:0.0},
+  {date:"2026-09-22", overall:16.3},
+  {date:"2026-09-24", overall:24.3},
+];
+
+// إجمالي على مستوى المشروع من "قاعدة بيانات الأسر" (ورقة لوحة المؤشرات) - يُحدَّث يوميًا مع الملف الموحّد
+const FAMILY = {
+  families:25, coreMembers:132, extendedMembers:62, totalIndividuals:194,
+  casesWithExtended:11, extendedSubfamilies:15, disabled:10, elderly:12,
+  chronic:14, warInjured:9, nursingMothers:4, avgFamilySize:5.3,
+  childrenUnder18:99, childrenPct:51.0, women:103, men:91, workingAge:83, workingAgePct:42.8, elderlyPct:6.2,
+};
+
+// الوضع المالي للمشروع (مستوى المشروع ككل فقط - لا قيم مالية لأي مستفيد بعينه)
+// totalGrant ثابت يدويًا = القيمة الرسمية المعتمدة للمنحة (274,998 ₪ - بتأكيد المستخدم 2026-09-06)، وليس من عمود "إجمالي قيمة العقود" بورقة "لوحة سير المشروع".
+// remaining و disbursedPct يُحسبان دائمًا من totalGrant الثابت هذا.
+// ⚠️ تحديث 2026-09-22: بدأ التنفيذ الميداني الفعلي وأصبح للمصدر عمود "إجمالي المصروف" بقيم حقيقية (لم يكن موجودًا حتى 2026-09-20).
+// وُجد تعارض داخلي بين ورقتي "لوحة سير المشروع" و"ملخص المستفيدين المرتبط" لهذا العمود بتاريخ 2026-09-22 (74,408.64 ₪ حينها)
+// (نسبة الإنجاز وقيمة العقد متطابقتان تمامًا بين الورقتين، التعارض في عمود الصرف فقط) - عُرض على المستخدم فاختار صراحة اعتماد
+// "ملخص المستفيدين المرتبط" كمصدر وحيد لـtotalDisbursed ولكل القيم المالية المصروفة. راجع فحص الجلسة بتاريخ 2026-09-22 لمزيد من التفصيل.
+const FINANCE = {
+  totalGrant: 274998,
+  totalDisbursed: 74414.94,
+  remaining: 200583.06,
+  disbursedPct: 27.1,
+  contractsSum: 274996.3,
+  payments: [
+    {label:"الدفعة الأولى (30%)", planned:82498.89, actual:74414.94},
+    {label:"الدفعة الثانية (50%)", planned:137498.15, actual:0},
+    {label:"الدفعة الثالثة (20%)", planned:54999.26, actual:0},
+  ],
+};
+
+// التوزيع العمري والنوعي الكامل لكل أفراد المشروع (أساسي + ممتد) - من ورقة "الفئات العمرية للمشروع"
+const AGE_BANDS = [
+  {label:"أقل من 8 سنوات", male:21, female:22, total:43, pct:22.2},
+  {label:"8 - 17 سنة", male:27, female:29, total:56, pct:28.9},
+  {label:"18 - 59 سنة", male:38, female:45, total:83, pct:42.8},
+  {label:"60 سنة فأكثر", male:5, female:7, total:12, pct:6.2},
+];
+
+// completion/p1/p2: كسور 0..1 من الأعمدة الحية (IMPORTRANGE) بورقة "ملخص المستفيدين المرتبط" (أيضًا المصدر المعتمد لعمود المصروف - راجع ملاحظة FINANCE أعلاه).
+// eng/stage/adherence وحقول الأسرة من ورقتي "لوحة سير المشروع" و"قاعدة بيانات الأسر" بالملف الموحّد (معتمد).
+const DATA = [
+{code:"MM4",name:"رائد نبيل احمد السويسي",eng:"م. رانيا مهنا",items:13,completion:0.4202015277,p1:1,p2:0.1677359151,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:13,hasExtended:true,disabled:0,chronic:0,warInjured:2,elderly:0},
+{code:"NS1",name:"منى نافذ محمود عبد العال",eng:"م. رانيا مهنا",items:11,completion:0.3041368744,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"NS2",name:"خديجه راشد يوسف عبد العال",eng:"م. رانيا مهنا",items:13,completion:0.4462840905,p1:1,p2:0.1315422947,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 55%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:6,hasExtended:true,disabled:1,chronic:1,warInjured:1,elderly:2},
+{code:"RM11",name:"مجدولين حاتم اسعد الوحيدي",eng:"م. رانيا مهنا",items:12,completion:0.081963714,p1:0.127342066,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)",
+  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:9,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
+{code:"RM5",name:"حنين روحي مصطفى الطناني",eng:"م. رانيا مهنا",items:14,completion:0.2967686022,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"MM5",name:"سلفيا نبيل احمد البهتيني",eng:"م. رانيا مهنا",items:14,completion:0.4182074309,p1:1,p2:0.097883959,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 58%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"MM6",name:"عطية احمد عثمان السويسي",eng:"م. رانيا مهنا",items:13,completion:0.5518597997,p1:1,p2:0.3542069321,schedGood:false,eligGood:false,housing:"إستضافة",schedText:"🟠 الإنجاز أبطأ من المخطط",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 45%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:false,disabled:3,chronic:0,warInjured:0,elderly:2},
+{code:"MM8",name:"خضر عبدالرحيم راشد الدلو",eng:"م. رانيا مهنا",items:11,completion:0.3632007302,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 64%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"MM9",name:"بلال اياد عبدالرحيم الدلو",eng:"م. رانيا مهنا",items:12,completion:0.3663182573,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 63%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:5,hasExtended:false,disabled:0,chronic:1,warInjured:0,elderly:0},
+{code:"NS9",name:"نداء جودت عبد المظلوم",eng:"م. رانيا مهنا",items:19,completion:0.3305497,p1:1,p2:0.0348334307,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:13,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"MF7",name:"جودت عبد طه المظلوم",eng:"م. رانيا مهنا",items:14,completion:0.3036001286,p1:1,p2:0.0673697805,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 70%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:true,disabled:2,chronic:2,warInjured:0,elderly:0},
+{code:"MS8",name:"يونس نعيم يونس قنيطة",eng:"م. رانيا مهنا",items:12,completion:0.0838625327,p1:0.1637192343,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 92%)",
+  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:8,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
+{code:"MR6",name:"فوزية عبد العزيز مبروك ضبان",eng:"م. سماح ابراهيم",items:12,completion:0.3218645426,p1:1,p2:0.025203252,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:10,hasExtended:true,disabled:1,chronic:2,warInjured:0,elderly:1},
+{code:"MM2",name:"رسمية محمد ابراهيم الطنة",eng:"م. سماح ابراهيم",items:10,completion:0.5630567144,p1:1,p2:0.300890743,schedGood:false,eligGood:false,housing:"ملك",schedText:"🟠 الإنجاز أبطأ من المخطط",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 44%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:1},
+{code:"MR3",name:"أيمن أحمد هاشم ضبان",eng:"م. سماح ابراهيم",items:11,completion:0.3257836198,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 67%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:2,warInjured:2,elderly:0},
+{code:"MS5",name:"محمد حسن مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:12,completion:0.3153747871,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 68%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"MS1",name:"حسن مصطفى حسني الجاعوني",eng:"م. سماح ابراهيم",items:11,completion:0.1695772059,p1:0.3996101365,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 83%)",
+  stage:"قيد تنفيذ أعمال الدفعة الأولى",adherence:"ضمن الموعد المخطط",familySize:6,hasExtended:true,disabled:0,chronic:0,warInjured:0,elderly:2},
+{code:"MR2",name:"رأفت أحمد هاشم ضبان",eng:"م. سماح ابراهيم",items:10,completion:0.3140764172,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:8,hasExtended:false,disabled:0,chronic:1,warInjured:1,elderly:0},
+{code:"MF8",name:"عطالله عايش محمد الفالوجى",eng:"م. سماح ابراهيم",items:12,completion:0,p1:0,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)",
+  stage:"لم يبدأ التنفيذ بعد",adherence:"ضمن الموعد المخطط",familySize:23,hasExtended:true,disabled:1,chronic:0,warInjured:0,elderly:1},
+{code:"MF6",name:"مصطفى سالم عايدي المشهراوي",eng:"م. سماح ابراهيم",items:11,completion:0.4006261266,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 60%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:9,hasExtended:true,disabled:0,chronic:0,warInjured:1,elderly:0},
+{code:"MF5",name:"محمود فريد احمد صبيح",eng:"م. سماح ابراهيم",items:7,completion:0,p1:0,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 100%)",
+  stage:"لم يبدأ التنفيذ بعد",adherence:"ضمن الموعد المخطط",familySize:6,hasExtended:false,disabled:1,chronic:1,warInjured:0,elderly:0},
+{code:"SE5",name:"ناصر مصطفى حسني الجاعوني",eng:"م. سماح ابراهيم",items:11,completion:0.3089950651,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 69%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:1},
+{code:"SE6",name:"عمر ناصر مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:8,completion:0.3357505439,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 66%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:0,chronic:3,warInjured:1,elderly:0},
+{code:"SE7",name:"بلال ناصر مصطفى الجاعوني",eng:"م. سماح ابراهيم",items:8,completion:0.3518024446,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 65%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:4,hasExtended:false,disabled:0,chronic:0,warInjured:0,elderly:0},
+{code:"SE11",name:"فوزي محمد فتحي عبد العليم المصري",eng:"م. سماح ابراهيم",items:13,completion:0.4109868741,p1:1,p2:0,schedGood:false,eligGood:false,housing:"ملك",schedText:"🔴 الإنجاز متأخر عن الجدول الزمني",eligText:"⛔ غير مؤهل - الدفعة الثالثة تُصرف بعد إنجاز 100% من جدول الكميات (المتبقي 59%)",
+  stage:"تم إنجاز الدفعة الأولى - جارٍ العمل على الدفعة الثانية",adherence:"✅ اكتملت الدفعة الأولى",familySize:7,hasExtended:false,disabled:1,chronic:1,warInjured:1,elderly:0},
+];
+/* ================================================================================================= */
+
+/* ============================ منطق العرض (لا يُلمس في التحديث اليومي) ============================ */
+function score(d){ return Math.round(50*d.completion + 20*((d.p1+d.p2)/2) + (d.schedGood?30:0)); }
+function cls(s){ if(s>=85) return "ممتاز"; if(s>=65) return "جيد"; if(s>=45) return "متابعة"; return "حرج"; }
+const CLS_ORDER = ["ممتاز","جيد","متابعة","حرج"];
+const CLS_COLOR = {"ممتاز":"var(--good)","جيد":"var(--warn)","متابعة":"var(--serious)","حرج":"var(--crit)"};
+const CLS_TAG   = {"ممتاز":"t-good","جيد":"t-warn","متابعة":"t-serious","حرج":"t-crit"};
+
+DATA.forEach(d=>{ d.score = score(d); d.cls = cls(d.score); });
+
+const ENG_COLOR_VARS = ["--cat-1","--cat-2","--cat-3","--cat-4","--cat-5","--cat-6","--cat-7","--cat-1","--cat-2","--cat-3"];
+const ENGINEERS = [...new Set(DATA.map(d=>d.eng))].sort((a,b)=>a.localeCompare(b,"ar"));
+function engColorVar(name){ const i = ENGINEERS.indexOf(name); return `var(${ENG_COLOR_VARS[i % ENG_COLOR_VARS.length]})`; }
+
+function fmtPct(x){ return Math.round(x*100)+"%"; }
+function avg(a){ return a.length ? a.reduce((x,y)=>x+y,0)/a.length : 0; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function fmtILS(n, d=0){ return n.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d}) + " ₪"; }
+function ltr(s){ return `<span class="ltr-num">${esc(s)}</span>`; }
+// تنظيف نص المصدر من الرموز التعبيرية في بدايته (المعنى موجود في النص نفسه) - للعرض فقط
+function clean(s){ return String(s).replace(/^[^\p{L}\p{N}]+/u, "").trim(); }
+const AR_DIGITS = "٠١٢٣٤٥٦٧٨٩";
+function arNum(n){ return String(n).replace(/\d/g, d=>AR_DIGITS[+d]); }
+
+/* ---------- حركة (تُعطَّل تلقائيًا مع تفضيل تقليل الحركة) ---------- */
+const REDUCE_MOTION = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+function animateNumber(el, target, opts={}){
+  const {decimals=0, duration=900, prefix="", suffix=""} = opts;
+  const fmt = v => prefix + v.toLocaleString("en-US",{minimumFractionDigits:decimals,maximumFractionDigits:decimals}) + suffix;
+  if(REDUCE_MOTION || !el){ if(el) el.textContent = fmt(target); return; }
+  const start = performance.now();
+  function frame(now){
+    const t = Math.min(1,(now-start)/duration);
+    el.textContent = fmt(target*(1-Math.pow(1-t,3)));
+    if(t<1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+function animateFills(container){
+  if(!container) return;
+  const els = container.querySelectorAll("[data-w]");
+  if(REDUCE_MOTION){ els.forEach(el=>{ el.style.width = el.dataset.w; }); return; }
+  els.forEach(el=>{ el.style.width = "0%"; });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ els.forEach(el=>{ el.style.width = el.dataset.w; }); }));
+}
+function animateGauges(container){
+  if(!container) return;
+  const els = container.querySelectorAll("[data-offset]");
+  if(REDUCE_MOTION){ els.forEach(el=>{ el.style.strokeDashoffset = el.dataset.offset; }); return; }
+  els.forEach(el=>{ el.style.strokeDashoffset = el.dataset.circ; });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ els.forEach(el=>{ el.style.strokeDashoffset = el.dataset.offset; }); }));
+}
+/* ظهور تدريجي عند التحميل (وليس عند التمرير - حتى تبقى كل الأقسام ظاهرة في اللقطة/الطباعة) */
+(function initReveal(){
+  const els = document.querySelectorAll(".reveal");
+  if(REDUCE_MOTION){ els.forEach(el=>el.classList.add("in")); return; }
+  els.forEach((el,i)=>{ el.style.transitionDelay = Math.min(i*70,420)+"ms"; });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{ els.forEach(el=>el.classList.add("in")); }));
+})();
+
+/* ---------- إحصاءات عامة ---------- */
+const total = DATA.length;
+const avgScore = avg(DATA.map(d=>d.score));
+const avgCompletionAll = avg(DATA.map(d=>d.completion));
+const eligibleCount = DATA.filter(d=>d.eligGood).length;
+const completedCount = DATA.filter(d=>d.completion>=0.999).length;
+const lateCount = DATA.filter(d=>!d.schedGood).length;
+// ZERO_PROGRESS: كل نسب الإنجاز صفر في الملف المصدر. منذ 2026-09-20 هذا لا يعني "لم يبدأ التنفيذ"
+// بل أن الكميات المنفَّذة لم تُدخَل بعد في "جداول المتابعة" بملفات المستفيدين (كل النسب مشتقّة منها).
+const ZERO_PROGRESS = DATA.every(d=>d.completion===0 && d.p1===0 && d.p2===0);
+const PRE_EXECUTION = ZERO_PROGRESS && FINANCE.totalDisbursed===0;
+
+/* ---------- المسار الزمني: الحساب ---------- */
+function dayDiff(a,b){ return (new Date(b)-new Date(a))/86400000; }
+const spanDays = Math.max(1, Math.round(dayDiff(MILESTONES[0].date, MILESTONES[MILESTONES.length-1].date)));
+const elapsedDays = Math.round(dayDiff(MILESTONES[0].date, REPORT_DATE));
+const elapsedClamped = Math.max(0, Math.min(spanDays, elapsedDays));
+// المعالم موزّعة تخطيطيًا (pos)، فتُسقَط "اليوم" على نفس المقياس بالاستيفاء بين المعلمين المحيطين بها
+// - وإلا ظهرت العلامة بعد معلم لم يحن موعده بعد.
+const todayPos = (()=>{
+  const t = new Date(REPORT_DATE).getTime(), ms = MILESTONES;
+  if(t <= new Date(ms[0].date).getTime()) return ms[0].pos;
+  for(let i=0; i<ms.length-1; i++){
+    const a = new Date(ms[i].date).getTime(), b = new Date(ms[i+1].date).getTime();
+    if(t < b){ const f = (b-a) ? (t-a)/(b-a) : 0; return ms[i].pos + f*(ms[i+1].pos - ms[i].pos); }
+  }
+  return ms[ms.length-1].pos;
+})();
+
+/* ---------- كتلة بيانات المخطط (Title block) ---------- */
+document.getElementById("titleBlock").innerHTML = `
+  <div class="tb-row"><span class="k">تاريخ اللقطة</span><span class="v">${ltr(REPORT_DATE)}</span></div>
+  <div class="tb-row"><span class="k">إعداد وتصميم</span><span class="v">م. نعيم شاهين</span></div>
+  <div class="tb-row"><span class="k">عدد المستفيدين</span><span class="v">${total} وحدة سكنية</span></div>
+  <div class="tb-row"><span class="k">الإشراف الميداني</span><span class="v">${ENGINEERS.length} مهندسات</span></div>
+`;
+
+/* ---------- شريط المؤشرات على المقدمة ---------- */
+document.getElementById("mstrip").innerHTML = `
+  <div class="mstat">
+    <div class="k">إجمالي قيمة العقود (المنحة)</div>
+    <div class="v"><span class="ltr-num"><span id="msGrant">0</span><span class="cur">₪</span></span></div>
+  </div>
+  <div class="mstat">
+    <div class="k">المصروف فعليًا حتى الآن</div>
+    <div class="v"><span class="ltr-num"><span id="msPaid">0</span><span class="cur">₪</span></span><small>${FINANCE.disbursedPct.toFixed(1)}% من المنحة</small></div>
+  </div>
+  <div class="mstat">
+    <div class="k">متوسط الإنجاز الميداني</div>
+    <div class="v" id="msProg">0%</div>
+  </div>
+  <div class="mstat is-copper">
+    <div class="k">الموقع في المدة الزمنية</div>
+    <div class="v">اليوم ${arNum(elapsedClamped)} <small>من ${arNum(spanDays)} يومًا</small></div>
+    <div class="mstat-track"><span data-w="${todayPos.toFixed(1)}%"></span></div>
+  </div>
+`;
+animateNumber(document.getElementById("msGrant"), FINANCE.totalGrant, {duration:1100});
+animateNumber(document.getElementById("msPaid"), FINANCE.totalDisbursed, {decimals:2, duration:1100});
+animateNumber(document.getElementById("msProg"), avgCompletionAll*100, {decimals:0, duration:1000, suffix:"%"});
+animateFills(document.getElementById("mstrip"));
+
+/* ---------- تنبيه مرحلة المشروع (يظهر تلقائيًا فقط عندما تكون كل القيم صفرًا) ---------- */
+document.getElementById("phaseBanner").innerHTML = ZERO_PROGRESS ? `
+  <div class="notice">
+    <span class="ic">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 8.2v4.6"/><circle cx="12" cy="16" r=".9" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+    <div>
+      <b>بيانات التنفيذ لم تُدخَل بعد في الملف المصدر</b>
+      <p>بدأ التنفيذ الميداني فعليًا وصُرفت <b>الدفعة الأولى كمقدّمة لـ${FINANCE.firstPaymentReceipts ? FINANCE.firstPaymentReceipts.received : 0} حالة من أصل ${total}</b>، لكن حتى تاريخ هذه اللقطة (${ltr(REPORT_DATE)}) لم تُسجَّل أي كميات منفَّذة في "جداول المتابعة" داخل ملفات المستفيدين. وبما أن كل نسب الإنجاز في الملف المصدر مشتقّة من تلك الجداول، تظهر مؤشرات الإنجاز أدناه بقيمة صفر وتظهر كل الحالات "متأخرة عن الجدول". هذه قراءة صحيحة للملف المصدر وليست خللًا في اللوحة — وستتغيّر تلقائيًا فور إدخال الكميات المنفَّذة.</p>
+    </div>
+  </div>` : "";
+
+/* ---------- لوحة المؤشرات ---------- */
+const ICON = {
+  house:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 10.5V19.5h11V10.5"/><path d="M10.2 19.5V15h3.6v4.5"/></svg>`,
+  gauge:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4.2-5"/><circle cx="12" cy="17" r="1.1" fill="currentColor" stroke="none"/></svg>`,
+  shield:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.4 19 6v6c0 4.5-2.9 7.5-7 8.8C7.9 19.5 5 16.5 5 12V6z"/><path d="m9.2 12.2 2 2 3.8-4"/></svg>`,
+  list:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="4" width="15" height="16" rx="2.2"/><path d="M8.4 9.4h7.2M8.4 12.8h7.2M8.4 16.2h4.6"/></svg>`,
+  clock:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="M12 7.6v4.7l3.2 1.9"/></svg>`,
+};
+function kpi(lab, icon, valHtml, sub, mod=""){
+  return `<div class="kpi ${mod}">
+    <div class="kpi-lab"><span class="g">${icon}</span>${lab}</div>
+    <div class="kpi-val">${valHtml}</div>
+    <div class="kpi-sub">${sub}</div>
+  </div>`;
+}
+document.getElementById("kpiRow").innerHTML =
+  kpi("إجمالي المستفيدين", ICON.house, `<span id="kpiTotal">0</span>`, `${ENGINEERS.length} مهندسات مشرفات ميدانيًا`) +
+  kpi("متوسط السكور العام", ICON.gauge, `<span id="kpiScore">0.0</span>`, "من 100 — إنجاز والتزام زمني فقط", "is-primary") +
+  kpi("مؤهل للدفعة الأخيرة", ICON.shield, `<span class="num-ratio">${eligibleCount} / ${total}</span>`, "يتطلب إنجاز 100% من البنود") +
+  kpi("أنجز 100% من البنود", ICON.list, `<span class="num-ratio">${completedCount} / ${total}</span>`, `باقي ${total-completedCount} حالة دون ذلك`) +
+  kpi("متأخر عن الجدول الزمني", ICON.clock, `<span class="num-ratio">${lateCount} / ${total}</span>`, ZERO_PROGRESS ? "ناتج عن غياب بيانات التنفيذ بالمصدر" : "يستدعي متابعة ميدانية", "is-crit");
+animateNumber(document.getElementById("kpiTotal"), total, {duration:700});
+animateNumber(document.getElementById("kpiScore"), avgScore, {decimals:1, duration:1000});
+
+/* ---------- الوضع المالي ---------- */
+document.getElementById("finFigs").innerHTML = `
+  <div class="fin-fig is-lead"><div class="k">إجمالي قيمة العقود (المنحة)</div><div class="v"><span id="finGrant">0</span><span class="cur">₪</span></div></div>
+  <div class="fin-fig is-out"><div class="k">المصروف فعليًا حتى الآن</div><div class="v"><span id="finPaid">0</span><span class="cur">₪</span></div></div>
+  <div class="fin-fig is-rest"><div class="k">المتبقي من قيمة العقود</div><div class="v"><span id="finRest">0</span><span class="cur">₪</span></div></div>
+`;
+animateNumber(document.getElementById("finGrant"), FINANCE.totalGrant, {duration:1100});
+animateNumber(document.getElementById("finPaid"), FINANCE.totalDisbursed, {decimals:2, duration:1100});
+animateNumber(document.getElementById("finRest"), FINANCE.remaining, {duration:1100});
+
+const FIN_CIRC = 2*Math.PI*47;
+const finGauge = document.getElementById("finGaugeFill");
+finGauge.setAttribute("stroke-dasharray", FIN_CIRC.toFixed(2));
+finGauge.dataset.circ = FIN_CIRC.toFixed(2);
+finGauge.dataset.offset = (FIN_CIRC*(1-FINANCE.disbursedPct/100)).toFixed(2);
+animateGauges(document.querySelector(".fin-gauge"));
+animateNumber(document.getElementById("finGaugePct"), FINANCE.disbursedPct, {decimals:1, duration:1100, suffix:"%"});
+
+// شريط هيكل الدفعات: تدرّج متسلسل من نفس اللون (مراحل مرتّبة، ليست فئات مستقلة)
+const STAGE_TINT = ["color-mix(in srgb, var(--primary) 42%, var(--surface))",
+                    "color-mix(in srgb, var(--primary) 70%, var(--surface))",
+                    "var(--primary)"];
+const plannedTotal = FINANCE.payments.reduce((a,p)=>a+p.planned,0) || 1;
+document.getElementById("finAlloc").innerHTML = FINANCE.payments.map((p,i)=>
+  `<span style="flex:${p.planned}; background:${STAGE_TINT[i%3]}"></span>`).join("");
+document.getElementById("finAllocKey").innerHTML = FINANCE.payments.map((p,i)=>
+  `<span><i style="background:${STAGE_TINT[i%3]}"></i>${esc(p.label)} — <span class="ltr-num">${fmtILS(p.planned,2)}</span> (${(p.planned/plannedTotal*100).toFixed(0)}%)</span>`).join("");
+
+document.getElementById("financeStages").innerHTML = FINANCE.payments.map((p,i)=>{
+  const pct = p.planned>0 ? Math.min(100, p.actual/p.planned*100) : 0;
+  return `<div>
+    <div class="stage-head"><span>${esc(p.label)}</span><b>${fmtPct(pct/100)} مصروف</b></div>
+    <div class="stage-track"><div class="stage-fill" data-w="${pct.toFixed(1)}%"></div></div>
+    <div class="stage-nums"><span>المخطط: <span class="num-ratio">${fmtILS(p.planned,2)}</span></span><span>المصروف: <span class="num-ratio">${fmtILS(p.actual,2)}</span></span></div>
+  </div>`;
+}).join("");
+animateFills(document.getElementById("financeStages"));
+
+// تنبيه "صُرف صفر" يظهر فقط إذا بدأ التنفيذ فعلًا دون صرف (التنبيه العام أعلى الصفحة يغطي حالة ما قبل التنفيذ)
+const RCPT = FINANCE.firstPaymentReceipts;
+document.getElementById("financeNoteWrap").innerHTML =
+  (RCPT && RCPT.received>0)
+    ? `<div class="fin-note">صُرفت <b>الدفعة الأولى لـ${RCPT.received} حالة من أصل ${RCPT.total}</b> بتاريخَي ${RCPT.dates.map(d=>ltr(d)).join(" و")}${RCPT.missing.length?` — لم تُصرف بعد لـ${RCPT.missing.map(esc).join(" و")}`:""}. ${RCPT.amountFromSource===false ? `<b>الملف المصدر لا يحوي عمودًا للمبالغ المصروفة</b> (أعمدته المالية تحسب "المستحق حسب نسبة الإنجاز" وهي صفر لأن الكميات المنفَّذة لم تُدخَل بعد)، لذلك رقم "المصروف فعليًا" أعلاه <b>محسوب في هذه اللوحة</b> = 30% من قيمة عقد كل حالة من الـ${RCPT.received}. يصبح مقروءًا من المصدر مباشرة فور إضافة عمود "المبلغ المصروف" إليه.` : ""}</div>`
+    : ((!PRE_EXECUTION && FINANCE.totalDisbursed===0)
+        ? `<div class="fin-note">التنفيذ الميداني بدأ فعليًا لكن لم يُسجَّل أي مبلغ مصروف حتى ${ltr(REPORT_DATE)} — يُتابَع هذا مع الفريق المالي.</div>`
+        : "");
+
+if(FINANCE.contractsSum!=null && Math.abs(FINANCE.contractsSum-FINANCE.totalGrant) > 0.01){
+  const diff = Math.abs(FINANCE.totalGrant-FINANCE.contractsSum);
+  document.getElementById("financeReconcileNote").innerHTML =
+    `* قيمة المنحة الرسمية المعتمدة <span class="num-ratio">${fmtILS(FINANCE.totalGrant,0)}</span> تختلف بفارق طفيف (<span class="num-ratio">${fmtILS(diff,2)}</span>) عن مجموع قيم العقود الـ${total} الموقّعة فعليًا (<span class="num-ratio">${fmtILS(FINANCE.contractsSum,2)}</span>) — ناتج عن تقريب قيم العقود الفردية، وليس خطأً في اللوحة.`;
+} else {
+  document.getElementById("financeReconcileNote").innerHTML = "";
+}
+
+/* ---------- الأثر الإنساني ---------- */
+document.getElementById("impactHero").innerHTML =
+  `<div class="v" id="impactHeroValue">0</div><div class="k">فردًا متأثرًا بالمشروع عبر الوحدات السكنية الـ${total} — بمتوسط ${FAMILY.avgFamilySize} أفراد لكل أسرة</div>`;
+animateNumber(document.getElementById("impactHeroValue"), FAMILY.totalIndividuals, {duration:900});
+
+function lens(title, colorVar, items){
+  return `<div class="lens" style="--c:${colorVar}">
+    <div class="lens-k"><i></i>${title}</div>
+    <div class="lens-items">${items.map(it=>
+      `<div><div class="li-v">${it.v}</div><div class="li-k">${it.k}</div>${it.s?`<div class="li-s">${it.s}</div>`:""}</div>`).join("")}</div>
+  </div>`;
+}
+document.getElementById("impactGroups").innerHTML =
+  lens("حسب نوع الأسرة", "var(--cat-1)", [
+    {v:FAMILY.coreMembers, k:"أفراد الأسرة الأساسية"},
+    {v:FAMILY.extendedMembers, k:"أفراد الأسر الممتدة"},
+  ]) +
+  lens("حسب الفئة العمرية", "var(--cat-2)", [
+    {v:FAMILY.childrenUnder18, k:"أطفال وفتية (أقل من 18)", s:FAMILY.childrenPct.toFixed(1)+"%"},
+    {v:FAMILY.workingAge, k:"الفئة العاملة (18-59)", s:FAMILY.workingAgePct.toFixed(1)+"%"},
+    {v:FAMILY.elderly, k:"كبار السن (60+)", s:FAMILY.elderlyPct.toFixed(1)+"%"},
+  ]) +
+  lens("حسب النوع الاجتماعي", "var(--cat-3)", [
+    {v:FAMILY.women, k:"إناث (نساء وفتيات)"},
+    {v:FAMILY.men, k:"ذكور (رجال وفتية)"},
+  ]);
+
+document.getElementById("impactGrid").innerHTML = [
+  {v:FAMILY.avgFamilySize, k:"متوسط أفراد الأسرة"},
+  {v:FAMILY.casesWithExtended, k:"حالات تضم أسرة ممتدة"},
+  {v:FAMILY.disabled, k:"ذوو إعاقة"},
+  {v:FAMILY.chronic, k:"ذوو أمراض مزمنة"},
+  {v:FAMILY.warInjured, k:"مصابون في الحرب"},
+  {v:FAMILY.nursingMothers, k:"سيدات مرضعات"},
+].map(t=>`<div class="tile"><div class="v">${t.v}</div><div class="k">${t.k}</div></div>`).join("");
+
+document.getElementById("ageBreakdown").innerHTML = `
+  <div class="impact-sub" style="margin-top:0">التكوين الأسري (الأسرة الأساسية + الأسر الممتدة)</div>
+  <div class="age-row h"><div>الفئة العمرية</div><div>ذكور</div><div>إناث</div><div>الإجمالي</div><div>النسبة</div></div>
+  ${AGE_BANDS.map(b=>`<div class="age-row"><div>${esc(b.label)}</div><div>${b.male}</div><div>${b.female}</div><div>${b.total}</div><div>${b.pct}%</div></div>`).join("")}
+  <div class="age-row t"><div>الإجمالي</div><div>${FAMILY.men}</div><div>${FAMILY.women}</div><div>${FAMILY.totalIndividuals}</div><div>100%</div></div>
+`;
+
+/* ---------- المسار الزمني ---------- */
+// محاذاة واعية بالحواف: العنصر عند الطرف يُحاذى للداخل حتى لا يُقتطع خارج البطاقة
+function edgeAlign(pos, nearEdge=3){
+  if(pos <= nearEdge)      return "transform:translateX(0); text-align:start;";
+  if(pos >= 100-nearEdge)  return "transform:translateX(100%); text-align:end;";
+  return "";
+}
+const LABEL_W = MILESTONES.length>=5 ? "16%" : "124px";
+let tlHtml = `<div class="tl-progress" data-w="${todayPos.toFixed(1)}%"></div>`;
+MILESTONES.forEach(m=>{
+  tlHtml += `<div class="tl-node ${m.pos<=todayPos?'done':''}" style="right:${m.pos}%"></div>`;
+  tlHtml += `<div class="tl-label" style="right:${m.pos}%; width:${LABEL_W}; ${edgeAlign(m.pos)}"><div class="d">${esc(m.date)}</div><div class="t">${esc(m.label)}</div></div>`;
+});
+tlHtml += `<div class="today-line" style="right:${todayPos}%"></div>`;
+tlHtml += `<div class="today-flag" style="right:${todayPos}%; ${edgeAlign(todayPos, 12)}"><span>اليوم ${ltr(REPORT_DATE)}</span></div>`;
+document.getElementById("timeline").innerHTML = tlHtml;
+animateFills(document.getElementById("timeline"));
+
+// النسخة الرأسية (تظهر تلقائيًا على الشاشات الضيقة بدل المخطط الأفقي)
+const passed = MILESTONES.filter(m=>m.pos<=todayPos).length;
+document.getElementById("timelineVert").innerHTML = MILESTONES.map((m,i)=>{
+  const done = m.pos<=todayPos;
+  const nowMarker = (i===passed-1)
+    ? `<li class="tv-item now"><span class="tv-dot"></span><span class="tv-d">${esc(REPORT_DATE)}</span><div class="tv-t">اليوم — الموقع الحالي</div></li>` : "";
+  return `<li class="tv-item ${done?'done':''}"><span class="tv-dot"></span><span class="tv-d">${esc(m.date)}</span><div class="tv-t">${esc(m.label)}</div></li>` + nowMarker;
+}).join("");
+document.getElementById("tlFoot").textContent =
+  "* مدة المشروع من 2026-07-01 إلى 2026-10-31 (122 يومًا)، وتوقيع الاتفاقيات مع المستفيدين بتاريخ 2026-08-26. تواريخ طلبات الدفعات موحّدة لكل الحالات الـ25 في ملفات جداول الكميات. مواقع المعالم على المحور تخطيطية (توزيع متساوٍ) بينما علامة اليوم محسوبة من التاريخ الفعلي.";
+
+/* ---------- منحنى الأداء ---------- */
+function renderTrend(history){
+  const wrap = document.getElementById("trendWrap");
+  if(!history || history.length===0){
+    wrap.innerHTML = `<div class="sr-txt">لا يوجد سجل تاريخي بعد.</div>`; return;
+  }
+  if(history.length===1){
+    const h = history[0];
+    wrap.innerHTML = `
+      <div class="single-reading">
+        <div class="sr-fig"><div class="v">${h.overall.toFixed(1)}</div><div class="k">القراءة الأولى · ${ltr(h.date)}</div></div>
+        <div class="sr-txt">لا يوجد سوى قراءة واحدة حتى الآن، فلا يمكن رسم منحنى اتجاه بعد. تُضاف نقطة جديدة تلقائيًا مع كل تحديث يومي، ويظهر المنحنى من القراءة الثانية فصاعدًا.</div>
+      </div>
+      <div class="sr-axis"><i></i></div>
+      <div class="sr-scale"><span>القراءات القادمة</span><span>${ltr(h.date)}</span></div>`;
+    return;
+  }
+  const W=1000,H=190,padT=14,padB=24,padL=8,padR=8, innerH=H-padT-padB, n=history.length;
+  const xAt = i => padL + i*(W-padL-padR)/(n-1);
+  const yAt = v => padT + (100-Math.max(0,Math.min(100,v)))/100*innerH;
+  const path = history.map((h,i)=>`${i===0?'M':'L'}${xAt(i).toFixed(1)},${yAt(h.overall).toFixed(1)}`).join(" ");
+  const area = `${path} L${xAt(n-1).toFixed(1)},${(H-padB).toFixed(1)} L${xAt(0).toFixed(1)},${(H-padB).toFixed(1)} Z`;
+  let svg = `<svg class="trend-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="منحنى متوسط السكور العام">`;
+  [0,50,100].forEach(v=>{
+    const y = yAt(v);
+    svg += `<line x1="${padL}" y1="${y.toFixed(1)}" x2="${W-padR}" y2="${y.toFixed(1)}" stroke="var(--rule)" stroke-width="1"/>`;
+    svg += `<text x="${padL}" y="${(y-5).toFixed(1)}" font-size="9" fill="var(--ink-3)" font-family="IBM Plex Sans Arabic, sans-serif">${v}</text>`;
+  });
+  svg += `<path d="${area}" fill="var(--primary)" opacity=".09"/>`;
+  svg += `<path d="${path}" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  history.forEach((h,i)=>{ svg += `<circle cx="${xAt(i).toFixed(1)}" cy="${yAt(h.overall).toFixed(1)}" r="4" fill="var(--primary)" stroke="var(--surface)" stroke-width="2"/>`; });
+  history.forEach((h,i)=>{
+    const xL = i===0 ? padL : (xAt(i-1)+xAt(i))/2;
+    const xR = i===n-1 ? (W-padR) : (xAt(i)+xAt(i+1))/2;
+    svg += `<rect class="hover-zone" data-i="${i}" x="${xL.toFixed(1)}" y="0" width="${Math.max(1,xR-xL).toFixed(1)}" height="${H}"/>`;
+  });
+  svg += `</svg><div class="trend-tooltip" id="trendTip"></div>`;
+  // كل القراءات متساوية: الخط مسطّح على خط الصفر - نوضّح ذلك بدل ترك البطاقة تبدو فارغة
+  const flat = history.every(h=>h.overall===history[0].overall);
+  if(flat){
+    svg += `<div class="sr-txt" style="margin-top:12px">الخط مسطّح لأن متوسط السكور لم يتغيّر بين القراءات (${ltr(history[0].overall.toFixed(1))} في ${arNum(history.length)} قراءات حتى الآن) — سيبدأ المنحنى بالارتفاع مع أول بيانات تنفيذ فعلية.</div>`;
+  }
+  wrap.innerHTML = svg;
+  const tip = document.getElementById("trendTip"), svgEl = wrap.querySelector("svg");
+  wrap.querySelectorAll(".hover-zone").forEach(z=>{
+    z.addEventListener("mouseenter", ()=>{
+      const i=+z.dataset.i, h=history[i], r=svgEl.getBoundingClientRect(), wr=wrap.getBoundingClientRect();
+      tip.style.left = (r.left + (xAt(i)/W)*r.width - wr.left)+"px";
+      tip.style.top  = (r.top + (yAt(h.overall)/H)*r.height - wr.top - 10)+"px";
+      tip.innerHTML = `<span class="ltr-num">${esc(h.date)}</span><br>المعدل العام: ${h.overall.toFixed(1)}`;
+      tip.classList.add("show");
+    });
+    z.addEventListener("mouseleave", ()=> tip.classList.remove("show"));
+  });
+}
+renderTrend(HISTORY);
+
+/* ---------- بطاقات المهندسات ---------- */
+const CIRC = 2*Math.PI*33;
+const engAvgScore = {};
+document.getElementById("engGrid").innerHTML = ENGINEERS.map(key=>{
+  const color = engColorVar(key);
+  const list = DATA.filter(d=>d.eng===key);
+  const avgC = avg(list.map(d=>d.completion));
+  const avgS = avg(list.map(d=>d.score));
+  engAvgScore[key] = avgS;
+  const eligN = list.filter(d=>d.eligGood).length;
+  const onSched = list.filter(d=>d.schedGood).length;
+  let bars="", key2="";
+  CLS_ORDER.forEach(c=>{
+    const n = list.filter(d=>d.cls===c).length;
+    if(n===0) return;
+    bars += `<span data-w="${(n/list.length*100)}%" style="width:0; background:${CLS_COLOR[c]}"></span>`;
+    key2 += `<span><i style="background:${CLS_COLOR[c]}"></i>${c} ${n}</span>`;
+  });
+  return `<div class="card lift eng-card" style="--c:${color}">
+    <div class="eng-head"><span class="eng-name">${esc(key)}</span><span class="eng-count">${list.length} مستفيدًا</span></div>
+    <div class="eng-body">
+      <svg class="gauge" width="80" height="80" viewBox="0 0 80 80">
+        <circle cx="40" cy="40" r="33" fill="none" stroke="var(--well)" stroke-width="7"/>
+        <circle class="gauge-fill" cx="40" cy="40" r="33" fill="none" stroke="${color}" stroke-width="7" stroke-linecap="round"
+          stroke-dasharray="${CIRC.toFixed(2)}" data-circ="${CIRC.toFixed(2)}" data-offset="${(CIRC*(1-avgC)).toFixed(2)}" transform="rotate(-90 40 40)"/>
+        <text x="40" y="38" text-anchor="middle" font-family="Readex Pro, sans-serif" font-weight="600" font-size="15" fill="var(--ink)">${fmtPct(avgC)}</text>
+        <text x="40" y="51" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="8" fill="var(--ink-3)">إنجاز</text>
+      </svg>
+      <div class="eng-stats">
+        <div class="srow"><span class="k">متوسط السكور</span><span class="v">${avgS.toFixed(1)}</span></div>
+        <div class="srow"><span class="k">مؤهل للدفعة الأخيرة</span><span class="v">${eligN}</span></div>
+        <div class="srow"><span class="k">ملتزم بالجدول الزمني</span><span class="v num-ratio">${onSched} / ${list.length}</span></div>
+        <div><div class="cls-bar">${bars}</div><div class="cls-key">${key2}</div></div>
+      </div>
+    </div>
+  </div>`;
+}).join("");
+animateGauges(document.getElementById("engGrid"));
+animateFills(document.getElementById("engGrid"));
+
+const bestEng = ENGINEERS.slice().sort((a,b)=>engAvgScore[b]-engAvgScore[a])[0];
+document.getElementById("engDeltaNote").textContent = ENGINEERS.length
+  ? (ZERO_PROGRESS
+      ? `متوسط السكور متساوٍ عند 0.0 لكل المهندسات لأن بيانات التنفيذ لم تُدخَل بعد في الملف المصدر — التوزيع أدناه يوضح حجم المسؤولية الميدانية لكل واحدة`
+      : `أعلى متوسط سكور حاليًا: ${bestEng} (${engAvgScore[bestEng].toFixed(1)}) من إجمالي ${ENGINEERS.length} مهندسات مشرفات`)
+  : "";
+
+/* ---------- التوزيعات ---------- */
+function distCard(title, entries){
+  const maxN = Math.max(...entries.map(e=>e.n), 1);
+  return `<div class="card lift dist-card"><div class="card-title">${title}</div>${
+    entries.map(e=>`<div class="bar-row">
+      <span class="lab" title="${esc(e.label)}">${esc(e.label)}</span>
+      <div class="bar-track"><div class="bar-fill" data-w="${(e.n/maxN*100)}%" style="background:${e.color||'var(--primary)'}"></div></div>
+      <span class="bar-num">${e.n}</span></div>`).join("")}</div>`;
+}
+const uniq = f => [...new Set(DATA.map(f))];
+document.getElementById("distGrid").innerHTML =
+  distCard("توزيع المهندسات المشرفات", ENGINEERS.map(e=>({label:e, n:DATA.filter(d=>d.eng===e).length, color:engColorVar(e)}))) +
+  distCard("المرحلة الحالية في المشروع", uniq(d=>d.stage).map(v=>({label:v, n:DATA.filter(d=>d.stage===v).length})).sort((a,b)=>b.n-a.n)) +
+  distCard("حالة السكن", uniq(d=>d.housing).map(v=>({label:v, n:DATA.filter(d=>d.housing===v).length})).sort((a,b)=>b.n-a.n)) +
+  distCard("التصنيف العام (السكور)", CLS_ORDER.map(c=>({label:c, n:DATA.filter(d=>d.cls===c).length, color:CLS_COLOR[c]}))) +
+  distCard("الحالة الزمنية للتنفيذ", [
+    {label:"مطابق أو أسرع من المخطط", n:DATA.filter(d=>d.schedGood).length, color:"var(--good)"},
+    {label:"متأخر عن الجدول الزمني", n:DATA.filter(d=>!d.schedGood).length, color:"var(--crit)"},
+  ]);
+animateFills(document.getElementById("distGrid"));
+
+/* ---------- الجدول ---------- */
+const fEngSel = document.getElementById("fEng");
+ENGINEERS.forEach(e=>{ const o=document.createElement("option"); o.value=e; o.textContent=e; fEngSel.appendChild(o); });
+
+function tag(text, kind){ return `<span class="tag ${kind}"><i></i>${text}</span>`; }
+function matchesFilters(d,f){
+  if(f.eng && d.eng!==f.eng) return false;
+  if(f.cls && d.cls!==f.cls) return false;
+  if(f.sched==="good" && !d.schedGood) return false;
+  if(f.sched==="bad" && d.schedGood) return false;
+  if(f.q){ const q=f.q.trim().toLowerCase();
+    if(q && !(d.name.toLowerCase().includes(q) || d.code.toLowerCase().includes(q))) return false; }
+  return true;
+}
+function renderTable(filtered){
+  let rows = "";
+  ENGINEERS.forEach(key=>{
+    const color = engColorVar(key);
+    const list = filtered.filter(d=>d.eng===key);
+    if(!list.length) return;
+    rows += `<tr class="grp"><td colspan="8"><span class="eng-pill"><span class="dot" style="background:${color}"></span>${esc(key)} — ${list.length} مستفيدًا</span></td></tr>`;
+    list.forEach((d,i)=>{
+      rows += `<tr class="row-main" data-code="${d.code}">
+        <td>${i+1}</td>
+        <td class="name-cell"><span class="chev">◀</span>${esc(d.name)}</td>
+        <td><span class="code">${d.code}</span></td>
+        <td><span class="mini-bar"><span data-w="${fmtPct(d.completion)}"></span></span>${fmtPct(d.completion)}</td>
+        <td>${d.schedGood ? tag("مطابق","t-good") : tag("متأخر","t-crit")}</td>
+        <td>${d.eligGood ? tag("مؤهل","t-good") : tag("غير مؤهل","t-crit")}</td>
+        <td class="score">${d.score}</td>
+        <td>${tag(d.cls, CLS_TAG[d.cls])}</td>
+      </tr>
+      <tr class="detail-row" data-detail-for="${d.code}"><td colspan="8"><div class="detail-grid">
+        <div>
+          <div class="ditem"><span class="k">حالة السكن</span><span class="v">${esc(d.housing)}</span></div>
+          <div class="ditem"><span class="k">المرحلة الحالية</span><span class="v">${esc(d.stage)}</span></div>
+          <div class="ditem"><span class="k">حالة المتابعة الزمنية</span><span class="v">${esc(d.adherence)}</span></div>
+          <div class="ditem"><span class="k">حجم الأسرة (الوحدة السكنية)</span><span class="v">${d.familySize} فردًا${d.hasExtended?" · أسرة ممتدة":""}</span></div>
+          <div class="ditem"><span class="k">نسبة دفعة 1 المستلمة</span><span class="v">${fmtPct(d.p1)}</span></div>
+          <div class="ditem"><span class="k">نسبة دفعة 2 المستلمة</span><span class="v">${fmtPct(d.p2)}</span></div>
+        </div>
+        <div>
+          <div class="ditem"><span class="k">الحالة الزمنية</span><span class="v">${esc(clean(d.schedText))}</span></div>
+          <div class="ditem"><span class="k">أهلية الدفعة الأخيرة</span><span class="v">${esc(clean(d.eligText))}</span></div>
+          <div class="ditem"><span class="k">ذوو إعاقة بالوحدة</span><span class="v">${d.disabled}</span></div>
+          <div class="ditem"><span class="k">ذوو أمراض مزمنة بالوحدة</span><span class="v">${d.chronic}</span></div>
+          <div class="ditem"><span class="k">مصابون بالحرب بالوحدة</span><span class="v">${d.warInjured}</span></div>
+          <div class="ditem"><span class="k">كبار السن (60+) بالوحدة</span><span class="v">${d.elderly}</span></div>
+        </div>
+      </div></td></tr>`;
+    });
+  });
+  document.getElementById("tbody").innerHTML = rows || `<tr class="empty-row"><td colspan="8">لا يوجد مستفيدون مطابقون لمعايير البحث أو الفلترة الحالية.</td></tr>`;
+  document.getElementById("fCount").textContent = `عرض ${filtered.length} من ${total}`;
+  animateFills(document.getElementById("tbody"));
+}
+const filters = {q:"", eng:"", cls:"", sched:""};
+function applyFilters(){ renderTable(DATA.filter(d=>matchesFilters(d,filters))); }
+document.getElementById("fSearch").addEventListener("input", e=>{ filters.q=e.target.value; applyFilters(); });
+document.getElementById("fEng").addEventListener("change", e=>{ filters.eng=e.target.value; applyFilters(); });
+document.getElementById("fCls").addEventListener("change", e=>{ filters.cls=e.target.value; applyFilters(); });
+document.getElementById("fSched").addEventListener("change", e=>{ filters.sched=e.target.value; applyFilters(); });
+document.getElementById("fReset").addEventListener("click", ()=>{
+  filters.q=""; filters.eng=""; filters.cls=""; filters.sched="";
+  ["fSearch","fEng","fCls","fSched"].forEach(id=>document.getElementById(id).value="");
+  applyFilters();
+});
+document.getElementById("tbody").addEventListener("click", e=>{
+  const row = e.target.closest("tr.row-main"); if(!row) return;
+  const detail = document.querySelector(`tr.detail-row[data-detail-for="${row.dataset.code}"]`);
+  const open = !row.classList.contains("open");
+  row.classList.toggle("open", open);
+  if(detail) detail.classList.toggle("open", open);
+});
+applyFilters();
+
+/* ---------- المخطط التخطيطي لمواقع تواجد المستفيدين ---------- */
+function renderSitePlan(){
+  const wrap = document.getElementById("spWrap");
+  const card = document.getElementById("spCard");
+  const legendEl = document.getElementById("spLegend");
+  const noteEl = document.getElementById("spNote");
+  if(!wrap || !card || typeof COORDS==="undefined" || !COORDS.length) return;
+
+  const DATA_BY_CODE = Object.fromEntries(DATA.map(d=>[d.code, d]));
+  const REF_LAT = avg(COORDS.map(p=>p.lat));
+  const REF_LON = avg(COORDS.map(p=>p.lon));
+  const mPerDegLat = 110540;
+  const mPerDegLon = 111320 * Math.cos(REF_LAT * Math.PI/180);
+
+  // إسقاط تقريبي (equirectangular) بالأمتار حول مركز النقاط - كافٍ لمساحة بحجم حي سكني صغير
+  const pts = COORDS.map(p=>{
+    const d = DATA_BY_CODE[p.code] || {};
+    return {
+      code:p.code, gmaps:p.gmaps,
+      name:d.name || p.code, eng:d.eng || "", stage:d.stage || "غير معروف", completion:d.completion,
+      xm:(p.lon-REF_LON)*mPerDegLon, ym:(REF_LAT-p.lat)*mPerDegLat, // ym: الشمال = قيمة أصغر (أعلى على المخطط)
+    };
+  });
+
+  const W = 720, H = 340, pad = 48;
+  const xs = pts.map(p=>p.xm), ys = pts.map(p=>p.ym);
+  const xRange = Math.max(1, Math.max(...xs)-Math.min(...xs));
+  const yRange = Math.max(1, Math.max(...ys)-Math.min(...ys));
+  const scale = Math.min((W-2*pad)/xRange, (H-2*pad)/yRange);
+  const xMid = (Math.max(...xs)+Math.min(...xs))/2;
+  const yMid = (Math.max(...ys)+Math.min(...ys))/2;
+  pts.forEach(p=>{ p.px = W/2 + (p.xm-xMid)*scale; p.py = H/2 + (p.ym-yMid)*scale; });
+
+  // فصل بصري بسيط للنقاط شديدة التقارب/المتطابقة حتى تبقى قابلة للتمييز والضغط عليها
+  // (يُعدّل موضع الرسم فقط - لا يمسّ الإحداثيات الفعلية ولا رابط "فتح في خرائط جوجل" لكل نقطة)
+  const MIN_SEP = 15;
+  for(let iter=0; iter<60; iter++){
+    let moved = false;
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        let dx = pts[j].px-pts[i].px, dy = pts[j].py-pts[i].py;
+        let d = Math.hypot(dx,dy);
+        if(d < MIN_SEP){
+          moved = true;
+          if(d < 0.001){ dx = (i%2?1:-1)*0.6; dy = (j%2?1:-1)*0.6; d = Math.hypot(dx,dy); }
+          const push = (MIN_SEP-d)/2, ux = dx/d, uy = dy/d;
+          pts[i].px -= ux*push; pts[i].py -= uy*push;
+          pts[j].px += ux*push; pts[j].py += uy*push;
+        }
+      }
+    }
+    if(!moved) break;
+  }
+
+  const scaleLenM = 20, scaleLenPx = scaleLenM*scale;
+  let svg = `<svg class="siteplan-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="مخطط تخطيطي لمواقع تواجد المستفيدين">`;
+  for(let k=0;k<=6;k++){ const gx=pad+k*(W-2*pad)/6;
+    svg += `<line x1="${gx.toFixed(1)}" y1="${pad}" x2="${gx.toFixed(1)}" y2="${H-pad}" stroke="var(--rule)" stroke-width="1" opacity=".6"/>`; }
+  for(let k=0;k<=4;k++){ const gy=pad+k*(H-2*pad)/4;
+    svg += `<line x1="${pad}" y1="${gy.toFixed(1)}" x2="${W-pad}" y2="${gy.toFixed(1)}" stroke="var(--rule)" stroke-width="1" opacity=".6"/>`; }
+  svg += `<g transform="translate(${W-pad-8},${pad+20})">
+    <path d="M0,-13 L6,5 L-6,5 Z" fill="var(--copper)"/>
+    <text x="0" y="17" text-anchor="middle" class="sp-north-txt">ش</text>
+  </g>`;
+  svg += `<line x1="${pad}" y1="${H-pad+18}" x2="${(pad+scaleLenPx).toFixed(1)}" y2="${H-pad+18}" stroke="var(--ink-3)" stroke-width="1.4"/>
+    <line x1="${pad}" y1="${H-pad+13}" x2="${pad}" y2="${H-pad+23}" stroke="var(--ink-3)" stroke-width="1.4"/>
+    <line x1="${(pad+scaleLenPx).toFixed(1)}" y1="${H-pad+13}" x2="${(pad+scaleLenPx).toFixed(1)}" y2="${H-pad+23}" stroke="var(--ink-3)" stroke-width="1.4"/>
+    <text x="${(pad+scaleLenPx/2).toFixed(1)}" y="${H-pad+35}" text-anchor="middle" class="sp-scale-txt">${scaleLenM} م تقريبًا</text>`;
+  pts.forEach(p=>{
+    svg += `<circle class="sp-dot" data-code="${p.code}" cx="${p.px.toFixed(1)}" cy="${p.py.toFixed(1)}" r="7" fill="${engColorVar(p.eng)}"/>`;
+  });
+  svg += `</svg>`;
+  wrap.innerHTML = svg;
+
+  function showCard(p){
+    wrap.querySelectorAll(".sp-dot").forEach(el=>el.classList.toggle("active", el.dataset.code===p.code));
+    const completionTxt = (p.completion!=null) ? fmtPct(p.completion) : "—";
+    card.innerHTML = `
+      <div class="sp-card-head"><i style="background:${engColorVar(p.eng)}"></i>
+        <div><div class="sp-card-name">${esc(p.name)}</div><div class="sp-card-code">${esc(p.code)}</div></div>
+      </div>
+      <div class="sp-card-rows">
+        <div class="r"><span class="k">المهندسة المشرفة</span><span class="v">${esc(p.eng)}</span></div>
+        <div class="r"><span class="k">المرحلة الحالية</span><span class="v">${esc(p.stage)}</span></div>
+        <div class="r"><span class="k">نسبة الإنجاز</span><span class="v">${completionTxt}</span></div>
+      </div>
+      <a class="sp-gmaps-btn" href="${p.gmaps}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        فتح الموقع في خرائط جوجل
+      </a>`;
+  }
+
+  card.innerHTML = `<div class="ph">مرّر مؤشر الفأرة أو اضغط على أي نقطة في المخطط لعرض تفاصيلها</div>`;
+  wrap.querySelectorAll(".sp-dot").forEach(dot=>{
+    const p = pts.find(x=>x.code===dot.dataset.code);
+    dot.addEventListener("mouseenter", ()=>showCard(p));
+    dot.addEventListener("click", ()=>showCard(p));
+  });
+
+  legendEl.innerHTML = ENGINEERS.map(e=>`<span><i style="background:${engColorVar(e)}"></i>${esc(e)}</span>`).join("");
+  noteEl.textContent = 'مخطط تخطيطي يقرّب المواقع النسبية لبعضها البعض على مقياس محلي تقديري، وليس خريطة شوارع دقيقة - استخدم زر "فتح في خرائط جوجل" للوصول للموقع الفعلي.';
+}
+renderSitePlan();
+</script>
+
+</body></html>
