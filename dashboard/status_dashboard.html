@@ -11,15 +11,15 @@ if(t==="dark"||t==="light")r.setAttribute("data-theme",t);else if(!r.getAttribut
    أسماء المتغيرات ثابتة لأن منطق العرض يستخدمها مباشرة
    ============================================================================ */
 :root{
-  --paper:#F4F7FC; --surface:#FFFFFF; --well:#EEF3FB;
+  --paper:#F2F5F8; --surface:#FFFFFF; --well:#E8EEF3;
   --ink:#0A1633; --ink-2:#3B4868; --ink-3:#5F6B88;
   --rule:#E2E8F3; --rule-2:#C9D3E5;
-  --primary:#1D5FE0; --primary-2:#3B82F6; --primary-wash:#EAF1FF;
-  --copper:#E8590C; --copper-2:#FF8A3D;
+  --primary:#197C84; --primary-2:#23979F; --primary-wash:#E6F4F3;
+  --copper:#B8871A; --copper-2:#D9AE38;
   --teal:#0F9488; --teal-2:#14B8A6;
   --night:#0B1426; --night-2:#15213A;
   --on-night:#F1F5FB; --on-night-2:#A3B0C4; --on-night-rule:rgba(255,255,255,.12);
-  --cat-1:#1D5FE0; --cat-2:#E8590C; --cat-3:#0891B2;
+  --cat-1:#197C84; --cat-2:#B8871A; --cat-3:#5FBFA6;
   --cat-4:#7C3AED; --cat-5:#DB2777; --cat-6:#16A34A; --cat-7:#CA8A04;
   --good:#16A34A; --warn:#CA8A04; --serious:#EA580C; --crit:#DC2626;
   --shadow-1:0 1px 2px rgba(14,19,48,.05), 0 4px 14px -6px rgba(14,19,48,.08);
@@ -690,44 +690,66 @@ footer.notes{border-top:1px solid var(--rule); background:var(--surface); border
 /* ======================= الوضع الفاتح: أزرق + برتقالي ======================= */
 :root:not([data-theme="dark"]) .masthead{color:var(--ink); background:
   url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'72'%20height%3D'72'%20viewBox%3D'0%200%2072%2072'%3E%3Cg%20fill%3D'none'%20stroke%3D'%231D5FE0'%20stroke-opacity%3D'.07'%20stroke-width%3D'1'%3E%3Cpath%20d%3D'M36%208l8.5%2019.5L64%2036l-19.5%208.5L36%2064l-8.5-19.5L8%2036l19.5-8.5z'%2F%3E%3Crect%20x%3D'16'%20y%3D'16'%20width%3D'40'%20height%3D'40'%20transform%3D'rotate(45%2036%2036)'%2F%3E%3Crect%20x%3D'16'%20y%3D'16'%20width%3D'40'%20height%3D'40'%2F%3E%3Ccircle%20cx%3D'36'%20cy%3D'36'%20r%3D'8'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/72px 72px,
-  radial-gradient(760px 340px at 90% -30%, rgba(59,130,246,.20), transparent 62%),
+  radial-gradient(760px 340px at 90% -30%, rgba(35,151,159,.20), transparent 62%),
   radial-gradient(620px 300px at 0% 0%, rgba(255,138,61,.18), transparent 60%),
-  linear-gradient(180deg,#FFFFFF,#EEF4FF)!important;
+  linear-gradient(180deg,#FFFFFF,#F4F8FA)!important;
   border-bottom:1px solid var(--rule)}
-:root:not([data-theme="dark"]) .masthead::after{height:3px; background:linear-gradient(90deg,#1D5FE0,#3B82F6 55%,#FF8A3D)}
+:root:not([data-theme="dark"]) .masthead::after{height:3px; background:linear-gradient(90deg,#197C84,#23979F 55%,#D9AE38)}
 :root:not([data-theme="dark"]) .masthead h1{color:var(--ink)}
-:root:not([data-theme="dark"]) .brand-mark{background:linear-gradient(135deg,#3B82F6,#1D5FE0); box-shadow:0 12px 26px -10px rgba(29,95,224,.7)}
-:root:not([data-theme="dark"]) .brand-mark svg path[stroke="var(--copper)"]{stroke:#FFB27A}
+:root:not([data-theme="dark"]) .brand-mark{background:linear-gradient(135deg,#23979F,#197C84); box-shadow:0 12px 26px -10px rgba(25,124,132,.7)}
+:root:not([data-theme="dark"]) .brand-mark svg path[stroke="var(--copper)"]{stroke:#E8C45C}
 :root:not([data-theme="dark"]) .kicker{color:var(--copper)}
 :root:not([data-theme="dark"]) .brand-en,:root:not([data-theme="dark"]) .sync,:root:not([data-theme="dark"]) .dl-group .lbl,:root:not([data-theme="dark"]) .dl-msg{color:var(--ink-3)}
 :root:not([data-theme="dark"]) .theme-btn{color:var(--ink-2); background:#fff; border-color:var(--rule-2)}
 :root:not([data-theme="dark"]) .theme-btn:hover{color:var(--primary); border-color:var(--primary)}
-:root:not([data-theme="dark"]) .dl-btn{background:linear-gradient(135deg,#3B82F6,#1D5FE0); color:#fff; box-shadow:0 8px 18px -8px rgba(29,95,224,.7)}
+:root:not([data-theme="dark"]) .dl-btn{background:linear-gradient(135deg,#23979F,#197C84); color:#fff; box-shadow:0 8px 18px -8px rgba(25,124,132,.7)}
 :root:not([data-theme="dark"]) .dl-btn.is-alt{background:#fff; color:var(--copper); box-shadow:inset 0 0 0 1.5px var(--copper)}
-:root:not([data-theme="dark"]) .dl-btn:hover{background:linear-gradient(135deg,#FF8A3D,#E8590C); color:#fff; box-shadow:none}
+:root:not([data-theme="dark"]) .dl-btn:hover{background:linear-gradient(135deg,#D9AE38,#B8871A); color:#fff; box-shadow:none}
 :root:not([data-theme="dark"]) .tb-row{background:rgba(255,255,255,.8)!important; border-color:var(--rule)!important}
 :root:not([data-theme="dark"]) .tb-row .k{color:var(--ink-3)} :root:not([data-theme="dark"]) .tb-row .v{color:var(--ink)}
-:root:not([data-theme="dark"]) .mstat,:root:not([data-theme="dark"]) .mstat:first-child,:root:not([data-theme="dark"]) .mstat:nth-child(n){background:#fff!important; border-color:var(--rule)!important; box-shadow:0 1px 2px rgba(10,22,51,.04), 0 14px 30px -18px rgba(29,95,224,.35); position:relative; overflow:hidden}
-:root:not([data-theme="dark"]) .mstat::before{content:""; position:absolute; inset-inline-start:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg,#3B82F6,#1D5FE0)}
-:root:not([data-theme="dark"]) .mstat.is-copper::before{background:linear-gradient(180deg,#FF8A3D,#E8590C)}
+:root:not([data-theme="dark"]) .mstat,:root:not([data-theme="dark"]) .mstat:first-child,:root:not([data-theme="dark"]) .mstat:nth-child(n){background:#fff!important; border-color:var(--rule)!important; box-shadow:0 1px 2px rgba(10,22,51,.04), 0 14px 30px -18px rgba(25,124,132,.35); position:relative; overflow:hidden}
+:root:not([data-theme="dark"]) .mstat::before{content:""; position:absolute; inset-inline-start:0; top:0; bottom:0; width:4px; background:linear-gradient(180deg,#23979F,#197C84)}
+:root:not([data-theme="dark"]) .mstat.is-copper::before{background:linear-gradient(180deg,#D9AE38,#B8871A)}
 :root:not([data-theme="dark"]) .mstat .k{color:var(--ink-2)} :root:not([data-theme="dark"]) .mstat .v{color:var(--ink)} :root:not([data-theme="dark"]) .mstat .v small{color:var(--ink-3)}
 :root:not([data-theme="dark"]) .mstat.is-copper .v{color:var(--copper)}
 :root:not([data-theme="dark"]) .mstat-track{background:var(--well)}
-:root:not([data-theme="dark"]) .mstat-track span{background:linear-gradient(90deg,#FF8A3D,#E8590C)}
+:root:not([data-theme="dark"]) .mstat-track span{background:linear-gradient(90deg,#D9AE38,#B8871A)}
 :root:not([data-theme="dark"]) .toc{background:rgba(255,255,255,.88)}
 :root:not([data-theme="dark"]) .toc a:hover{background:var(--primary-wash); color:var(--primary)}
-:root:not([data-theme="dark"]) .sheet{background:linear-gradient(135deg,#3B82F6,#1D5FE0); color:#fff; box-shadow:0 10px 22px -10px rgba(29,95,224,.8)}
-:root:not([data-theme="dark"]) section:nth-of-type(even) .sheet{background:linear-gradient(135deg,#FF8A3D,#E8590C); box-shadow:0 10px 22px -10px rgba(232,89,12,.7)}
-:root:not([data-theme="dark"]) .stage-fill,:root:not([data-theme="dark"]) .tl-progress{background:linear-gradient(90deg,#3B82F6,#1D5FE0)}
-:root:not([data-theme="dark"]) .today-flag span{background:linear-gradient(135deg,#FF8A3D,#E8590C); color:#fff}
-:root:not([data-theme="dark"]) .cd-num{background:linear-gradient(135deg,#FF8A3D,#E8590C); -webkit-background-clip:text; background-clip:text; color:transparent}
-:root:not([data-theme="dark"]) #finGrad stop:first-child{stop-color:#3B82F6} :root:not([data-theme="dark"]) #finGrad stop:last-child{stop-color:#1D5FE0}
-:root:not([data-theme="dark"]) .kpi,:root:not([data-theme="dark"]) .kpi:nth-child(n){background:linear-gradient(180deg,#fff,#F6F9FF)}
+:root:not([data-theme="dark"]) .sheet{background:linear-gradient(135deg,#23979F,#197C84); color:#fff; box-shadow:0 10px 22px -10px rgba(25,124,132,.8)}
+:root:not([data-theme="dark"]) section:nth-of-type(even) .sheet{background:linear-gradient(135deg,#D9AE38,#B8871A); box-shadow:0 10px 22px -10px rgba(232,89,12,.7)}
+:root:not([data-theme="dark"]) .stage-fill,:root:not([data-theme="dark"]) .tl-progress{background:linear-gradient(90deg,#23979F,#197C84)}
+:root:not([data-theme="dark"]) .today-flag span{background:linear-gradient(135deg,#D9AE38,#B8871A); color:#fff}
+:root:not([data-theme="dark"]) .cd-num{background:linear-gradient(135deg,#D9AE38,#B8871A); -webkit-background-clip:text; background-clip:text; color:transparent}
+:root:not([data-theme="dark"]) #finGrad stop:first-child{stop-color:#23979F} :root:not([data-theme="dark"]) #finGrad stop:last-child{stop-color:#5FBFA6}
+:root:not([data-theme="dark"]) .kpi,:root:not([data-theme="dark"]) .kpi:nth-child(n){background:linear-gradient(180deg,#fff,#FAFCFD)}
 :root:not([data-theme="dark"]) .exec-side{background:linear-gradient(180deg,#FFF6EF,#fff)}
 :root:not([data-theme="dark"]) .eyebrow{color:var(--copper)}
-:root:not([data-theme="dark"]) thead th{background:#F1F5FD}
+:root:not([data-theme="dark"]) thead th{background:#EFF3F6}
 :root:not([data-theme="dark"]) .ph-tab[aria-selected="true"],:root:not([data-theme="dark"]) .sp-gmaps-btn{background:var(--primary); color:#fff; border-color:var(--primary)}
 :root:not([data-theme="dark"]) .ph-btn:hover{color:#fff}
+
+/* ======================= ترويسة متدرجة ملوّنة (لوحة 1a) ======================= */
+:root:not([data-theme="dark"]) .masthead{color:#fff; background:
+  url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'72'%20height%3D'72'%20viewBox%3D'0%200%2072%2072'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23FFFFFF'%20stroke-opacity%3D'.08'%20stroke-width%3D'1'%3E%3Cpath%20d%3D'M36%208l8.5%2019.5L64%2036l-19.5%208.5L36%2064l-8.5-19.5L8%2036l19.5-8.5z'%2F%3E%3Crect%20x%3D'16'%20y%3D'16'%20width%3D'40'%20height%3D'40'%20transform%3D'rotate(45%2036%2036)'%2F%3E%3Crect%20x%3D'16'%20y%3D'16'%20width%3D'40'%20height%3D'40'%2F%3E%3Ccircle%20cx%3D'36'%20cy%3D'36'%20r%3D'8'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/72px 72px,
+  radial-gradient(640px 320px at 0% 110%, rgba(255,138,61,.55), transparent 62%),
+  radial-gradient(700px 360px at 100% -20%, rgba(35,151,159,.45), transparent 60%),
+  linear-gradient(135deg,#0D1230 0%,#197C84 55%,#5FBFA6 100%)!important;
+  border-bottom:none}
+:root:not([data-theme="dark"]) .masthead::after{background:linear-gradient(90deg,#D9AE38,#B8871A 50%,#E8C45C)}
+:root:not([data-theme="dark"]) .masthead h1{color:#fff}
+:root:not([data-theme="dark"]) .brand-mark{background:rgba(255,255,255,.14); box-shadow:inset 0 0 0 1px rgba(255,255,255,.3); color:#fff}
+:root:not([data-theme="dark"]) .kicker{color:#E8C45C}
+:root:not([data-theme="dark"]) .brand-en,:root:not([data-theme="dark"]) .dl-group .lbl,:root:not([data-theme="dark"]) .dl-msg{color:#D9DEEA}
+:root:not([data-theme="dark"]) .sync{color:#E9ECF4}
+:root:not([data-theme="dark"]) .theme-btn{color:#fff; background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.35)}
+:root:not([data-theme="dark"]) .theme-btn:hover{color:#fff; border-color:#fff}
+:root:not([data-theme="dark"]) .dl-btn{background:#fff; color:#197C84; box-shadow:0 8px 18px -10px rgba(0,0,0,.5)}
+:root:not([data-theme="dark"]) .dl-btn.is-alt{background:linear-gradient(135deg,#D9AE38,#B8871A); color:#fff; box-shadow:0 8px 18px -10px rgba(232,89,12,.8)}
+:root:not([data-theme="dark"]) .dl-btn:hover{background:#FBF1D6; color:#8A6410}
+:root:not([data-theme="dark"]) .tb-row{background:rgba(255,255,255,.12)!important; border-color:rgba(255,255,255,.28)!important}
+:root:not([data-theme="dark"]) .tb-row .k{color:#D9DEEA} :root:not([data-theme="dark"]) .tb-row .v{color:#fff}
+:root:not([data-theme="dark"]) .mstat,:root:not([data-theme="dark"]) .mstat:first-child,:root:not([data-theme="dark"]) .mstat:nth-child(n){border-color:transparent!important; box-shadow:0 18px 36px -20px rgba(8,24,72,.7)}
 
 @media print{
   body{background:#fff}
@@ -735,17 +757,53 @@ footer.notes{border-top:1px solid var(--rule); background:var(--surface); border
   .card,.panel,.table-wrap{box-shadow:none; break-inside:avoid}
   section{break-inside:avoid}
 }
+
+/* ثلاثي الألوان: بنفسجي + برتقالي + أخضر مزرق */
+:root:not([data-theme="dark"]) section:nth-of-type(3n) .sheet{background:linear-gradient(135deg,#7DD0BA,#5FBFA6); box-shadow:0 10px 22px -10px rgba(95,191,166,.7)}
+:root:not([data-theme="dark"]) .stage-fill,:root:not([data-theme="dark"]) .tl-progress{background:linear-gradient(90deg,#23979F,#197C84 60%,#5FBFA6)}
+:root:not([data-theme="dark"]) .masthead::after{background:linear-gradient(90deg,#D9AE38,#197C84 50%,#5FBFA6)}
+
+/* لوحة الطيف: فحمي + ورق دافئ + شرائط طيفية */
+:root:not([data-theme="dark"]) body{background:linear-gradient(180deg,#F2F5F8,#EBF0F4)}
+:root:not([data-theme="dark"]) .masthead{background:
+  radial-gradient(520px 300px at 98% 0%, rgba(217,174,56,.42), transparent 62%),
+  radial-gradient(560px 320px at 70% 120%, rgba(27,168,201,.40), transparent 62%),
+  radial-gradient(520px 300px at 30% -30%, rgba(54,90,140,.45), transparent 62%),
+  radial-gradient(560px 320px at 0% 100%, rgba(46,47,88,.40), transparent 62%),
+  linear-gradient(135deg,#0D1230,#2E2F58)!important}
+:root:not([data-theme="dark"]) .masthead::after{height:4px; background:linear-gradient(90deg,#E8C45C,#D9AE38,#2E2F58,#365A8C,#197C84,#5FBFA6,#3FB57A)}
+:root:not([data-theme="dark"]) .dl-btn{color:#0D1230}
+:root:not([data-theme="dark"]) section:nth-of-type(5n) .sheet{background:linear-gradient(135deg,#4A70A6,#365A8C); box-shadow:0 10px 22px -10px rgba(54,90,140,.7)}
+:root:not([data-theme="dark"]) section:nth-of-type(7n) .sheet{background:linear-gradient(135deg,#45477A,#2E2F58); box-shadow:0 10px 22px -10px rgba(46,47,88,.7)}
+:root:not([data-theme="dark"]) .mstat-track span{background:linear-gradient(90deg,#E8C45C,#D9AE38,#2E2F58)}
+:root:not([data-theme="dark"]) .stage-fill,:root:not([data-theme="dark"]) .tl-progress{background:linear-gradient(90deg,#365A8C,#197C84 55%,#5FBFA6)}
+
+/* لوحة "بحر من الفضاء": خردلي، أخضر بحري، فيروزي، أزرق دنيم، نيلي، كحلي ليلي (الترويسة) */
+:root:not([data-theme="dark"]) .masthead{background:
+  radial-gradient(620px 320px at 100% -10%, rgba(35,151,159,.45), transparent 62%),
+  radial-gradient(520px 280px at 55% 130%, rgba(95,191,166,.28), transparent 62%),
+  radial-gradient(460px 260px at 0% 110%, rgba(217,174,56,.30), transparent 62%),
+  linear-gradient(135deg,#0D1230 0%,#171C42 55%,#2E2F58 100%)!important}
+:root:not([data-theme="dark"]) .masthead::after{height:4px; background:linear-gradient(90deg,#D9AE38,#5FBFA6,#23979F,#365A8C,#2E2F58)}
+:root:not([data-theme="dark"]) .brand-mark{background:linear-gradient(135deg,#23979F,#365A8C); box-shadow:0 10px 24px -10px rgba(35,151,159,.8)}
+:root:not([data-theme="dark"]) .mstat::before{background:linear-gradient(180deg,#23979F,#365A8C)}
+:root:not([data-theme="dark"]) .mstat.is-copper::before{background:linear-gradient(180deg,#E8C45C,#D9AE38)}
+:root:not([data-theme="dark"]) .mstat-track span{background:linear-gradient(90deg,#E8C45C,#D9AE38)}
+:root:not([data-theme="dark"]) .today-flag span{background:#D9AE38; color:#0D1230}
+:root:not([data-theme="dark"]) .dl-btn.is-alt{background:#D9AE38; color:#0D1230}
+:root:not([data-theme="dark"]) .stage-fill,:root:not([data-theme="dark"]) .tl-progress{background:linear-gradient(90deg,#365A8C,#23979F 55%,#5FBFA6)}
 </style>
+
 
 <header class="masthead">
   <div class="masthead-in">
     <div class="brand">
       <div class="brand-mark">
         <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4.5 15.5 16 6l11.5 9.5"/>
-          <path d="M8 14v10.5h16V14"/>
-          <path d="M13.5 24.5v-6h5v6"/>
-          <path d="M3 28.5h26" stroke="var(--copper)"/>
+          <path d="M4.5 15.5 16 6l11.5 9.5"></path>
+          <path d="M8 14v10.5h16V14"></path>
+          <path d="M13.5 24.5v-6h5v6"></path>
+          <path d="M3 28.5h26" stroke="var(--copper)"></path>
         </svg>
       </div>
       <div>
@@ -758,14 +816,14 @@ footer.notes{border-top:1px solid var(--rule); background:var(--surface); border
       <div class="actionbar">
         <span class="sync" id="syncBadge"></span>
         <button type="button" class="theme-btn" id="themeBtn" aria-label="تبديل الوضع الفاتح والداكن">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" stroke="none"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" stroke="none"></path></svg>
           <span id="themeLbl">الوضع الداكن</span>
         </button>
       </div>
-      <div class="dl-group" id="dlGroup" hidden>
+      <div class="dl-group" id="dlGroup" hidden="">
         <span class="lbl">تنزيل تقرير الإنجاز:</span>
-        <button type="button" class="dl-btn" id="dlPdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 19.5h14"/></svg>تقرير PDF</button>
-        <button type="button" class="dl-btn is-alt" id="dlXlsx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>جداول Excel</button>
+        <button type="button" class="dl-btn" id="dlPdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><path d="m7.5 10.5 4.5 4.5 4.5-4.5"></path><path d="M5 19.5h14"></path></svg>تقرير PDF</button>
+        <button type="button" class="dl-btn is-alt" id="dlXlsx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M10 4v16"></path></svg>جداول Excel</button>
         <span class="dl-msg" id="dlMsg" role="status" aria-live="polite"></span>
       </div>
     </div>
@@ -811,10 +869,9 @@ footer.notes{border-top:1px solid var(--rule); background:var(--surface); border
         <div class="fin-gauge-wrap">
           <div class="fin-gauge">
             <svg width="112" height="112" viewBox="0 0 112 112">
-              <circle cx="56" cy="56" r="47" fill="none" stroke="var(--well)" stroke-width="9"/>
-              <defs><linearGradient id="finGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#2DD4BF"/></linearGradient></defs>
-              <circle class="fin-gauge-fill" id="finGaugeFill" cx="56" cy="56" r="47" fill="none"
-                stroke="url(#finGrad)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 56 56)"/>
+              <circle cx="56" cy="56" r="47" fill="none" stroke="var(--well)" stroke-width="9"></circle>
+              <defs><linearGradient id="finGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38BDF8"></stop><stop offset="1" stop-color="#2DD4BF"></stop></linearGradient></defs>
+              <circle class="fin-gauge-fill" id="finGaugeFill" cx="56" cy="56" r="47" fill="none" stroke="url(#finGrad)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 56 56)"></circle>
             </svg>
             <div class="pct" id="finGaugePct">0%</div>
           </div>
